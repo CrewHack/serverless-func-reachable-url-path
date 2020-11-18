@@ -53,8 +53,18 @@ export const getScreenshot = async (req, res) => {
   
   //await page.goto(url, { waitUntil: "load" });
 
+  const page = await browser.newPage();
+  await page.goto('https://example.com'); // change to your website
+  
+  // Executes Navigation API within the page context
+  const performanceEntries = JSON.parse(
+      await page.evaluate(() => JSON.stringify(
+          performance.getEntriesByType("navigation")[0]
+      )) 
+  );
+
   res.statusCode = 200
-  res.json({ chromiumPath: "test" })
+  res.json({ performanceEntries: performanceEntries })
 
   return { res };
 };
