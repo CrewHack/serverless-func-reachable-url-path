@@ -31,12 +31,12 @@ export const getOptions = async isDev => {
     headless: chrome.headless,
   };
 };
-export const getScreenshot = async url => {
+export const getScreenshot = async (req, res) => {
 
-  url = "https://allied-techs.com";
+  var url = "https://allied-techs.com";
 
   const options = await getOptions(isDev);
-  const browser = await puppeteer.launch(options);
+  //const browser = await puppeteer.launch(options);
   //const page = await browser.newPage();
   /**
    * Here we set the viewport manually to a big resolution
@@ -53,7 +53,10 @@ export const getScreenshot = async url => {
   
   //await page.goto(url, { waitUntil: "load" });
 
-  return { chromiumPath: "test" };
+  res.statusCode = 200
+  res.json({ chromiumPath: "test" })
+
+  return { res };
 };
 
 export default getScreenshot;
