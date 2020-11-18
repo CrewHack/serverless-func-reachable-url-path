@@ -1,7 +1,7 @@
 import chrome from "chrome-aws-lambda";
 import puppeteer from "puppeteer";
-const isDev = process.env.NODE_ENV === "development";
 
+const isDev = process.env.NODE_ENV === "development";
 const exePath =
   process.platform === "win32"
     ? "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
@@ -36,7 +36,7 @@ export const getScreenshot = async (req, res) => {
   
   const performanceEntries = JSON.parse(
       await page.evaluate(() => JSON.stringify(
-          performance.getEntriesByType("navigation")[1]
+          performance.getEntriesByType("navigation")[0]
       )) 
   );
 
@@ -44,8 +44,7 @@ export const getScreenshot = async (req, res) => {
     await page.evaluate(() => JSON.stringify(
         performance.timing
     )) 
-
-);
+  );
 
   res.statusCode = 200
   res.json({ performanceEntries: performanceEntries })
