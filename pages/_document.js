@@ -9,7 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head><description>This is the legacy description header tag that nobody or nobot reads anymore.</description></Head>
+        <Head>
+        <meta name="description" content="This is the description of my app." />
+        </Head>
         <body>
           <Main />
           <NextScript />
