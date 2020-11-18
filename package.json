@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "clean": "rm -rf node_modules",
-    "reinstall": "npm run clean && PUPPETEER_PRODUCT=chrome yarn add puppeteer@5.5.0"
+    /*"reinstall": "npm run clean && PUPPETEER_PRODUCT=chrome yarn add puppeteer@5.5.0"*/
+    "reinstall": "npm run clean && PUPPETEER_PRODUCT=chrome npm install"
   },
   "dependencies": {
     "next": "10.0.0",
