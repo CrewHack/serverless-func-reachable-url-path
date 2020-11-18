@@ -48,12 +48,17 @@ async.function(function(response) {
     }
 });
 
-module.exports = function(cb){
+/*module.exports = function(cb){
     if(typeof performanceEntries != 'undefined'){
         cb(performanceEntries); // If foo is already define, I don't wait.
     } else {
         callback = cb;
     }
+}*/
+
+export default (req, res) => {
+  res.statusCode = 200
+  res.json({ name: 'Performance Results5' })
 }
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
