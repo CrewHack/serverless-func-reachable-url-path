@@ -34,9 +34,15 @@ var performanceEntries, performanceTiming, callback;
 
 export default async function foo(req, res) {
   
-  const browser = await puppeteer.launch(
+  /*const browser = await puppeteer.launch(
     {product: 'chrome'}
-  );
+  );*/
+  
+  const browser = await puppeteer.launch({
+    executablePath: process.env.PUPPETEER_EXEC_PATH,
+    args: ['--no-sandbox']
+  });
+  
   //const page = await browser.newPage();
   //await page.goto('https://example.com'); // change to your website
   
