@@ -24,7 +24,7 @@ export const getOptions = async isDev => {
   };
 };
 
-export const getScreenshot = async (req, res) => {
+export const getPerformance = async (req, res) => {
 
   var url = "https://allied-techs.com";
 
@@ -52,6 +52,6 @@ export const getScreenshot = async (req, res) => {
   return { res };
 };
 
-export default getScreenshot;
+export default getPerformance;
 
 //https://developer.mozilla.org/en-US/docs/Web/Performance/Navigation_and_resource_timings
