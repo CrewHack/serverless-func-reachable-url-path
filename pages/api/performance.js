@@ -34,9 +34,9 @@ var performanceEntries, performanceTiming, callback;
 
 export default async function foo(req, res) {
   
-  /*const browser = await puppeteer.launch(
+  const browser = await puppeteer.launch(
     {product: 'chrome'}
-  );*/
+  );
   
   //const browser = await puppeteer.launch(); 
   /*{
