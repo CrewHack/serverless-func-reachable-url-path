@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "clean": "rm -rf node_modules",
-    "reinstall": "npm run clean && npm install"
+    "reinstall": "npm run clean && PUPPETEER_PRODUCT=firefox npm install"
   },
   "dependencies": {
     "next": "10.0.0",
