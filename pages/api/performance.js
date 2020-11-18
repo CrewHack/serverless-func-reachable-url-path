@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-const chromiumBinary = require('chromium-binary');
 
 var performanceEntries, performanceTiming, callback;
 
@@ -59,7 +58,7 @@ export default async function foo(req, res) {
   );*/
   
   res.statusCode = 200
-  res.json({ chromiumPath: chromiumBinary.path })
+  res.json({ chromiumPath: "test" })
 }
 
 //puppeteerPath: puppeteer.executablePath()
