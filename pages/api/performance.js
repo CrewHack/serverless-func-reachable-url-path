@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer');
+//const puppeteer = require('puppeteer');
 
-var performanceEntries, performanceTiming;
+//var performanceEntries, performanceTiming;
 
 /*(async () => {
   const browser = await puppeteer.launch();
