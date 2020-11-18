@@ -32,37 +32,14 @@ var performanceEntries, performanceTiming, callback;
   res.json({ performance: 'Performance Results4' })
 }*/
 
-/*async.function(function(response) {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto('https://example.com'); // change to your website
-  
-    const performanceEntries = JSON.parse(
-        await page.evaluate(() => JSON.stringify(
-            performance.getEntriesByType("navigation")[0]
-        )) 
-    );
-
-    if( typeof callback == 'function' ){
-        callback(performanceEntries);
-    }
-});*/
-
-/*module.exports = function(cb){
-    if(typeof performanceEntries != 'undefined'){
-        cb(performanceEntries); // If foo is already define, I don't wait.
-    } else {
-        callback = cb;
-    }
-}*/
-
-async function doStuff(req, res) {
-   res.statusCode = 200
-   res.json({ name: 'John Doe' })
+export default async function foo(req, res) {
+  res.statusCode = 200
+  res.json({ name: 'John Doe' })
 }
-// doStuff is defined inside the module so we can call it wherever we want
 
-// Export it to make it available outside
-module.exports.doStuff = doStuff;
+/*export default (req, res) => {
+  res.statusCode = 200
+  res.json({ name: 'John Doe' })
+}(/
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
