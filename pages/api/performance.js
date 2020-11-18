@@ -57,7 +57,7 @@ var performanceEntries, performanceTiming, callback;
 }*/
 
 // This function is async
-export const res = async () => {
+export default = async (req, res) => {
   // This one is not though which means it can't use await inside
   // return dispatch => {
 
