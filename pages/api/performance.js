@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const chromium = require('chromium');
+const chromium = require('chrome-aws-lambda');
 
 var performanceEntries, performanceTiming, callback;
 
