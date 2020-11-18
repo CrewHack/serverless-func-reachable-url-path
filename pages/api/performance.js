@@ -35,8 +35,8 @@ var performanceEntries, performanceTiming, callback;
 export default async function foo(req, res) {
   
   const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('https://example.com'); // change to your website
+  //const page = await browser.newPage();
+  //await page.goto('https://example.com'); // change to your website
   
   /*// Executes Navigation API within the page context
   const performanceEntries = JSON.parse(
@@ -48,10 +48,5 @@ export default async function foo(req, res) {
   res.statusCode = 200
   res.json({ name: 'John Doe' })
 }
-
-/*export default async (req, res) => {
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
-}*/
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
