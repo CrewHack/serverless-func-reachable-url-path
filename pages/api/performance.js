@@ -59,7 +59,7 @@ export default async function foo(req, res) {
   );*/
   
   res.statusCode = 200
-  res.json({ chromiumPath: "test" })
+  res.json({ chromiumPath: await chromium.executablePath })
 }
 
 //puppeteerPath: puppeteer.executablePath()
