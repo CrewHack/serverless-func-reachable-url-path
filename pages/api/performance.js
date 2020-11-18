@@ -38,7 +38,7 @@ export default async function foo(req, res) {
     {product: 'chrome'}
   );*/
   
-  const browser = await puppeteer.launch(); 
+  //const browser = await puppeteer.launch(); 
   /*{
     executablePath: process.env.PUPPETEER_EXEC_PATH,
     args: ['--no-sandbox']
@@ -55,7 +55,7 @@ export default async function foo(req, res) {
   );*/
   
   res.statusCode = 200
-  res.json({ name: 'John Doe' })
+  res.json({ puppeteerPath: puppeteer.executablePath() })
 }
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
