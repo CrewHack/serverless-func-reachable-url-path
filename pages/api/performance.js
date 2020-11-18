@@ -32,7 +32,7 @@ var performanceEntries, performanceTiming, callback;
   res.json({ performance: 'Performance Results4' })
 }*/
 
-async.function(function(response) {
+/*async.function(function(response) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://example.com'); // change to your website
@@ -46,7 +46,7 @@ async.function(function(response) {
     if( typeof callback == 'function' ){
         callback(performanceEntries);
     }
-});
+});*/
 
 /*module.exports = function(cb){
     if(typeof performanceEntries != 'undefined'){
