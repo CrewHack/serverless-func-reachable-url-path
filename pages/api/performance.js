@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+//const puppeteer = require('puppeteer');
 const chromium = require('chrome-aws-lambda');
 
 var performanceEntries, performanceTiming, callback;
@@ -35,12 +35,12 @@ var performanceEntries, performanceTiming, callback;
 
 export default async function foo(req, res) {
   
-  const browser = await puppeteer.launch(
+  /*const browser = await puppeteer.launch(
     {
       product: 'chrome',
       exexutablePath: await chromium.executablePath
     }
-  );
+  );*/
   
   //const browser = await puppeteer.launch(); 
   /*{
@@ -57,6 +57,31 @@ export default async function foo(req, res) {
           performance.getEntriesByType("navigation")[0]
       )) 
   );*/
+
+  let result = null;
+  let browser = null;
+ 
+  try {
+    browser = await chromium.puppeteer.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath,
+      headless: chromium.headless,
+      ignoreHTTPSErrors: true,
+    });
+ 
+    let page = await browser.newPage();
+ 
+    await page.goto(event.url || 'https://example.com');
+ 
+    result = await page.title();
+  } catch (error) {
+    return callback(error);
+  } finally {
+    if (browser !== null) {
+      await browser.close();
+    }
+  }
   
   res.statusCode = 200
   res.json({ chromiumPath: "test" })
