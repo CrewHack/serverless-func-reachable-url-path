@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 var performanceEntries, performanceTiming;
 
-/*(async () => {
+(async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://example.com'); // change to your website
@@ -24,12 +24,7 @@ var performanceEntries, performanceTiming;
 
   await browser.close();
 
-  export default (req, res) => {
-    res.statusCode = 200
-    res.json({ name: 'John Doe' })
-  }
-
-})();*/
+})();
 
 export default (req, res) => {
   res.statusCode = 200
