@@ -37,7 +37,7 @@ export default async function foo(req, res) {
   const browser = await puppeteer.launch(
     {
       product: 'chrome',
-      exexutablePath: "'"+puppeteer.executablePath()+"'"
+      exexutablePath: puppeteer.executablePath()
     }
   );
   
