@@ -1,5 +1,5 @@
 import chrome from "chrome-aws-lambda";
-import puppeteer from "puppeteer-core";
+import puppeteer from "puppeteer";
 const isDev = process.env.NODE_ENV === "development";
 /**
  * In order to have the function working in both windows and macOS
@@ -34,7 +34,7 @@ export const getOptions = async isDev => {
 export const getScreenshot = async url => {
 
   url = "https://allied-techs.com";
-  
+
   const options = await getOptions(isDev);
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
