@@ -56,16 +56,13 @@ var performanceEntries, performanceTiming, callback;
     }
 }*/
 
-// This function is async
-export default = async (req, res) => {
-  // This one is not though which means it can't use await inside
-  // return dispatch => {
-
-  // Instead it should likely be:
-  return async res => {
-    res.statusCode = 200
-    res.json({ name: 'John Doe' })
-  }
+async function doStuff(req, res) {
+   res.statusCode = 200
+   res.json({ name: 'John Doe' })
 }
+// doStuff is defined inside the module so we can call it wherever we want
+
+// Export it to make it available outside
+module.exports.doStuff = doStuff;
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
