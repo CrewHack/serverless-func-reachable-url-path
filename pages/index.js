@@ -56,6 +56,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
+        Vercel  
         </a>
       </footer>
     </div>
