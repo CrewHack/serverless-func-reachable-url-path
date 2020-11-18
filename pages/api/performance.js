@@ -36,7 +36,7 @@ export const getScreenshot = async (req, res) => {
   var url = "https://allied-techs.com";
 
   const options = await getOptions(isDev);
-  //const browser = await puppeteer.launch(options);
+  const browser = await puppeteer.launch(options);
   //const page = await browser.newPage();
   /**
    * Here we set the viewport manually to a big resolution
