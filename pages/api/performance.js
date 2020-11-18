@@ -1,8 +1,8 @@
 const puppeteer = require('puppeteer');
 
-var performanceEntries, performanceTiming;
+var performanceEntries, performanceTiming, callback;
 
-export default (req, res) => {
+/*export default (req, res) => {
 
 (async () => {
   const browser = await puppeteer.launch();
@@ -30,7 +30,30 @@ export default (req, res) => {
   
   res.statusCode = 200
   res.json({ performance: 'Performance Results4' })
+}*/
+
+async.function(function(response) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://example.com'); // change to your website
+  
+    const performanceEntries = JSON.parse(
+        await page.evaluate(() => JSON.stringify(
+            performance.getEntriesByType("navigation")[0]
+        )) 
+    );
+
+    if( typeof callback == 'function' ){
+        callback(performanceEntries);
+    }
+});
+
+module.exports = function(cb){
+    if(typeof performanceEntries != 'undefined'){
+        cb(performanceEntries); // If foo is already define, I don't wait.
+    } else {
+        callback = cb;
+    }
 }
 
-
-// https://serverless-func-reachable-url-path.vercel.app/api/hello
+// https://serverless-func-reachable-url-path.vercel.app/api/performance
