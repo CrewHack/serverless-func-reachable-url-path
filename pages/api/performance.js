@@ -28,7 +28,7 @@ var performanceEntries, performanceTiming;
 
 export default (req, res) => {
   res.statusCode = 200
-  res.json({ performance: 'Performance Results' })
+  res.json({ performance: 'Performance Results2' })
 }
 
 
