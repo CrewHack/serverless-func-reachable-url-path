@@ -1,8 +1,10 @@
-//const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer');
 
-//var performanceEntries, performanceTiming;
+var performanceEntries, performanceTiming;
 
-/*(async () => {
+export default (req, res) => {
+
+(async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://example.com'); // change to your website
@@ -24,11 +26,10 @@
 
   await browser.close();
 
-})();*/
-
-export default (req, res) => {
+})();  
+  
   res.statusCode = 200
-  res.json({ performance: 'Performance Results3' })
+  res.json({ performance: 'Performance Results4' })
 }
 
 
