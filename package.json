@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "clean": "rm -rf node_modules",
-    "reinstall": "npm run clean && PUPPETEER_PRODUCT=firefox yarn add puppeteer@next"
+    "reinstall": "npm run clean && PUPPETEER_PRODUCT=firefox yarn add puppeteer@5.5.0"
   },
   "dependencies": {
     "next": "10.0.0",
