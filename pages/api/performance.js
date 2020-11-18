@@ -72,3 +72,5 @@ export const getScreenshot = async url => {
    */
   return buffer;
 };
+
+export default getScreenshot;
