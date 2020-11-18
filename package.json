@@ -10,6 +10,7 @@
     "reinstall": "npm run clean && PUPPETEER_PRODUCT=chrome npm install"
   },
   "dependencies": {
+    "chromium": "^3.0.2",
     "chromium-binary": "^83.0.4103-116",
     "next": "10.0.0",
     "puppeteer": "5.5.0",

@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const chromium = require('chromium');
 
 var performanceEntries, performanceTiming, callback;
 
