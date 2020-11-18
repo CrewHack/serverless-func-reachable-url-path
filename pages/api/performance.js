@@ -1,4 +1,6 @@
 const puppeteer = require('puppeteer');
+const chromiumBinary = require('chromium-binary');
+const {execFile} = require('child_process');
 
 var performanceEntries, performanceTiming, callback;
 
@@ -34,12 +36,16 @@ var performanceEntries, performanceTiming, callback;
 
 export default async function foo(req, res) {
   
-  const browser = await puppeteer.launch(
+  /*const browser = await puppeteer.launch(
     {
       product: 'chrome',
       exexutablePath: puppeteer.executablePath()
     }
-  );
+  );*/
+
+  execFile(chromiumBinary.path, ['https://google.com'], err => {
+    console.log(chromiumBinary.path);
+  });
   
   //const browser = await puppeteer.launch(); 
   /*{
@@ -58,7 +64,9 @@ export default async function foo(req, res) {
   );*/
   
   res.statusCode = 200
-  res.json({ puppeteerPath: puppeteer.executablePath() })
+  res.json({ chromiumPath: chromiumBinary.path })
 }
+
+//puppeteerPath: puppeteer.executablePath()
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
