@@ -35,12 +35,12 @@ var performanceEntries, performanceTiming, callback;
 
 export default async function foo(req, res) {
   
-  /*const browser = await puppeteer.launch(
+  const browser = await puppeteer.launch(
     {
       product: 'chrome',
-      exexutablePath: puppeteer.executablePath()
+      exexutablePath: await chromium.executablePath
     }
-  );*/
+  );
   
   //const browser = await puppeteer.launch(); 
   /*{
@@ -59,7 +59,7 @@ export default async function foo(req, res) {
   );*/
   
   res.statusCode = 200
-  res.json({ chromiumPath: await chromium.executablePath })
+  res.json({ chromiumPath: "test" })
 }
 
 //puppeteerPath: puppeteer.executablePath()
