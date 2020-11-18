@@ -42,10 +42,6 @@ export default async function foo(req, res) {
       exexutablePath: puppeteer.executablePath()
     }
   );*/
-
-  execFile(chromiumBinary.path, ['https://google.com'], err => {
-    console.log(chromiumBinary.path);
-  });
   
   //const browser = await puppeteer.launch(); 
   /*{
