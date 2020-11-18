@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 const chromiumBinary = require('chromium-binary');
-const {execFile} = require('child_process');
 
 var performanceEntries, performanceTiming, callback;
 
