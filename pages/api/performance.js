@@ -33,7 +33,7 @@ var performanceEntries, performanceTiming, callback;
   res.json({ performance: 'Performance Results4' })
 }*/
 
-export default async function foo(req, res) {
+export default async function foo(req, res, callback, event, context) {
   
   /*const browser = await puppeteer.launch(
     {
@@ -85,6 +85,8 @@ export default async function foo(req, res) {
   
   res.statusCode = 200
   res.json({ chromiumPath: "test" })
+
+  return callback(null, result);
 }
 
 //puppeteerPath: puppeteer.executablePath()
