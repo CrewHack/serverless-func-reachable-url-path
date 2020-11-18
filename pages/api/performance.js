@@ -40,6 +40,6 @@ export default async function foo(req, res) {
 /*export default async (req, res) => {
   res.statusCode = 200
   res.json({ name: 'John Doe' })
-}/
+}*/
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
