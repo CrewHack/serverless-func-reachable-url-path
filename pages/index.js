@@ -6,6 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
+        <description>yep</description>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -15,7 +16,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          <h2>Get started by editing{' '}</h2>
           <code className={styles.code}>pages/index.js</code>
         </p>
 
