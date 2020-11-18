@@ -56,9 +56,16 @@ var performanceEntries, performanceTiming, callback;
     }
 }*/
 
-export default (req, res) => {
-  res.statusCode = 200
-  res.json({ name: 'Performance Results5' })
+// This function is async
+export const res = async () => {
+  // This one is not though which means it can't use await inside
+  // return dispatch => {
+
+  // Instead it should likely be:
+  return async res => {
+    res.statusCode = 200
+    res.json({ name: 'John Doe' })
+  }
 }
 
 // https://serverless-func-reachable-url-path.vercel.app/api/performance
