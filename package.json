@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "clean": "rm -rf node_modules", 
+    "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && npm install"
   },
   "dependencies": {
