@@ -38,12 +38,12 @@ export default async function foo(req, res) {
   const page = await browser.newPage();
   await page.goto('https://example.com'); // change to your website
   
-  // Executes Navigation API within the page context
+  /*// Executes Navigation API within the page context
   const performanceEntries = JSON.parse(
       await page.evaluate(() => JSON.stringify(
           performance.getEntriesByType("navigation")[0]
       )) 
-  );
+  );*/
   
   res.statusCode = 200
   res.json({ name: 'John Doe' })
