@@ -23,9 +23,9 @@ export default function Home() {
           onClick={() => {
             fetch('api/performance')
               .then(response => { 
-                response.json()
+                console.log(response)
               })
-              .then(data => console.log(data))
+              //.then(data => console.log(data))
           }}
         >
         Perform  
