@@ -14,6 +14,21 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">my App!</a>
         </h1>
 
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => {
+            fetch('api/performance')
+              .then(response => { 
+                console.log(response)
+                response.json()
+              })
+              .then(data => console.log(data))
+          }}
+        >
+        Perform  
+        </Button>
+
         <p className={styles.description}>
           <h2>Get started by editing{' '}</h2>
           <code className={styles.code}>pages/index.js</code>
