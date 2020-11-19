@@ -21,14 +21,14 @@ async function fetchData() {
     process(permission)
   })
 
-  /*const baseUrl = process.env.NEXT_PUBLIC_SERVERLESS_FUNCTIONS_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_SERVERLESS_FUNCTIONS_BASE_URL;
 
   const response = await fetch(baseUrl + '/api/performance');
 
   var myFetchedDataPre = await response.json();
   const myFetchedData = myFetchedDataPre.performanceEntries.name;
 
-  return { myFetchedData };*/
+  return { myFetchedData };
 }
 
 export default function Home(props) {
