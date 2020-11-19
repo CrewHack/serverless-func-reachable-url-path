@@ -23,7 +23,7 @@ export default function Home() {
           onClick={() => {
             fetch('api/performance')
               .then(response => { 
-                response
+                response.json()
               })
               .then(data => console.log(data))
           }}
