@@ -36,16 +36,22 @@ export default class MyDocument extends Document {
             h1 {
               text-align: center;
             }
-            `
+            @font-face {
+              font-family: 'Roboto';
+              src: url('/styles/fonts/Roboto-Regular.ttf');
+              font-weight: normal;
+              font-display: auto;
+              font-style: normal;
+            }            `
           }</style>
 
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
 
-          <link
+          {/*<link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
+          />*/}
           
         </Head>
         <body>
