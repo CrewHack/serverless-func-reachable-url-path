@@ -10,6 +10,7 @@
     "@material-ui/core": "next",
     "clsx": "latest",
     "next": "latest",
+    "next-pwa": "latest",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest"
