@@ -8,7 +8,10 @@ async function fetchData() {
 
   const process = (permission) => {
     if (permission === "granted") {
-      // ok we can show the permission
+      var n = new Notification('Title', {
+        body: 'We will keep you notified!',
+        //icon: '/path/to/icon.png' // optional
+      })
     }
   }
   
