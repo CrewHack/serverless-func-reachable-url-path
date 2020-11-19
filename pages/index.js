@@ -46,13 +46,13 @@ export default function Home(props) {
           color="secondary"
           onClick={refresh}
         >
-        {"Perfrom"}
+        Perform
         </Button>
 
-        <p className={styles.description}>
-          <h2>Get started by editing{' '}</h2>
+        <h2 className={styles.description}>
+          <p>Get started by editing{' '}</p>
           <code className={styles.code}>pages/index.js</code>
-        </p>
+        </h2>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
