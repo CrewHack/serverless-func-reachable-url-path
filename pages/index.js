@@ -45,7 +45,7 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">my PWA</a>
+          My <a href="https://nextjs.org">PWA</a>
         </h1>
 
         <strong>{myFetchedData}</strong>
