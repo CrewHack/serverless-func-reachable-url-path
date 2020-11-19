@@ -1,21 +1,25 @@
 {
   "name": "nextjs",
-  "version": "0.1.0",
+  "version": "5.0.0",
   "private": true,
+  "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@emotion/server": "latest",
+    "@material-ui/core": "next",
+    "clsx": "latest",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
     "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && PUPPETEER_PRODUCT=chrome npm install"
-  },
-  "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "chrome-aws-lambda": "^5.3.1",
-    "next": "10.0.0",
-    "next-pwa": "^3.1.5",
-    "puppeteer": "5.5.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
   }
 }
