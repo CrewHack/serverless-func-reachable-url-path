@@ -4,7 +4,7 @@ module.exports = withPWA({
   pwa: {
     disable: process.env.NODE_ENV === 'development',
     register: true,
-    scope: 'https://serverless-func-reachable-url-path.vercel.app/',
+    scope: '/',
     sw: 'sw.js',
   }
 })
