@@ -42,8 +42,9 @@ export default function Home(props) {
         <strong>{myFetchedData}</strong>
 
         <Button
-          variant="contained"
-          color="secondary"
+          /*variant="contained"
+          color="secondary"*/
+          classes={{ label: 'buttonLabel' }}
           onClick={refresh}
         >
         Perform
