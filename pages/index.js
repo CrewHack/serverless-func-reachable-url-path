@@ -5,14 +5,27 @@ import Link from 'next/link'
 import Button from '@material-ui/core/Button'
 
 async function fetchData() {
-  const baseUrl = process.env.NEXT_PUBLIC_SERVERLESS_FUNCTIONS_BASE_URL;
+
+  const process = (permission) => {
+    if (permission === "granted") {
+      // ok we can show the permission
+    }
+  }
+  
+  Notification.requestPermission((permission) => {
+    process(permission)
+  }).then((permission) => {
+    process(permission)
+  })
+
+  /*const baseUrl = process.env.NEXT_PUBLIC_SERVERLESS_FUNCTIONS_BASE_URL;
 
   const response = await fetch(baseUrl + '/api/performance');
 
   var myFetchedDataPre = await response.json();
   const myFetchedData = myFetchedDataPre.performanceEntries.name;
 
-  return { myFetchedData };
+  return { myFetchedData };*/
 }
 
 export default function Home(props) {
