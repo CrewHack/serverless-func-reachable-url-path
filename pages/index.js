@@ -6,21 +6,6 @@ import Button from '@material-ui/core/Button'
 
 async function fetchData() {
 
-  const process = (permission) => {
-    if (permission === "granted") {
-      var n = new Notification('Title', {
-        body: 'We will keep you notified!',
-        //icon: '/path/to/icon.png' // optional
-      })
-    }
-  }
-  
-  Notification.requestPermission((permission) => {
-    process(permission)
-  }).then((permission) => {
-    process(permission)
-  })
-
   const baseUrl = process.env.NEXT_PUBLIC_SERVERLESS_FUNCTIONS_BASE_URL;
 
   const response = await fetch(baseUrl + '/api/performance');
