@@ -32,6 +32,15 @@ export default function Home(props) {
       <Head>
         <title>App Title</title>
         <link rel="icon" href="/favicon.ico" />
+        {/*<meta
+            name='viewport'
+            content='minimum-scale=1, initial-scale=1, width=device-width'
+            key='viewport-meta'
+        />*/}
+        <meta 
+            name='viewport' 
+            content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover' 
+        /> 
       </Head>
 
       <main className={styles.main}>
@@ -42,8 +51,8 @@ export default function Home(props) {
         <strong>{myFetchedData}</strong>
 
         <Button
-          /*variant="contained"*/
-          color="#fafafa"
+          /*variant="contained"
+          color="secondary"*/
           classes={{ label: 'buttonLabel' }}
           onClick={refresh}
         >

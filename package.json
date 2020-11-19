@@ -13,6 +13,7 @@
     "@material-ui/core": "^4.11.0",
     "chrome-aws-lambda": "^5.3.1",
     "next": "10.0.0",
+    "next-pwa": "^3.1.5",
     "puppeteer": "5.5.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
