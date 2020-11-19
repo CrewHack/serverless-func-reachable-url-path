@@ -10,7 +10,9 @@
     "reinstall": "npm run clean && PUPPETEER_PRODUCT=chrome npm install"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "chrome-aws-lambda": "^5.3.1",
+    "material-ui": "^0.20.2",
     "next": "10.0.0",
     "puppeteer": "5.5.0",
     "react": "17.0.1",
