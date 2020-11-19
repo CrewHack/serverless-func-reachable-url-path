@@ -98,4 +98,4 @@ export default function Home(props) {
   )
 }
 
-Home.getInitialProps = fetchData;
+{/*Home.getInitialProps = fetchData;*/}
