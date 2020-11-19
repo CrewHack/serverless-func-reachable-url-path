@@ -1,10 +1,32 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import React from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Button from '@material-ui/core/Button'
 
-export default function Home() {
+async function fetchData() {
+  const baseUrl = process.env.NEXT_PUBLIC_SERVERLESS_FUNCTIONS_BASE_URL;
+
+  const response = await fetch(baseUrl + '/api/performance');
+
+  var myFetchedDataPre = await response.json();
+  const myFetchedData = myFetchedDataPre.performanceEntries.name;
+
+  return { myFetchedData };
+}
+
+export default function Home(props) {
+
+  const [
+    myFetchedData,
+    setMyFetchedData
+  ] = useState(props.myFetchedData);
+
+  async function refresh() {
+    const refreshedProps = await fetchData();
+    setMyFetchedData(refreshedProps.myFetchedData);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,21 +36,17 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">my App!</a>
+          Welcome to <a href="https://nextjs.org">my App</a>
         </h1>
+
+        <strong>{myFetchedData}</strong>
 
         <Button
           variant="contained"
           color="secondary"
-          onClick={() => {
-            fetch('api/performance')
-              .then(response => { 
-                response
-              })
-              .then(data => console.log(data.json()))
-          }}
+          onClick={refresh}
         >
-        Perform  
+        {"Perfrom"}
         </Button>
 
         <p className={styles.description}>
@@ -79,3 +97,5 @@ export default function Home() {
     </div>
   )
 }
+
+Home.getInitialProps = fetchData;

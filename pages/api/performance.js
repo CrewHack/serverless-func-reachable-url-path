@@ -32,7 +32,7 @@ export const getPerformance = async (req, res) => {
   const browser = await puppeteer.launch(options);
 
   const page = await browser.newPage();
-  await page.goto('https://example.com'); // change to your website
+  await page.goto(url); // change to your website
   
   const performanceEntries = JSON.parse(
       await page.evaluate(() => JSON.stringify(
