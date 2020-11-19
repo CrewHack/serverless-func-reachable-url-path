@@ -6,8 +6,13 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 
+const useStyles = makeStyles(theme => ({
+  offset: theme.mixins.toolbar,
+}))
+
 export default function MyApp(props) {
   const { Component, pageProps } = props;
+  const classes = useStyles();
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -27,8 +32,8 @@ export default function MyApp(props) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <PrimarySearchAppBar />
-           <Component {...pageProps} />
-        
+        <div className={classes.offset} />
+        <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>
   );
