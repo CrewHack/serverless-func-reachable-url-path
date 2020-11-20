@@ -34,9 +34,9 @@ export default class Image extends Component {
     const {
       src: _1,
       fallbackSrc: _2,
-      width: _3,
-      height: _4,
-      newSrc: _5,
+      //width: _3,
+      //height: _4,
+      newSrc: _3,
       ...props
     } = this.props;
 
