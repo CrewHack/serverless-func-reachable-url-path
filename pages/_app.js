@@ -25,7 +25,7 @@ export default function MyApp(props) {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
-      $("#jss-server-side").remove();
+      jss.remove();
       //console.log(jssStyles);
       jssStyles.parentElement.removeChild(jssStyles);
     }
