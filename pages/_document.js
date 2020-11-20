@@ -13,8 +13,10 @@ export default class MyDocument extends Document {
       gtmId: 'GTM-WNXSTVT'
     }
     
-    TagManager.initialize(tagManagerArgs)
-    
+    if (process.browser) {
+      TagManager.initialize(tagManagerArgs)
+    }
+
     return (
       <Html lang="en">
         <Head>
