@@ -10,9 +10,13 @@ const APP_DESCRIPTION = 'This is an example of using next-pwa plugin.'
 export default class MyDocument extends Document {
   render() {
 
+    if (process.browser) {
+    React.useEffect(() => {
     TagManager.initialize({
       id: 'GTM-WNXSTVT'
     })
+    }, []);
+    }
 
     return (
       <Html lang="en">
