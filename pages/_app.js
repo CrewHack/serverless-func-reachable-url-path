@@ -27,6 +27,8 @@ export default function MyApp(props) {
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
+    console.log("hi");
+    
     TagManager.initialize(tagManagerArgs)
   }, []);
 
