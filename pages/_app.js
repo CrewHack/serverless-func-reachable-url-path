@@ -1,6 +1,5 @@
 import App, { Container } from 'next/app'
 import React from 'react'
-import './app.css'
 import TagManager from 'react-gtm-module'
 
 const tagManagerArgs = {
