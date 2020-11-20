@@ -39,8 +39,8 @@ if (node.parentNode) {
 
     }
 
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) {
+    const jssStylesNew = document.querySelector('#jss-server-side');
+    if (jssStylesNew && jssStylesNew.parentNode) {
       console.log("nope");
     }
     else
