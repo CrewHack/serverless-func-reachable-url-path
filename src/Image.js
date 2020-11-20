@@ -11,7 +11,8 @@ export default class Image extends Component {
     };
   }
 
-  onError = () => {
+  onError = (e) => {
+    console.log(e);
     if (!this.state.errored) {
       this.setState({
         src: this.props.fallbackSrc,
