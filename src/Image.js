@@ -12,7 +12,6 @@ export default class Image extends Component {
   }
 
   onError = (e) => {
-    console.log(e);
     if (!this.state.errored) {
       this.setState({
         src: this.props.fallbackSrc,
@@ -36,6 +35,8 @@ export default class Image extends Component {
       src: _1,
       fallbackSrc: _2,
       width: _3,
+      height: _4,
+      newSrc: _5,
       ...props
     } = this.props;
 
