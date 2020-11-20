@@ -21,6 +21,11 @@ export default function MyApp(props) {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
+
+      var btn = document.createElement("BUTTON");   // Create a <button> element
+btn.innerHTML = "CLICK ME";                   // Insert text
+document.body.appendChild(btn);               // Append <button> to <body>
+
     }
   }, []);
 
