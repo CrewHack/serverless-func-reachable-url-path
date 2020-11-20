@@ -23,7 +23,10 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
-    TagManager.initialize(tagManagerArgs)
+    TagManager.initialize({
+      id: 'GTM-WNXSTVT'
+    }
+    )
 
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
