@@ -4,7 +4,7 @@ import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../src/theme';
 
 const APP_NAME = 'next-pwa example'
-const APP_DESCRIPTION = 'This is an example of using next-pwa plugin'
+const APP_DESCRIPTION = 'This is an example of using next-pwa plugin.'
 
 export default class MyDocument extends Document {
   render() {
