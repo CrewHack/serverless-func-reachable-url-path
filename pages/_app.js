@@ -28,8 +28,8 @@ export default function MyApp(props) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
     console.log("hi");
-    
-    TagManager.initialize(tagManagerArgs)
+
+    //TagManager.initialize(tagManagerArgs)
   }, []);
 
   return (
