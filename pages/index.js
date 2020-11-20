@@ -24,8 +24,6 @@ export default function Index() {
             newSrc = "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
             width = "0px"
             height = "0px"
-            /*display = "none"
-            visibility = "hidden"*/
         >   
         </Image>
     
