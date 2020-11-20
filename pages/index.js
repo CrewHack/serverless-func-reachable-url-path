@@ -25,7 +25,7 @@ export default function Index() {
             width = "0px"
             height = "0px"
             /*display = "none"
-  visibility = "hidden"*/
+            visibility = "hidden"*/
         >   
         </Image>
     
