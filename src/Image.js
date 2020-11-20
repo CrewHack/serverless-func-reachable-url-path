@@ -21,6 +21,15 @@ export default class Image extends Component {
     }
   }
 
+  onLoad = () => {
+    if (!this.state.errored) {
+      this.setState({
+        src: this.props.newSrc,
+        errored: false,
+      });
+    }
+  }
+
   render() {
     const { src } = this.state;
     const {
@@ -33,9 +42,10 @@ export default class Image extends Component {
       <img
         src={src}
         onError={this.onError}
+        onLoad={this.onLoad}
         width={props.width}
         height={props.height}
-        display={props.display}
+        //display={props.display}
         //visbility={props.visibility}
         {...props}
       />
@@ -46,6 +56,7 @@ export default class Image extends Component {
 Image.propTypes = {
   src: PropTypes.string,
   fallbackSrc: PropTypes.string,
+  newSrc: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
   display: PropTypes.string,

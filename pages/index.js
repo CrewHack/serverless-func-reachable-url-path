@@ -21,10 +21,11 @@ export default function Index() {
         <Image 
             src = "https://accounts.google.com/CheckCookie?continue=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png&followup=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png&chtml=LoginDoneHtml&checkedDomains=youtube&checkConnection=youtube%3A291%3A1"
             fallbackSrc = "/images/nogoog.png"
+            newSrc = "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
             width = "0px"
             height = "0px"
-            display = "none"
-            visibility = "hidden"
+            /*display = "none"
+  visibility = "hidden"*/
         >   
         </Image>
     
