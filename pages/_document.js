@@ -8,15 +8,22 @@ const APP_NAME = 'next-pwa example'
 const APP_DESCRIPTION = 'This is an example of using next-pwa plugin.'
 
 export default class MyDocument extends Document {
-  render() {
 
-    if (process.browser) {
-    React.useEffect(() => {
-    TagManager.initialize({
+  componentDidMount () {
+    var test = TagManager.initialize({
       id: 'GTM-WNXSTVT'
     })
-    }, []);
-    }
+
+    console.log(test);
+
+    console.log(document.getElementsByTagName("script"));
+  }
+
+  render() {
+
+    /*if (process.browser) {
+    
+    }*/
 
     return (
       <Html lang="en">
