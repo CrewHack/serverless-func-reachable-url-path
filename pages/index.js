@@ -34,8 +34,6 @@ export default function Index() {
     
         <ProTip />
 
-       
-
       </Box>
       <Copyright />
     </Container>
