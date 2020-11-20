@@ -7,14 +7,14 @@ import TagManager from 'react-gtm-module'
 const APP_NAME = 'next-pwa example'
 const APP_DESCRIPTION = 'This is an example of using next-pwa plugin.'
 
-const tagManagerArgs = {
-  gtmId: 'GTM-WNXSTVT'
-}
-
-TagManager.initialize(tagManagerArgs)
-
 export default class MyDocument extends Document {
   render() {
+    const tagManagerArgs = {
+      gtmId: 'GTM-WNXSTVT'
+    }
+    
+    TagManager.initialize(tagManagerArgs)
+    
     return (
       <Html lang="en">
         <Head>
