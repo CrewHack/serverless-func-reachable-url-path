@@ -8,10 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 import TagManager from 'react-gtm-module'
 
-const tagManagerArgs = {
-  id: 'GTM-WNXSTVT'
-}
-
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
 }))
@@ -23,10 +19,7 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
-    TagManager.initialize({
-      id: 'GTM-WNXSTVT'
-    }
-    )
+    TagManager.initialize('GTM-WNXSTVT');
 
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
