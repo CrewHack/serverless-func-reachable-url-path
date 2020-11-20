@@ -13,8 +13,6 @@ export default function Index() {
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
           URLTools.io
-
-
         </Typography>
 
         <Link href="/about" color="primary">
