@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import SvgIcon from '@material-ui/core/SvgIcon';
@@ -12,24 +12,45 @@ function LightBulbIcon(props) {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    margin: theme.spacing(6, 0, 3),
-  },
-  lightBulb: {
-    verticalAlign: 'middle',
-    marginRight: theme.spacing(1),
-  },
-}));
+const textArray = ['eat', 'sleep', 'drink', 'snore', 'foo', 'buzz', 'whatever'];
 
-export default function ProTip() {
-  const classes = useStyles();
-  return (
-    <Typography className={classes.root} color="textSecondary">
-      <LightBulbIcon className={classes.lightBulb} />
-      Pro tip: See more{' '}
-      <Link href="https://material-ui.com/getting-started/templates/">templates</Link> on the
-      Material-UI documentation.
-    </Typography>
-  );
+class ProTip extends Component {
+  constructor() {
+    super();
+    this.state = { textIdx: 0 };
+  }
+
+  componentDidMount() {
+    this.timeout = setInterval(() => {
+      let currentIdx = this.state.textIdx;
+      this.setState({ textIdx: currentIdx + 1 });
+    }, 1500);
+  }
+
+  componentDidUnmount() {
+    clearInterval(this.timeout);
+  }
+
+  render() {
+    let textThatChanges = textArray[this.state.textIdx % textArray.length];
+
+    const classes = makeStyles((theme) => ({
+      root: {
+        margin: theme.spacing(6, 0, 3),
+      },
+      lightBulb: {
+        verticalAlign: 'middle',
+        marginRight: theme.spacing(1),
+      },
+    }));
+
+    return (
+      <Typography className={classes.root} color="textSecondary">
+        <LightBulbIcon className={classes.lightBulb} />
+        Did you know?: {textThatChanges}
+      </Typography>
+    )
+  }
 }
+
+export default ProTip;

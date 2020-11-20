@@ -175,14 +175,14 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            URLTools.io
+            URLpow!
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Enter URL to scan"
+              placeholder="Enter URL"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
