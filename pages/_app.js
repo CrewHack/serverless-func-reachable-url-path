@@ -33,7 +33,7 @@ export default function MyApp(props) {
 
     const jssStylesNew = document.querySelector('#jss-server-side');
     if (jssStylesNew && jssStylesNew.parentNode) {
-      console.log("nope");
+      console.log("nopess");
     }
     else
     {
