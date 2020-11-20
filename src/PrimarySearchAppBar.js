@@ -182,7 +182,7 @@ export default function PrimarySearchAppBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Enter URL"
+              placeholder="Enter URL to measure power"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
