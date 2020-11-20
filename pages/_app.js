@@ -6,12 +6,18 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import { makeStyles } from '@material-ui/core/styles';
 import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
+import TagManager from 'react-gtm-module'
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
 }))
 
+const tagManagerArgs = {
+  gtmId: 'GTM-WNXSTVT'
+}
+
 export default function MyApp(props) {
+  
   const { Component, pageProps } = props;
   const classes = useStyles();
 
@@ -21,6 +27,7 @@ export default function MyApp(props) {
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
+    TagManager.initialize(tagManagerArgs)
   }, []);
 
   return (

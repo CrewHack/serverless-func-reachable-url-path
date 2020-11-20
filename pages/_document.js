@@ -2,21 +2,12 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../src/theme';
-import TagManager from 'react-gtm-module'
 
 const APP_NAME = 'next-pwa example'
 const APP_DESCRIPTION = 'This is an example of using next-pwa plugin.'
 
 export default class MyDocument extends Document {
   render() {
-    const tagManagerArgs = {
-      gtmId: 'GTM-WNXSTVT'
-    }
-    
-    if (process.browser) {
-      TagManager.initialize(tagManagerArgs)
-    }
-
     return (
       <Html lang="en">
         <Head>
