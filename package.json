@@ -5,18 +5,19 @@
   "dependencies": {
     "@emotion/cache": "latest",
     "@emotion/react": "latest",
-    "@emotion/styled": "latest",
     "@emotion/server": "latest",
+    "@emotion/styled": "latest",
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
+    "chrome-aws-lambda": "latest",
     "clsx": "latest",
     "next": "latest",
     "next-pwa": "latest",
     "prop-types": "latest",
+    "puppeteer": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "chrome-aws-lambda": "latest",
-    "puppeteer": "latest"
+    "react-gtm-module": "^2.0.11"
   },
   "scripts": {
     "dev": "next dev",
