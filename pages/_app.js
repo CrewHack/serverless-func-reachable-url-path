@@ -25,7 +25,7 @@ export default function MyApp(props) {
 
       jssStyles.parentElement.removeChild(jssStyles);
 
-      var btn = document.createElement("BUTTON");   // Create a <button> element
+      /*var btn = document.createElement("BUTTON");   // Create a <button> element
 btn.innerHTML = "CLICK ME";                   // Insert text
 btn.id = "test";
 document.body.appendChild(btn);               // Append <button> to <body>
@@ -33,9 +33,21 @@ document.body.appendChild(btn);               // Append <button> to <body>
 let node = document.getElementById("test");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
-}
+}*/
+
+
 
     }
+
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles && jssStyles.parentNode) {
+      console.log("nope");
+    }
+    else
+    {
+      console.log("removed");
+    }
+
   }, []);
 
   return (
