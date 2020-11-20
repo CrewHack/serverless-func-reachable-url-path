@@ -16,8 +16,7 @@
     "prop-types": "latest",
     "puppeteer": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "react-gtm-module": "^2.0.11"
+    "react-dom": "latest"
   },
   "scripts": {
     "dev": "next dev",
