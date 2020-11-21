@@ -58,7 +58,7 @@ function Index(props) {
         <CardContent>
         <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
 
-        <span>&nbsp;&nbsp;</span>
+        {/*<span>&nbsp;&nbsp;</span>*/}
         </CardContent>
         <CardActions>
         {/*style={{backgroundColor: ""}}*/}
