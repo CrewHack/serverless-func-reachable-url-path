@@ -6,7 +6,7 @@ import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Image from '../src/Image';
-import {Input, TextField} from '@material-ui/core/Input';
+import {TextField} from '@material-ui/core/TextField';
 import MUICookieConsent from 'material-ui-cookie-consent';
 
 export default function Index() {
@@ -28,7 +28,7 @@ export default function Index() {
           Measure any URL's power.
         </Typography>
 
-        <Input fullWidth></Input>
+        {/*<Input fullWidth></Input>*/}
 
         <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
 
