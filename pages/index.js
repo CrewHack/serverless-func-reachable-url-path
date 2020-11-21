@@ -7,6 +7,7 @@ import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Image from '../src/Image';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import MUICookieConsent from 'material-ui-cookie-consent';
 
 export default function Index() {
@@ -17,7 +18,7 @@ export default function Index() {
         <MUICookieConsent 
             cookieName="mySiteCookieConsent"
             componentType="Dialog" // default value is Snackbar
-            message="This site uses cookies. Click 'Accept' to continue to site."
+            message="This site uses cookies. Click 'Accept' to continue to site. GDPR, done."
         />
 
         <Typography align="left" variant="h1" component="h1" gutterBottom>
@@ -31,6 +32,8 @@ export default function Index() {
         {/*<Input fullWidth></Input>*/}
 
         <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
+
+        <Button fullwidth label="Measure URL power"/>
 
         {/*<Link href="/about" color="primary">
           Go to the about page
