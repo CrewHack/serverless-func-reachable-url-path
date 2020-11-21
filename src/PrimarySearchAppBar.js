@@ -134,15 +134,15 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge badgeContent={4} color="warning">
             <MailIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+        <IconButton aria-label="show 2 new notifications" color="inherit">
+          <Badge badgeContent={2} color="warning">
             <NotificationsIcon />
           </Badge>
         </IconButton>
