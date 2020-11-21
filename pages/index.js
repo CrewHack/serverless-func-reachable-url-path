@@ -66,6 +66,8 @@ function Index(props) {
         </CardActions>
         </Card>
 
+        <span>&nbsp;&nbsp;</span>
+        
         <Card style={{backgroundColor: "#ebeff2"}} className={classes.card}>
         <CardContent>
         Your results will appear here.
