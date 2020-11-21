@@ -66,6 +66,15 @@ function Index(props) {
         </CardActions>
         </Card>
 
+        <Card style={{backgroundColor: "#ebeff2"}} className={classes.card}>
+        <CardContent>
+        Your results will appear here.
+        </CardContent>
+        <CardActions>
+
+        </CardActions>
+        </Card>
+
         {/*<Link href="/about" color="primary">
           Go to the about page
         </Link>*/}
