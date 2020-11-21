@@ -45,10 +45,13 @@ class ProTip extends Component {
     }));
 
     return (
+      <span>
+      <span>&nbsp;&nbsp;</span>
       <Typography className={classes.root} color="textSecondary">
-        <LightBulbIcon className={classes.lightBulb} />
+        <LightBulbIcon color="primary" className={classes.lightBulb} />
         Did you know?: {textThatChanges}
       </Typography>
+      </span>
     )
   }
 }
