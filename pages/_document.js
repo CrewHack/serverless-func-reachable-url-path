@@ -11,10 +11,10 @@ export default class MyDocument extends Document {
   render() {
 
     var fonts = "";
-    if (!process.browser) // SSR
-    {
+    //if (!process.browser) // SSR
+    //{
       fonts = <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>;
-    }
+    //}
     
 
     return (
@@ -68,7 +68,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
 
           {fonts}
-          {/*<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/></noscript>*/}
+          <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/></noscript>
           
         </Head>
         <body>
