@@ -24,7 +24,7 @@ class ProTip extends Component {
     this.timeout = setInterval(() => {
       let currentIdx = this.state.textIdx;
       this.setState({ textIdx: currentIdx + 1 });
-    }, 3000);
+    }, 3500);
   }
 
   componentDidUnmount() {
