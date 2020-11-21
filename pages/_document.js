@@ -13,16 +13,13 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
 
-        <link href="https://www.googletagmanager.com/gtag/js?id=GTM-WNXSTVT" rel="preload" as="script"/>
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com/" ></link>  
+        {/*<link href="https://www.googletagmanager.com/gtag/js?id=GTM-WNXSTVT" rel="preload" as="script"/>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com/" ></link>*/}  
 
         {/* Google Tag Manager HEAD snippet*/}
-        <script dangerouslySetInnerHTML={
+        <script defer dangerouslySetInnerHTML={
             {
-                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var
-                f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-WNXSTVT');</script>`,
+                __html: `(function(p,i,c,o){var n=new Event("pico-init");i[p]=i[p]||function(){(i[p].queue=i[p].queue||[]).push(arguments)},i.document.addEventListener("pico-init",function(e){var t=i.Pico.getInstance(e,{publisherId:o,picoInit:n},i);t.handleQueueItems(i[p].queue),i[p]=function(){return t.handleQueueItems([arguments])}},!1);var e=i.document.createElement("script"),t=i.document.getElementsByTagName("script")[0];e.async=1,e.src=c,e.onload=function(e){return i.Pico.getInstance(e,{publisherId:o,picoInit:n},i)},t.parentNode.insertBefore(e,t)})("pico",window,"https://widget.pico.tools/wrapper.min.js","48ee8702-11f8-4645-8cf3-624de738b7ed");</script>`,
             }
         }
         />
@@ -64,6 +61,8 @@ export default class MyDocument extends Document {
           
         </Head>
         <body>
+
+          
             {/* <!-- Google Tag Manager BODY snippet (noscript) --> */}
             <noscript dangerouslySetInnerHTML={
                 {
@@ -73,6 +72,26 @@ export default class MyDocument extends Document {
                 }
             }
            />
+
+<script defer dangerouslySetInnerHTML={
+            {
+                __html: `var pageInfo = {
+                  article: true,
+                  post_id: "1",
+                  post_type: "article",
+                  taxonomies: {
+                      tags: ["test-tag"],
+                      categories: ["test-category"]
+                  },
+                  url: window.location.href
+              };
+          
+              window.pico('visit', pageInfo);
+          </script>`,
+            }
+        }
+        />
+
            {/* <!-- End Google Tag Manager BODY snippet (noscript) --> */}
           <Main />
           <NextScript />
