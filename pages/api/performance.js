@@ -46,9 +46,13 @@ export const getPerformance = async (req, res) => {
     )) 
   );*/
 
-  //save to DB
+  //save to Bubble DB
   const response = await fetch("https://marketheart.allied-techs.com/api/1.1/obj/Urls");
   var myFetchedData = await response.json();
+
+  //trigger Bubble Workflow
+  var baseUrl = "https://marketheart.allied-techs.com/api/1.1/wf/testendpoint?url=";
+  const response = await fetch();
 
   res.statusCode = 200
   res.json(myFetchedData)

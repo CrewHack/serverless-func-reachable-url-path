@@ -13,6 +13,9 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
 
+        <link href="https://www.googletagmanager.com/gtag/js?id=GTM-WNXSTVT" rel="preload" as="script"/>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com/" ></link>  
+
         {/* Google Tag Manager HEAD snippet*/}
         <script dangerouslySetInnerHTML={
             {
