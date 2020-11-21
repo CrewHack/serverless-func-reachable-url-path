@@ -31,7 +31,7 @@ export default function Index() {
 
         {/*<Input fullWidth></Input>*/}
 
-        <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
+        <TextField fullWidth id="standard-basic" label="Enter URL to measure power (incl. http:// or https://" />
 
         <Button fullWidth color="primary" variant="contained">Measure URL power</Button>
 
