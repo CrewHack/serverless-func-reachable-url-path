@@ -6,7 +6,7 @@ import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Image from '../src/Image';
-import {TextField} from '@material-ui/core/Input';
+import TextField from '@material-ui/core/TextField';
 import MUICookieConsent from 'material-ui-cookie-consent';
 
 export default function Index() {
