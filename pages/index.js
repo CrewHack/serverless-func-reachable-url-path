@@ -33,6 +33,8 @@ export default function Index() {
 
         <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
 
+        <span>&nbsp;&nbsp;</span>
+
         {/*style={{backgroundColor: ""}}*/}
         <Button fullWidth color="primary" variant="contained">Measure URL power</Button>
 
