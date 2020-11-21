@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
+    //display: 'none',
+    //[theme.breakpoints.up('sm')]: {
       display: 'block',
-    },
+    //},
   },
   search: {
     position: 'relative',
@@ -174,7 +174,7 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={classes.title} variant="h6">
             URLpow!
           </Typography>
           {/*<div className={classes.search}>
@@ -190,7 +190,7 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
             </div>*/}
-          {/*<div className={classes.grow} />*/}
+          <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">

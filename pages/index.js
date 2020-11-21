@@ -17,7 +17,7 @@ export default function Index() {
       <MUICookieConsent 
   cookieName="mySiteCookieConsent"
   componentType="Dialog" // default value is Snackbar
-  message="This site uses cookies.... bla bla..."
+  message="This site uses cookies. You accept. Unless you don't. Otherwise, you do. Cool? Click 'Accept' to continue to site."
 />
 
         <Typography align="left" variant="h1" component="h1" gutterBottom>
@@ -28,7 +28,7 @@ export default function Index() {
           Measure any URL's power.
         </Typography>
 
-        <Input></Input>
+        <Input fullWidth></Input>
 
         {/*<Link href="/about" color="primary">
           Go to the about page
