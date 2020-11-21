@@ -15,7 +15,6 @@ export default function Index() {
       <Box my={4}>
 
         <MUICookieConsent 
-            color="primary"
             cookieName="mySiteCookieConsent"
             componentType="Dialog" // default value is Snackbar
             message="This site uses cookies. Click 'Accept' to continue to site."
