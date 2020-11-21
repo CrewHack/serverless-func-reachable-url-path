@@ -193,12 +193,12 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 0 new mails" color="inherit">
-              <Badge badgeContent={4} color="warning.light">
+              <Badge badgeContent={4} color="warning">
                 <MailIcon />
               </Badge>
             </IconButton>
             <IconButton aria-label="show 2 new notifications" color="inherit">
-              <Badge badgeContent={17} color="warning.light">
+              <Badge badgeContent={17} color="warning">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

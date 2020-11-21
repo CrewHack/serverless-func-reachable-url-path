@@ -20,7 +20,7 @@ const theme = createMuiTheme({
       default: '#fff',
     },
     warning: {
-      light: '#fdf731',
+      main: '#fdf731',
     }
   },
 });
