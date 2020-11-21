@@ -9,8 +9,33 @@ import Image from '../src/Image';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import MUICookieConsent from 'material-ui-cookie-consent';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 
-export default function Index() {
+const styles = {
+  card: {
+    minWidth: 275,
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+};
+
+function Index(props) {
+
+  const { classes } = props;
+
   return (
     <Container maxWidth="sm">
       <Box my={4}>
@@ -29,14 +54,17 @@ export default function Index() {
           Measure any URL's power.
         </Typography>
 
-        {/*<Input fullWidth></Input>*/}
-
+        <Card className={classes.card}>
+        <CardContent>
         <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
 
         <span>&nbsp;&nbsp;</span>
-
+        </CardContent>
+        <CardActions>
         {/*style={{backgroundColor: ""}}*/}
         <Button fullWidth color="primary" variant="contained">Measure URL power</Button>
+        </CardActions>
+        </Card>
 
         {/*<Link href="/about" color="primary">
           Go to the about page
@@ -58,3 +86,9 @@ export default function Index() {
     </Container>
   );
 }
+
+Index.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Index);
