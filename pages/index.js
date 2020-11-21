@@ -14,11 +14,11 @@ export default function Index() {
     <Container maxWidth="sm">
       <Box my={4}>
 
-      <MUICookieConsent 
-  cookieName="mySiteCookieConsent"
-  componentType="Dialog" // default value is Snackbar
-  message="This site uses cookies. You accept. Unless you don't. Otherwise, you do. Cool? Click 'Accept' to continue to site."
-/>
+        <MUICookieConsent 
+            cookieName="mySiteCookieConsent"
+            componentType="Dialog" // default value is Snackbar
+            message="This site uses cookies. Click 'Accept' to continue to site."
+        />
 
         <Typography align="left" variant="h1" component="h1" gutterBottom>
           Welcome.
