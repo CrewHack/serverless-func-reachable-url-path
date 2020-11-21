@@ -26,7 +26,7 @@ export const getOptions = async isDev => {
 
 export const getPerformance = async (req, res) => {
 
-  var url = "https://allied-techs.com";
+  /*var url = "https://allied-techs.com";
 
   const options = await getOptions(isDev);
   const browser = await puppeteer.launch(options);
@@ -44,10 +44,15 @@ export const getPerformance = async (req, res) => {
     await page.evaluate(() => JSON.stringify(
         performance.timing
     )) 
-  );
+  );*/
+
+  //save to DB
+  const response = await fetch("https://marketheart.allied-techs.com/version-test/api/1.1/Urls");
+  var myFetchedData = await response.json();
 
   res.statusCode = 200
-  res.json({ performanceEntries: performanceEntries })
+  res.json(myFetchedData)
+  //myFetchedData
 
   return { res };
 };
