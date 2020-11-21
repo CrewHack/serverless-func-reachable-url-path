@@ -9,11 +9,18 @@ const APP_DESCRIPTION = 'This is an example of using next-pwa plugin.'
 export default class MyDocument extends Document {
 
   render() {
+
+    var fonts = "";
+    if (!process.browser) // SSR
+    {
+      fonts = <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>;
+    }
+    
+
     return (
       <Html lang="en">
         <Head>
 
-        {/*<link href="https://www.googletagmanager.com/gtag/js?id=GTM-WNXSTVT" rel="preload" as="script"/>*/}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com/" ></link> 
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" ></link>  
 
@@ -60,8 +67,8 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
 
-          <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-          <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/></noscript>
+          {fonts}
+          {/*<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/></noscript>*/}
           
         </Head>
         <body>

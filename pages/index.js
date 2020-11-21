@@ -7,11 +7,19 @@ import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Image from '../src/Image';
 import Input from '@material-ui/core/Input';
+import MUICookieConsent from 'material-ui-cookie-consent';
 
 export default function Index() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
+
+      <MUICookieConsent 
+  cookieName="mySiteCookieConsent"
+  componentType="Dialog" // default value is Snackbar
+  message="This site uses cookies.... bla bla..."
+/>
+
         <Typography align="left" variant="h1" component="h1" gutterBottom>
           Welcome.
         </Typography>
