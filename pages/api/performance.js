@@ -47,7 +47,7 @@ export const getPerformance = async (req, res) => {
   );*/
 
   //save to DB
-  const response = await fetch("https://marketheart.allied-techs.com/version-test/api/1.1/obj/Urls");
+  const response = await fetch("https://marketheart.allied-techs.com/version-test/api/1.1/obj/urls");
   var myFetchedData = await response.json();
 
   res.statusCode = 200
