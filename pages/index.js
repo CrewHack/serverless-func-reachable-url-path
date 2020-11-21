@@ -33,7 +33,7 @@ export default function Index() {
 
         <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
 
-        <Button fullWidth color="error" variant="contained">Measure URL power</Button>
+        <Button fullWidth style={{backgroundColor: "#fdf731"}} variant="contained">Measure URL power</Button>
 
         {/*<Link href="/about" color="primary">
           Go to the about page
