@@ -14,13 +14,13 @@ const theme = createMuiTheme({
       //secondary: '#e93f33'
     },
     error: {
-      main: red.A400,
+      main: yellow.A400,
     },
     background: {
       default: '#fff',
     },
     warning: {
-      main: '#fdf731',
+      main: red.A400,
     }
   },
 });
