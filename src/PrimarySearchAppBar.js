@@ -134,7 +134,7 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton aria-label="show 2 new mails" color="inherit">
-          <Badge badgeContent={2} color="warning">
+          <Badge badgeContent={2} color={theme.palette.warning}>
             <MailIcon />
           </Badge>
         </IconButton>
@@ -142,7 +142,7 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 3 new notifications" color="inherit">
-          <Badge badgeContent={3} color="warning">
+          <Badge badgeContent={3} color={theme.palette.warning}>
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -193,12 +193,12 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 2 new mails" color="inherit">
-              <Badge badgeContent={2} color="warning">
+              <Badge badgeContent={2} color={theme.palette.warning}>
                 <MailIcon />
               </Badge>
             </IconButton>
             <IconButton aria-label="show 3 new notifications" color="inherit">
-              <Badge badgeContent={3} color="warning">
+              <Badge badgeContent={3} color={theme.palette.warning}>
                 <NotificationsIcon />
               </Badge>
             </IconButton>
