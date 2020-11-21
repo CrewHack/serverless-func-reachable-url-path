@@ -30,6 +30,8 @@ export default function Index() {
 
         <Input fullWidth></Input>
 
+        <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
+
         {/*<Link href="/about" color="primary">
           Go to the about page
         </Link>*/}
