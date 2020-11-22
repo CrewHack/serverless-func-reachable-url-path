@@ -48,7 +48,7 @@ function Index(props) {
         />
 
         <Typography align="left" variant="h1" component="h1" gutterBottom>
-          <PowerIcon />
+          <PowerIcon fontSize="inherit"/>
           URLpow
         </Typography>
 
