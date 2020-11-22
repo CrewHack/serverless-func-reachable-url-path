@@ -15,6 +15,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import PowerIcon from '@material-ui/icons/Power';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -175,6 +176,7 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6">
+            <PowerIcon />
             URLpow
           </Typography>
           {/*<div className={classes.search}>
