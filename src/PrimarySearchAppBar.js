@@ -175,8 +175,8 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6">
-            <PowerIcon />
+          <Typography style={{color: "#FFFFFF"}} className={classes.title} variant="h6">
+            <PowerIcon style={{color: "#FFFFFF"}}/>
             URLpow
           </Typography>
           {/*<div className={classes.search}>
