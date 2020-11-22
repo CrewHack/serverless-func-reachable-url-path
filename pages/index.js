@@ -14,6 +14,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import PowerIcon from '@material-ui/icons/Power';
 
 const styles = {
   card: {
@@ -47,7 +48,8 @@ function Index(props) {
         />
 
         <Typography align="left" variant="h1" component="h1" gutterBottom>
-          Welcome.
+          <PowerIcon />
+          URLpow
         </Typography>
 
         <Typography variant="h2" component="h2" gutterBottom>

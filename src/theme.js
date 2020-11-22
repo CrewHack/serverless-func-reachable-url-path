@@ -8,13 +8,13 @@ const theme = createMuiTheme({
       main: '#e93f33', // #1976d2
     },
     secondary: {
-      main: '#ee7e33', // #fdf731 // #65aff7
+      main: '#7FFF00', // #ee7e33 // #fdf731 // #65aff7
     },
     text: {
       //secondary: '#e93f33'
     },
     error: {
-      main: yellow.A400,
+      main: '#ADFF2F',// yellow.A400,
     },
     background: {
       default: '#fff',
