@@ -43,7 +43,7 @@ function Index(props) {
 
         <MUICookieConsent 
             cookieName="mySiteCookieConsent"
-            componentType="Dialog" // default value is Snackbar
+            // componentType="Dialog" // default value is Snackbar
             message="This site uses cookies. Click 'Accept' to continue to site. GDPR, done."
         />
 
