@@ -15,6 +15,7 @@ import CardContent from '@material-ui/core/CardContent';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import PowerIcon from '@material-ui/icons/Power';
+import Grid from '@material-ui/core/Grid';
 
 const styles = {
   card: {
@@ -72,7 +73,27 @@ function Index(props) {
 
         <Card style={{backgroundColor: "#ebeff2", marginBottom: "5px"}} className={classes.card}>
         <CardContent>
-        Your results will appear here.
+        <Grid container>
+            <Grid style={{width: "16.67%"}} item md={3}>
+                <Card><PowerIcon fontSize="large"/></Card>
+            </Grid>
+            <Grid style={{width: "16.67%"}} item md={3}>
+                <Card><PowerIcon fontSize="large"/></Card>
+            </Grid>
+            <Grid style={{width: "16.67%"}} item md={3}>
+                <Card><PowerIcon fontSize="large"/></Card>
+            </Grid>  
+            <Grid style={{width: "16.67%"}} item md={3}>
+                <Card><PowerIcon fontSize="large"/></Card>
+            </Grid>  
+            <Grid style={{width: "16.67%"}} item md={3}>
+                <Card><PowerIcon fontSize="large"/></Card>
+            </Grid>  
+            <Grid style={{width: "16.67%"}} item md={3}>
+                <Card><PowerIcon fontSize="large"/></Card>
+            </Grid>                                      
+        </Grid>
+        Test
         </CardContent>
         <CardActions>
 
