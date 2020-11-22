@@ -75,28 +75,29 @@ function Index(props) {
         <CardContent>
         <Grid container>
             <Grid style={{width: "16.66%"}} item >
-                <Card><PowerIcon fontSize="large"/></Card>
+                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
             </Grid>
-            <Grid style={{width: "16.66%"}} item>
-                <Card><PowerIcon fontSize="large"/></Card>
+            <Grid style={{width: "16.66%"}} item >
+                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
             </Grid>
-            <Grid style={{width: "16.66%"}} item>
-                <Card><PowerIcon fontSize="large"/></Card>
-            </Grid>  
             <Grid style={{width: "16.66%"}} item >
-                <Card><PowerIcon fontSize="large"/></Card>
-            </Grid>  
+                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
+            </Grid>
             <Grid style={{width: "16.66%"}} item >
-                <Card><PowerIcon fontSize="large"/></Card>
-            </Grid>  
+                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
+            </Grid>      
             <Grid style={{width: "16.66%"}} item >
-                <Card><PowerIcon fontSize="large"/></Card>
-            </Grid>                                      
+                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
+            </Grid>    
+            <Grid style={{width: "16.66%"}} item >
+                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
+            </Grid>                                                                             
         </Grid>
         </CardContent>
         <CardActions>
-
+        <span>Your results will appear here.</span>
         </CardActions>
+
         </Card>
 
         {/*<Link href="/about" color="primary">
