@@ -74,26 +74,25 @@ function Index(props) {
         <Card style={{backgroundColor: "#ebeff2", marginBottom: "5px"}} className={classes.card}>
         <CardContent>
         <Grid container>
-            <Grid style={{width: "16.67%"}} item md={3}>
+            <Grid style={{width: "16.66%"}} item >
                 <Card><PowerIcon fontSize="large"/></Card>
             </Grid>
-            <Grid style={{width: "16.67%"}} item md={3}>
+            <Grid style={{width: "16.66%"}} item>
                 <Card><PowerIcon fontSize="large"/></Card>
             </Grid>
-            <Grid style={{width: "16.67%"}} item md={3}>
+            <Grid style={{width: "16.66%"}} item>
                 <Card><PowerIcon fontSize="large"/></Card>
             </Grid>  
-            <Grid style={{width: "16.67%"}} item md={3}>
+            <Grid style={{width: "16.66%"}} item >
                 <Card><PowerIcon fontSize="large"/></Card>
             </Grid>  
-            <Grid style={{width: "16.67%"}} item md={3}>
+            <Grid style={{width: "16.66%"}} item >
                 <Card><PowerIcon fontSize="large"/></Card>
             </Grid>  
-            <Grid style={{width: "16.67%"}} item md={3}>
+            <Grid style={{width: "16.66%"}} item >
                 <Card><PowerIcon fontSize="large"/></Card>
             </Grid>                                      
         </Grid>
-        Test
         </CardContent>
         <CardActions>
 
