@@ -10,20 +10,19 @@ export default class MyDocument extends Document {
 
   render() {
 
-    var fonts = "";
+    //var fonts = "";
     //if (!process.browser) // SSR
     //{
       //fonts = <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>;
     //}
     
 
-    return (  
+    return (
       <Html lang="en">
         <Head>
 
         <link rel="dns-prefetch" href="https://www.googletagmanager.com/" ></link> 
         <link rel="dns-prefetch" href="https://fonts.googleapis.com/" ></link>  
-        <link rel="preconnect" href="https://fonts.gstatic.com">
 
         {/* Google Tag Manager HEAD snippet*/}
         <script dangerouslySetInnerHTML={
@@ -69,6 +68,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
 
           {/*{fonts}*/}
+          <link rel="preconnect" href="https://fonts.gstatic.com">    
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>          
           {/*<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/></noscript>*/}</link>
           
