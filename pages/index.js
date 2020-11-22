@@ -64,7 +64,7 @@ function Index(props) {
         </CardContent>
         <CardActions>
         {/*style={{backgroundColor: ""}}*/}
-        <Button fullWidth color="primary" variant="contained">Measure URL power</Button>
+        <Button style={{color="#FFFFFF"}} fullWidth color="primary" variant="contained">Measure URL power</Button>
         </CardActions>
         </Card>
 
