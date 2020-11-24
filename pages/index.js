@@ -138,9 +138,9 @@ function Index(props) {
         </Typography>
         {/*}*/}
 
-        {/*<Typography variant="h2" component="h2" gutterBottom>
+        {!open && <Typography variant="h2" component="h2" gutterBottom>
           Measure any URL's power.
-      </Typography>*/}
+        </Typography>}
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}>
             <CardContent style={{paddingBottom: "2px"}}>
