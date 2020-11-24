@@ -21,27 +21,62 @@ import NetworkCheckIcon from '@material-ui/icons/NetworkCheck';
 import SecurityIcon from '@material-ui/icons/Security';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 import LinkIcon from '@material-ui/icons/Link';
+import clsx from 'clsx';
 
 const styles = {
   card: {
     minWidth: 275,
+    backgroundColor: "#ebeff2"
+  },
+  activatecard: {
+    minWidth: 275,
+    backgroundColor: "#F7F9FB"
   },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
-    transform: 'scale(0.8)',
+    transform: 'scale(0.8)'
   },
   title: {
-    fontSize: 14,
+    fontSize: 14
   },
   pos: {
-    marginBottom: 12,
+    marginBottom: 12
   },
+  open : {
+    backgroundColor: "white"
+  },
+  close: {
+    backgroundColor: "#F7F9FB"
+  },
+  rotate: {
+    transform: "rotate(90deg)",
+    transition: "all .3s ease",
+    color: "#94da28"
+  },
+  unrotate: {
+    transform: "rotate(0deg)",
+    transition: "all .3s ease",
+    color: "black"
+  },
+  hide: {
+    display: "none"
+  },
+  show: {
+    display: "block"
+  }
 };
 
 function Index(props) {
 
   const { classes } = props;
+
+  const drawerToggle = () => { 
+    setOpen(!open);
+    //console.log("yo");
+  };
+
+  const [open, setOpen] = React.useState(false);
 
   return (
     <Container maxWidth="sm">
@@ -49,12 +84,12 @@ function Index(props) {
 
         <MUICookieConsent 
             cookieName="mySiteCookieConsent"
-            // componentType="Dialog" // default value is Snackbar
+            componentType="Dialog" // default value is Snackbar
             message="This site uses cookies. Click 'Accept' to continue to site. GDPR, done."
-        />
+        /> 
 
         <Typography align="left" variant="h1" component="h1" gutterBottom>
-          <PowerIcon fontSize="inherit"/>
+          <PowerIcon className={clsx(!open && classes.unrotate, open && classes.rotate)} fontSize="inherit" />
           URLpow
         </Typography>
 
@@ -62,9 +97,9 @@ function Index(props) {
           Measure any URL's power.
         </Typography>
 
-        <Card className={classes.card} style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#ebeff2"}}>
+        <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}>
             <CardContent>
-                <TextField style={{backgroundColor: "#F7F9FB"}} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power" />
+                <TextField className={clsx(!open && classes.close, open && classes.open)} onFocus={drawerToggle} onBlur={drawerToggle} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power" />
             </CardContent>
             <CardActions>
                 <Button style={{color: "#FFFFFF"}} fullWidth color="primary" variant="contained">Measure URL power</Button>
@@ -73,31 +108,32 @@ function Index(props) {
 
         <span>&nbsp;&nbsp;</span>
 
-        <Card style={{backgroundColor: "#ebeff2", marginBottom: "10px", marginTop: "-8px"}} className={classes.card}>
+        <Card style={{marginBottom: "10px", marginTop: "-8px"}} className={clsx(!open && classes.card, open && classes.activatecard)}>
             <CardContent>
                 <Grid container>
                     <Grid style={{width: "16.66%"}} item >
-                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><NetworkCheckIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                        <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><NetworkCheckIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>
                     <Grid style={{width: "16.66%"}} item >
-                    <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><SecurityIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                        <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><SecurityIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>
                     <Grid style={{width: "16.66%"}} item >
-                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><TimerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                        <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><TimerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>
                     <Grid style={{width: "16.66%"}} item >
-                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><StarHalfIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                        <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><StarHalfIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                    </Grid>      
                     <Grid style={{width: "16.66%"}} item >
-                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><LinkIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                        <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><LinkIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>    
                     <Grid style={{width: "16.66%"}} item >
-                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><PowerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                        <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>                                                                             
                 </Grid>
             </CardContent>
             <CardActions>
-                <ProTip />
+                {!open && <ProTip/>}
+                {open && <Typography className={classes.root} color="textSecondary">Let's do this!</Typography>}
             </CardActions>
         </Card>
 

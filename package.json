@@ -10,7 +10,7 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "chrome-aws-lambda": "latest",
-    "clsx": "latest",
+    "clsx": "^1.1.1",
     "material-ui-cookie-consent": "^0.1.0",
     "next": "latest",
     "next-pwa": "latest",
