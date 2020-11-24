@@ -132,7 +132,7 @@ function Index(props) {
         }*/}
 
         {/*{open && */}
-        <Typography align="left" variant="h1" component="h1" gutterBottom style={{marginTop: "60px"}}>
+        <Typography align="left" variant="h1" component="h1" gutterBottom >
           <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
           URLpow
         </Typography>
