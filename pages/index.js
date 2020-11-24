@@ -73,7 +73,7 @@ function Index(props) {
 
         <span>&nbsp;&nbsp;</span>
 
-        <Card style={{backgroundColor: "#ebeff2", marginBottom: "10px"}} className={classes.card}>
+        <Card style={{backgroundColor: "#ebeff2", marginBottom: "10px", marginTop: "-8px"}} className={classes.card}>
             <CardContent>
                 <Grid container>
                     <Grid style={{width: "16.66%"}} item >
