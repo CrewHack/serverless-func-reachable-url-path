@@ -12,7 +12,7 @@ function LightBulbIcon(props) {
   );
 }
 
-const textArray = ["Non-performing URLs don't convert well.", "Slow loading URLs deter quality traffic.", "You can automate URLpow.", "We'll human audit your URLs, just ask!", "URLpow is free to use.", "We specialize in analyzing URL power!", "You can ask us anything. We don't bite.","You are awesome."];
+const textArray = ["Non-performing URLs don't convert.", "Slow loading URLs deter quality traffic.", "You can automate URLpow. Just ask!", "We'll human audit your URLs. Just ask!", "URLpow is free to use.", "We specialize in analyzing URL power!", "You can ask us anything. We don't bite.","You are awesome."];
 
 class ProTip extends Component {
   constructor() {

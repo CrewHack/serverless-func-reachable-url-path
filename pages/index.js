@@ -16,6 +16,11 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import PowerIcon from '@material-ui/icons/Power';
 import Grid from '@material-ui/core/Grid';
+import TimerIcon from '@material-ui/icons/Timer';
+import NetworkCheckIcon from '@material-ui/icons/NetworkCheck';
+import SecurityIcon from '@material-ui/icons/Security';
+import StarHalfIcon from '@material-ui/icons/StarHalf';
+import LinkIcon from '@material-ui/icons/Link';
 
 const styles = {
   card: {
@@ -57,48 +62,43 @@ function Index(props) {
           Measure any URL's power.
         </Typography>
 
-        <Card className={classes.card}>
-        <CardContent>
-        <TextField fullWidth id="standard-basic" label="Enter URL to measure power" />
-
-        {/*<span>&nbsp;&nbsp;</span>*/}
-        </CardContent>
-        <CardActions>
-        {/*style={{backgroundColor: ""}}*/}
-        <Button style={{color: "#FFFFFF"}} fullWidth color="primary" variant="contained">Measure URL power</Button>
-        </CardActions>
+        <Card className={classes.card} style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#ebeff2"}}>
+            <CardContent>
+                <TextField style={{backgroundColor: "#F7F9FB"}} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power" />
+            </CardContent>
+            <CardActions>
+                <Button style={{color: "#FFFFFF"}} fullWidth color="primary" variant="contained">Measure URL power</Button>
+            </CardActions>
         </Card>
 
         <span>&nbsp;&nbsp;</span>
 
         <Card style={{backgroundColor: "#ebeff2", marginBottom: "10px"}} className={classes.card}>
-        <CardContent>
-        <Grid container>
-            <Grid style={{width: "16.66%"}} item >
-                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
-            </Grid>
-            <Grid style={{width: "16.66%"}} item >
-                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
-            </Grid>
-            <Grid style={{width: "16.66%"}} item >
-                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
-            </Grid>
-            <Grid style={{width: "16.66%"}} item >
-                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
-            </Grid>      
-            <Grid style={{width: "16.66%"}} item >
-                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
-            </Grid>    
-            <Grid style={{width: "16.66%"}} item >
-                <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large"/></Card>
-            </Grid>                                                                             
-        </Grid>
-        </CardContent>
-        <CardActions>
-        {/*<span>Your results will appear here.</span>*/}
-        <ProTip />
-        </CardActions>
-
+            <CardContent>
+                <Grid container>
+                    <Grid style={{width: "16.66%"}} item >
+                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><NetworkCheckIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                    </Grid>
+                    <Grid style={{width: "16.66%"}} item >
+                    <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><SecurityIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                    </Grid>
+                    <Grid style={{width: "16.66%"}} item >
+                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><TimerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                    </Grid>
+                    <Grid style={{width: "16.66%"}} item >
+                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><StarHalfIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                   </Grid>      
+                    <Grid style={{width: "16.66%"}} item >
+                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><LinkIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                    </Grid>    
+                    <Grid style={{width: "16.66%"}} item >
+                        <Card style={{textAlign: "center", justifyContent: "center", alignItems: "center", backgroundColor: "#F7F9FB"}}><PowerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
+                    </Grid>                                                                             
+                </Grid>
+            </CardContent>
+            <CardActions>
+                <ProTip />
+            </CardActions>
         </Card>
 
         {/*<Link href="/about" color="primary">
