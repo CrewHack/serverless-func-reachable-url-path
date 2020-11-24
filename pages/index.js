@@ -131,12 +131,19 @@ function Index(props) {
           </Typography>
         }*/}
 
-        {/*{open && */}
+        {!open && 
         <Typography align="left" variant="h1" component="h1" gutterBottom >
           <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
           URLpow
         </Typography>
-        {/*}*/}
+        }
+
+        {open && 
+        <Typography align="left" variant="h1" component="h1" gutterBottom style={{marginBottom: "-8px"}}>
+          <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
+          URLpow
+        </Typography>
+        }
 
         {!open && <Typography variant="h2" component="h2" gutterBottom>
           Measure any URL's power.
