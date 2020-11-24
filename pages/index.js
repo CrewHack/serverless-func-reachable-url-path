@@ -95,7 +95,8 @@ function Index(props) {
         </Grid>
         </CardContent>
         <CardActions>
-        <span>Your results will appear here.</span>
+        {/*<span>Your results will appear here.</span>*/}
+        <ProTip />
         </CardActions>
 
         </Card>
@@ -112,8 +113,6 @@ function Index(props) {
             height = "0px"
         >   
         </Image>*/}
-    
-        <ProTip />
 
       </Box>
       <Copyright />

@@ -27,7 +27,7 @@ class ProTip extends Component {
     }, 3500);
   }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
     clearInterval(this.timeout);
   }
 
