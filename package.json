@@ -3,6 +3,7 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.12.1",
     "@emotion/cache": "latest",
     "@emotion/react": "latest",
     "@emotion/server": "latest",
@@ -11,13 +12,15 @@
     "@material-ui/icons": "latest",
     "chrome-aws-lambda": "latest",
     "clsx": "^1.1.1",
+    "framer-motion": "^2.9.4",
     "material-ui-cookie-consent": "^0.1.0",
     "next": "latest",
     "next-pwa": "latest",
     "prop-types": "latest",
     "puppeteer": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "dev": "next dev",

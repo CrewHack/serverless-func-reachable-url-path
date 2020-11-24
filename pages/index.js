@@ -3,9 +3,9 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ProTip from '../src/ProTip';
-import Link from '../src/Link';
+//import Link from '../src/Link';
 import Copyright from '../src/Copyright';
-import Image from '../src/Image';
+//import Image from '../src/Image';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import MUICookieConsent from 'material-ui-cookie-consent';
@@ -50,20 +50,56 @@ const styles = {
     backgroundColor: "#F7F9FB"
   },
   rotate: {
-    transform: "rotate(90deg)",
+    /*transform: "rotate(90deg)",
     transition: "all .3s ease",
-    color: "#94da28"
+    color: "#94da28",*/
+    transformOrigin: "center",
+    originX: 0.5, 
+    originY: 0.5
   },
   unrotate: {
-    transform: "rotate(0deg)",
+    /*transform: "rotate(0deg)",
     transition: "all .3s ease",
-    color: "black"
+    color: "black"*/
+    transformOrigin: "center",
+    originX: 0.5, 
+    originY: 0.5
   },
   hide: {
     display: "none"
   },
   show: {
     display: "block"
+  },
+  animatedItem: {
+    animation: `$myEffect 1000ms ease`
+  },
+  animatedItemExiting: {
+    color: "#94da28",
+    transform: "rotate(90deg) ",
+    transition: "all .3s ease",
+    animation: `$myEffectExit 1000ms ease`
+  },
+  "@keyframes myEffect": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(-200%)"
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)"
+    }
+  },
+  "@keyframes myEffectExit": {
+    "0%": {
+      opacity: 1,
+    },
+    "50%": {
+      opacity: 0,
+    },
+    "100%": {
+      opacity: 100,
+    }
   }
 };
 
@@ -88,17 +124,26 @@ function Index(props) {
             message="This site uses cookies. Click 'Accept' to continue to site. GDPR, done."
         /> 
 
-        <Typography align="left" variant="h1" component="h1" gutterBottom>
-          <PowerIcon className={clsx(!open && classes.unrotate, open && classes.rotate)} fontSize="inherit" />
+        {/*{!open && 
+          <Typography align="left" variant="h1" component="h1" gutterBottom>
+            <PowerIcon className={clsx(!open && classes.unrotate, open && classes.rotate)} fontSize="inherit" />
+            URLpow
+          </Typography>
+        }*/}
+
+        {/*{open && */}
+        <Typography align="left" variant="h1" component="h1" gutterBottom style={{marginTop: "60px"}}>
+          <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
           URLpow
         </Typography>
+        {/*}*/}
 
         <Typography variant="h2" component="h2" gutterBottom>
           Measure any URL's power.
         </Typography>
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}>
-            <CardContent>
+            <CardContent style={{paddingBottom: "2px"}}>
                 <TextField className={clsx(!open && classes.close, open && classes.open)} onFocus={drawerToggle} onBlur={drawerToggle} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power" />
             </CardContent>
             <CardActions>
@@ -109,7 +154,7 @@ function Index(props) {
         <span>&nbsp;&nbsp;</span>
 
         <Card style={{marginBottom: "10px", marginTop: "-8px"}} className={clsx(!open && classes.card, open && classes.activatecard)}>
-            <CardContent>
+            <CardContent style={{paddingBottom: "4px"}}>
                 <Grid container>
                     <Grid style={{width: "16.66%"}} item >
                         <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><NetworkCheckIcon fontSize="large" style={{color:"#00000087"}}/></Card>
