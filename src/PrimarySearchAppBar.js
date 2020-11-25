@@ -165,7 +165,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar style={{backgroundColor: "#00000087", color: "#FFFFFF"}} position="fixed">
+      <AppBar position="fixed"> {/*style={{backgroundColor: "#676666", color: "#FFFFFF"}}*/}
         <Toolbar>
           <IconButton
             edge="start"
