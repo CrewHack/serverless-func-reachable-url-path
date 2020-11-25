@@ -36,7 +36,7 @@ const styles = {
     backgroundColor: "white"
   },
   close: {
-    backgroundColor: "#F7F9FB"
+    backgroundColor: "#F7F9FB",
   },
   animatedItem: {
     animation: `$myEffect 1000ms ease`
@@ -74,11 +74,15 @@ function Index(props) {
 
   const { classes } = props;
 
-  const drawerToggle = () => { 
+  const drawerToggle = (event) => { 
     setOpen(!open);
-    
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+
+    event.stopPropagation(); // this can be ignored
+  let winScroll = window.scrollY;
+  window.scrollTo({
+    top: winScroll
+  });
+  console.log(event)
   };
 
   const [open, setOpen] = React.useState(false);
