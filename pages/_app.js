@@ -25,12 +25,10 @@ export default function MyApp(props) {
       for (let mutation of mutations) {
         if (mutation.type === "childList" && mutation.target.id === "pico-widget-container"){
           picoWidget.style.visibility = "hidden";
-          console.log("Hide Pico widget");
+          console.log("Hide Pico widget #1");
         }
 
         if (mutation.type === 'attributes' && mutation.attributeName === 'class' && mutation.target.id === "pico-widget-container") {
-          //
-          //console.log(mutation);
           if (mutation.target.className === '_modalOpen')
           {
             console.log('Pico modal opened');
@@ -39,7 +37,7 @@ export default function MyApp(props) {
           {
             console.log('Pico modal closed');
             picoWidget.style.visibility = "hidden";
-            console.log("Hide Pico widget");
+            console.log("Hide Pico widget #2");
           }
         }
       }
