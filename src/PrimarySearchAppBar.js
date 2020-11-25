@@ -107,6 +107,8 @@ export default function PrimarySearchAppBar() {
   };
 
   const handleProfile = (event) => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
     var picoWidget = document.getElementById("pico-widget-container");
     picoWidget.style.visibility = "visible";
   };
