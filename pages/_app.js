@@ -34,7 +34,7 @@ export default function MyApp(props) {
 
           console.log(mutation.target);
 
-          if (mutation.target.className === '_modalOpen')
+          if (mutation.target.className === '_modalOpen' || mutation.target.className === '_menuOpen')
           {
             console.log('Pico modal opened');
             picoModalClosed = false;
