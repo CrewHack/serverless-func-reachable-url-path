@@ -77,7 +77,7 @@ function Index(props) {
   const drawerToggle = (e) => { 
 
     e.preventDefault(); e.stopPropagation();
-    window.scrollTo(0,300); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
+    window.scrollTo(0,-300); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
 
     setOpen(!open);
   };
