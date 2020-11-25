@@ -30,7 +30,9 @@ const styles = {
   },
   activatecard: {
     minWidth: 275,
-    backgroundColor: "#F7F9FB"
+    backgroundColor: "#F7F9FB",
+    transition: "all 1s ease",
+    animation: `$growShadow 2000ms infinite`
   },
   open : {
     backgroundColor: "white"
@@ -42,10 +44,10 @@ const styles = {
     animation: `$myEffect 1000ms ease`
   },
   animatedItemExiting: {
-    color: "#94da28",
+    color: "#14a37f", // #4CAF50 // #94da28
     transform: "translateY(80%) rotate(540deg)",
-    transition: "all .3s ease",
-    animation: `$myEffectExit 1000ms ease`
+    transition: "all .7s ease",
+    animation: `$myEffectExit 2000ms ease`
   },
   "@keyframes myEffect": {
     "0%": {
@@ -62,10 +64,21 @@ const styles = {
       opacity: 1,
     },
     "50%": {
-      opacity: 0,
+      opacity: 0.33,
     },
     "100%": {
-      opacity: 100,
+      opacity: 1,
+    }
+  },
+  "@keyframes growShadow": {
+    "0%": {
+      boxShadow: "3px 2px 1px -1px #4CAF50, 0px 1px 1px 0px #4CAF50, 0px 1px 3px 0px #4CAF50",
+    },
+    "50%": {
+      boxShadow: "5px 4px 3px 1px #4CAF50, 2px 2px 2px 1px #4CAF50, 2px 3px 5px 2px #4CAF50",
+    },
+    "100%": {
+      boxShadow: "3px 2px 1px -1px #4CAF50, 0px 1px 1px 0px #4CAF50, 0px 1px 3px 0px #4CAF50",
     }
   }
 };
@@ -97,7 +110,7 @@ function Index(props) {
         /> 
 
         {/*{open && */}
-        <Typography align="left" variant="h1" component="h1" gutterBottom > 
+        <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
           {!open ? 'URLpow' : ''}
         </Typography>
