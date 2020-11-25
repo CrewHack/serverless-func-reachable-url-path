@@ -32,44 +32,11 @@ const styles = {
     minWidth: 275,
     backgroundColor: "#F7F9FB"
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)'
-  },
-  title: {
-    fontSize: 14
-  },
-  pos: {
-    marginBottom: 12
-  },
   open : {
     backgroundColor: "white"
   },
   close: {
     backgroundColor: "#F7F9FB"
-  },
-  rotate: {
-    /*transform: "rotate(90deg)",
-    transition: "all .3s ease",
-    color: "#94da28",*/
-    transformOrigin: "center",
-    originX: 0.5, 
-    originY: 0.5
-  },
-  unrotate: {
-    /*transform: "rotate(0deg)",
-    transition: "all .3s ease",
-    color: "black"*/
-    transformOrigin: "center",
-    originX: 0.5, 
-    originY: 0.5
-  },
-  hide: {
-    display: "none"
-  },
-  show: {
-    display: "block"
   },
   animatedItem: {
     animation: `$myEffect 1000ms ease`
@@ -109,13 +76,14 @@ function Index(props) {
 
   const drawerToggle = () => { 
     setOpen(!open);
-    //console.log("yo");
   };
 
   const [open, setOpen] = React.useState(false);
 
   return (
+
     <Container maxWidth="sm">
+
       <Box my={4}>
 
         <MUICookieConsent 
@@ -123,20 +91,6 @@ function Index(props) {
             componentType="Dialog" // default value is Snackbar
             message="This site uses cookies. Click 'Accept' to continue to site. GDPR, done."
         /> 
-
-        {/*{!open && 
-          <Typography align="left" variant="h1" component="h1" gutterBottom>
-            <PowerIcon className={clsx(!open && classes.unrotate, open && classes.rotate)} fontSize="inherit" />
-            URLpow
-          </Typography>
-        }*/}
-
-        {/*{!open && 
-        <Typography align="left" variant="h1" component="h1" gutterBottom >
-          <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
-          URLpow
-        </Typography>
-        }*/}
 
         {/*{open && */}
         <Typography align="left" variant="h1" component="h1" gutterBottom > 
@@ -188,22 +142,10 @@ function Index(props) {
                 {open && <Typography className={classes.root} color="textSecondary">Let's do this!</Typography>}
             </CardActions>
         </Card>
-
-        {/*<Link href="/about" color="primary">
-          Go to the about page
-        </Link>*/}
-
-        {/*<Image 
-            src = "https://accounts.google.com/CheckCookie?continue=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png&followup=https%3A%2F%2Fwww.google.com%2Fintl%2Fen%2Fimages%2Flogos%2Faccounts_logo.png&chtml=LoginDoneHtml&checkedDomains=youtube&checkConnection=youtube%3A291%3A1"
-            fallbackSrc = "/images/nogoog.png"
-            newSrc = "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-            width = "0px"
-            height = "0px"
-        >   
-        </Image>*/}
-
       </Box>
+
       <Copyright />
+
     </Container>
   );
 }
