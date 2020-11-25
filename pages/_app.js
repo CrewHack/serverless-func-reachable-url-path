@@ -18,6 +18,11 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    document.addEventListener('touchmove', function(e) {
+      console.log("hello");
+      e.preventDefault();
+  }, { passive: false });
+
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles && jssStyles.parentNode) {
