@@ -19,9 +19,11 @@ export default function MyApp(props) {
   React.useEffect(() => {
 
     var observer = new MutationObserver(function (mutations) {
+
+      var picoWidget = document.getElementById("pico-widget-container");
+
       for (let mutation of mutations) {
         if (mutation.type === "childList" && mutation.target.id === "pico-widget-container"){
-          var picoWidget = document.getElementById("pico-widget-container");
           picoWidget.style.visibility = "hidden";
           console.log("Hide Pico widget");
         }
@@ -36,6 +38,8 @@ export default function MyApp(props) {
           else
           {
             console.log('Pico modal closed');
+            picoWidget.style.visibility = "hidden";
+            console.log("Hide Pico widget");
           }
         }
       }
