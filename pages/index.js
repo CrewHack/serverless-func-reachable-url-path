@@ -76,13 +76,13 @@ function Index(props) {
 
   const drawerToggle = (event) => { 
     setOpen(!open);
-
+    event.preventDefault();
     event.stopPropagation(); // this can be ignored
   let winScroll = window.scrollY;
   window.scrollTo({
-    top: winScroll
+    top: 200
   });
-  console.log(event)
+  console.log(winScroll)
   };
 
   const [open, setOpen] = React.useState(false);
