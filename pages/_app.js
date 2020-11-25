@@ -25,6 +25,11 @@ export default function MyApp(props) {
           picoWidget.style.visibility = "hidden";
           console.log("Hide Pico widget");
         }
+
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          console.log('Aloha!');
+          console.log(mutation);
+        }
       }
     });
 
