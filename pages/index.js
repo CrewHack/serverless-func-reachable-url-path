@@ -43,7 +43,7 @@ const styles = {
   },
   animatedItemExiting: {
     color: "#94da28",
-    transform: "translateY(50%) rotate(540deg)",
+    transform: "translateY(80%) rotate(540deg)",
     transition: "all .3s ease",
     animation: `$myEffectExit 1000ms ease`
   },
