@@ -76,13 +76,6 @@ function Index(props) {
 
   const drawerToggle = (event) => { 
     setOpen(!open);
-    event.preventDefault();
-    event.stopPropagation(); // this can be ignored
-  let winScroll = window.scrollY;
-  window.scrollTo({
-    top: 200
-  });
-  console.log(winScroll)
   };
 
   const [open, setOpen] = React.useState(false);
@@ -106,9 +99,9 @@ function Index(props) {
         </Typography>
         {/*}*/}
 
-        {!open && <Typography variant="h2" component="h2" gutterBottom>
+        {/*{!open && <Typography variant="h2" component="h2" gutterBottom>
           Measure any URL's power.
-        </Typography>}
+  </Typography>}*/}
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}>
             <CardContent style={{paddingBottom: "2px"}}>
