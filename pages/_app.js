@@ -26,9 +26,17 @@ export default function MyApp(props) {
           console.log("Hide Pico widget");
         }
 
-        if (mutation.type === 'attributes' && mutation.attributeName === 'class' && mutation.target.className === '_modalOpen') {
-          console.log('Pico modal open!');
-          console.log(mutation);
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class' && mutation.target.id === "pico-widget-container") {
+          //
+          //console.log(mutation);
+          if (mutation.target.className === '_modalOpen')
+          {
+            console.log('Pico modal opened');
+          }
+          else
+          {
+            console.log('Pico modal closed');
+          }
         }
       }
     });
