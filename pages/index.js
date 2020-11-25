@@ -43,7 +43,7 @@ const styles = {
   },
   animatedItemExiting: {
     color: "#94da28",
-    transform: "rotate(90deg) ",
+    transform: "translateY(50%) rotate(540deg)",
     transition: "all .3s ease",
     animation: `$myEffectExit 1000ms ease`
   },
@@ -99,7 +99,7 @@ function Index(props) {
         {/*{open && */}
         <Typography align="left" variant="h1" component="h1" gutterBottom > 
           <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
-          URLpow
+          {!open ? 'URLpow' : ''}
         </Typography>
         {/*}*/}
 
