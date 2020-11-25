@@ -31,6 +31,9 @@ export default function MyApp(props) {
           console.log("Hide Pico widget initial");
         }
         if (mutation.type === 'attributes' && mutation.attributeName === 'class' && mutation.target.id === "pico-widget-container") {
+
+          console.log(mutation.target);
+
           if (mutation.target.className === '_modalOpen')
           {
             console.log('Pico modal opened');
