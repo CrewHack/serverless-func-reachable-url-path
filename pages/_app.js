@@ -16,6 +16,8 @@ export default function MyApp(props) {
   const { Component, pageProps } = props;
   const classes = useStyles();
 
+  var picoModalClosed = false;
+
   React.useEffect(() => {
 
     var observer = new MutationObserver(function (mutations) {
@@ -32,12 +34,17 @@ export default function MyApp(props) {
           if (mutation.target.className === '_modalOpen')
           {
             console.log('Pico modal opened');
+            picoModalClosed = false;
           }
           else
           {
-            console.log('Pico modal closed');
-            picoWidget.style.visibility = "hidden";
-            console.log("Hide Pico widget #2");
+            if (!picoModalClosed)
+            {
+              console.log('Pico modal closed');
+              picoWidget.style.visibility = "hidden";
+              console.log("Hide Pico widget #2");
+              picoModalClosed = true;
+            }
           }
         }
       }
