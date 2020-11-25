@@ -27,6 +27,7 @@ export default function MyApp(props) {
       for (let mutation of mutations) {
         if (mutation.type === "childList" && mutation.target.id === "pico-widget-container"){
           picoWidget.style.visibility = "hidden";
+          picoWidget.style.display = "none";
           console.log("Hide Pico widget initial");
         }
         if (mutation.type === 'attributes' && mutation.attributeName === 'class' && mutation.target.id === "pico-widget-container") {
@@ -41,6 +42,7 @@ export default function MyApp(props) {
             {
               console.log('Pico modal closed');
               picoWidget.style.visibility = "hidden";
+              picoWidget.style.display = "none";
               console.log("Hide Pico widget after modal close");
               picoModalClosed = true;
             }

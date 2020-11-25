@@ -111,6 +111,7 @@ export default function PrimarySearchAppBar() {
     handleMobileMenuClose();
     var picoWidget = document.getElementById("pico-widget-container");
     picoWidget.style.visibility = "visible";
+    picoWidget.style.display = "block";
   };
 
   const handleAccount = (event) => {
@@ -118,6 +119,7 @@ export default function PrimarySearchAppBar() {
     handleMobileMenuClose();
     var picoWidget = document.getElementById("pico-widget-container");
     picoWidget.style.visibility = "visible";
+    picoWidget.style.display = "block";
   };
 
   const menuId = 'primary-search-account-menu';
