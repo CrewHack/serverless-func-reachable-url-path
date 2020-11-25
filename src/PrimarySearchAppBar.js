@@ -117,7 +117,7 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem className="PicoEditProfile">Profile</MenuItem> {/*onClick={handleMenuClose}*/}
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
