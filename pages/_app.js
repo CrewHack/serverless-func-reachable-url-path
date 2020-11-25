@@ -22,8 +22,8 @@ export default function MyApp(props) {
       for (let mutation of mutations) {
         if (mutation.type === "childList" && mutation.target.id === "pico-widget-container"){
           var picoWidget = document.getElementById("pico-widget-container");
-          //picoWidget.style.visibility = "hidden";
-          //console.log("Hide Pico widget");
+          picoWidget.style.visibility = "hidden";
+          console.log("Hide Pico widget");
         }
       }
     });
