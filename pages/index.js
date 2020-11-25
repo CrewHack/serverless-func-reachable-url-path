@@ -78,6 +78,8 @@ function Index(props) {
     setOpen(!open);
     
     window.scrollTo(0,document.body.scrollHeight);
+    console.log(document.body.scrollHeight);
+    console.log(window);
   };
 
   const [open, setOpen] = React.useState(false);
