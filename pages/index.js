@@ -125,7 +125,7 @@ function Index(props) {
                 <TextField className={clsx(!open && classes.close, open && classes.open)} onFocus={drawerToggle} onBlur={drawerToggle} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power" />
             </CardContent>
             <CardActions>
-                <Button style={{color: "#FFFFFF"}} fullWidth color="primary" variant="contained">Measure URL power</Button>
+                <Button style={{color: "#FFFFFF", backgroundColor: "#14a37f"}} fullWidth color="primary" variant="contained">Measure URL power</Button>
             </CardActions>
         </Card>
 
