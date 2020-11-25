@@ -113,6 +113,13 @@ export default function PrimarySearchAppBar() {
     picoWidget.style.visibility = "visible";
   };
 
+  const handleAccount = (event) => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+    var picoWidget = document.getElementById("pico-widget-container");
+    picoWidget.style.visibility = "visible";
+  };
+
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -124,8 +131,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleProfile} className="PicoEditProfile">Profile</MenuItem> {/**/}
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleProfile} className="PicoEditProfile">Profile</MenuItem> 
+      <MenuItem onClick={handleAccount} className="PicoManageAccount">My account</MenuItem>
     </Menu>
   );
 
