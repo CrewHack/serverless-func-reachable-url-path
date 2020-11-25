@@ -9,14 +9,7 @@ const APP_DESCRIPTION = 'This is an example of using next-pwa plugin.'
 export default class MyDocument extends Document {
 
   render() {
-
-    //var fonts = "";
-    //if (!process.browser) // SSR
-    //{
-      //fonts = <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>;
-    //}
     
-
     return (
       <Html lang="en">
         <Head>

@@ -18,6 +18,51 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    var observer = new MutationObserver(function (mutations) {
+
+      var handledUser = false;
+      for (let mutation of mutations) {
+          
+        if (mutation.type === "childList")
+          console.log(mutation);
+          
+          /*if (!handledUser && mutation.type === 'attributes' && mutation.attributeName ===
+              'data-pico-email') {
+              if (mutation.oldValue === null) {
+                  var picoSignalElement = document.getElementById("so-submit-register")
+
+                  if (picoSignalElement.getAttribute("data-pico-email")) {
+                      console.log(picoSignalElement.getAttribute("data-pico-email") +
+                          " now logged in.");
+
+                      if (window.Pico && window.Pico.user && !window.Pico.user.email) {
+                          var i = 0;
+                          var timer = setInterval(function () {
+
+                              if (window.Pico.user.email) clearInterval(timer);
+
+                              handleUser(window.Pico.user);
+
+                          }, 100);
+                      }
+
+                  }
+
+                  handledUser = true;
+              }
+          }*/
+      }
+  });
+
+  observer.observe(document, {
+      attributes: true,
+      childList: true,
+      characterData: true,
+      subtree: true
+  });
+
+
+
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles && jssStyles.parentNode) {
