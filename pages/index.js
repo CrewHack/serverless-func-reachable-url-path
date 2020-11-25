@@ -77,9 +77,8 @@ function Index(props) {
   const drawerToggle = () => { 
     setOpen(!open);
     
-    window.scrollTo(0,document.body.scrollHeight);
-    console.log(document.body.scrollHeight);
-    console.log(window);
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
   };
 
   const [open, setOpen] = React.useState(false);
