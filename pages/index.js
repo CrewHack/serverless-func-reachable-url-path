@@ -102,6 +102,12 @@ function Index(props) {
     setOpen(!open);
   };
 
+  const submit = (e) => { 
+
+    console.log("SUBMIT!");
+    
+  };
+
   const [open, setOpen] = React.useState(false);
 
   const [url, setUrl] = React.useState('');
@@ -132,7 +138,7 @@ function Index(props) {
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-1px"}}>
             <CardContent style={{paddingBottom: "2px"}}>
    
-                <MainForm drawerToggle={drawerToggle.bind(this)}/>
+                <MainForm submit={submit.bind(this)} drawerToggle={drawerToggle.bind(this)}/>
 
                 {/*<TextField className={clsx(!open && classes.close, open && classes.open)} onFocus={drawerToggle} onBlur={drawerToggle} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power"/>*/}
             </CardContent>

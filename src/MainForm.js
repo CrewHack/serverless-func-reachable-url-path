@@ -77,6 +77,10 @@ export default class MainForm extends React.Component {
 
     handleSubmit = () => {
         // your submit logic
+
+        console.log("handle submit here");
+
+        this.props.submit();
     }
 
     render() {
