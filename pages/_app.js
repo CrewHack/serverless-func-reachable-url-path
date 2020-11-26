@@ -112,7 +112,7 @@ export default function MyApp(props) {
             message={<span aria-label="chilli" role="img">Welcome to <PowerIcon fontSize="inherit"/>URLpow.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue to site. GDPR, done. ✅</div></span>}
             //"
         /> 
-        <div style={cookied ? {pointerEvents: "all", opacity: 1} : {pointerEvents: "none", opacity: 0.4}}>
+        <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "none", opacity: 0.4, transition: "all .7s ease"}}>
             <PrimarySearchAppBar />
             <div className={classes.offset} />
             <Component {...pageProps} />
