@@ -60,6 +60,8 @@ export default class MainForm extends React.Component {
 
     handleBlur = event => {
 
+        return true;
+
         console.log(event);
 
         const { name, value } = event.target;
