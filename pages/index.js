@@ -8,7 +8,7 @@ import Copyright from '../src/Copyright';
 //import Image from '../src/Image';
 //import TextField from '@material-ui/core/TextField';
 //import Button from '@material-ui/core/Button';
-import MUICookieConsent from 'material-ui-cookie-consent';
+//import MUICookieConsent from 'material-ui-cookie-consent';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -23,8 +23,21 @@ import StarHalfIcon from '@material-ui/icons/StarHalf';
 import LinkIcon from '@material-ui/icons/Link';
 import clsx from 'clsx';
 import MainForm from '../src/MainForm';
+//import { useCookieWatcher, useCookie } from '@fcannizzaro/react-use-cookie-watcher'
+//import Cookies from 'js-cookie';
 
 const styles = {
+  disabledDiv: {
+    pointerEvents: "none",
+    opacity: 0.4
+  },
+  enabledDiv: {
+    pointerEvents: "all",
+    opacity: 1
+  },
+  emojiTwoTone: {
+    filter: "grayscale(100%)"
+  },
   card: {
     minWidth: 275,
     backgroundColor: "#ebeff2"
@@ -45,7 +58,7 @@ const styles = {
     animation: `$myEffect 1000ms ease`
   },
   animatedItemExiting: {
-    color: "#14a37f", // #4CAF50 // #94da28
+    color: "#14a37f", 
     transform: "translateY(80%) rotate(540deg)",
     transition: "all .7s ease",
     animation: `$myEffectExit 2000ms ease`
@@ -86,10 +99,15 @@ const styles = {
 
 function Index(props) {
 
-  /*const handleChange = (event) => {
-    const url = event.target.value;
-    setUrl(url);
-  }*/
+  {/*const timeout = setInterval(() => {
+    if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
+      setCookied(true);
+    }
+    else
+    {
+      setCookied(false);
+    }
+  }, 500);*/}
 
   const { classes } = props;
 
@@ -112,7 +130,9 @@ function Index(props) {
 
   const [open, setOpen] = React.useState(false);
 
-  const [url, setUrl] = React.useState('');
+  //const [url, setUrl] = React.useState('');
+
+  //const [cookied, setCookied] = React.useState(false);
 
   return (
 
@@ -120,11 +140,14 @@ function Index(props) {
 
       <Box my={4}>
 
-        <MUICookieConsent 
+        {/*<MUICookieConsent 
             cookieName="mySiteCookieConsent"
-            componentType="Dialog" // default value is Snackbar
-            message="This site uses cookies. Click 'Accept' to continue to site. GDPR, done."
-        /> 
+            //componentType="Dialog" // default value is Snackbar
+            message={<span aria-label="chilli" role="img">Welcome to <PowerIcon fontSize="inherit"/>URLpow.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue to site. GDPR, done. ✅</div></span>}
+            //"
+        />
+
+        <div className={clsx(!cookied && classes.disabledDiv, cookied && classes.enabledDiv)}> cookie {hasAcceptedCookies ? 'found' : 'not found'}*/}
 
         {/*{open && */}
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
@@ -179,6 +202,9 @@ function Index(props) {
                 {open && <Typography className={classes.root} color="textSecondary">Let's do this!</Typography>}
             </CardActions>
         </Card>
+
+        {/*</div>*/}
+
       </Box>
 
       <Copyright />

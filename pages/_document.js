@@ -75,6 +75,7 @@ export default class MyDocument extends Document {
             }
            />
            {/* <!-- End Google Tag Manager BODY snippet (noscript) --> */}
+
           <Main />
           <NextScript />
         </body>

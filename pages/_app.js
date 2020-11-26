@@ -6,9 +6,15 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import { makeStyles } from '@material-ui/core/styles';
 import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
+import MUICookieConsent from 'material-ui-cookie-consent';
+import Cookies from 'js-cookie';
+import PowerIcon from '@material-ui/icons/Power';
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
+  emojiTwoTone: {
+    filter: "grayscale(100%)"
+  }
 }))
 
 export default function MyApp(props) {
@@ -80,6 +86,18 @@ export default function MyApp(props) {
 
   }, []);
 
+  const timeout = setInterval(() => {
+    if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
+      setCookied(true);
+    }
+    else
+    {
+      setCookied(false);
+    }
+  }, 500);
+
+  const [cookied, setCookied] = React.useState(false);
+
   return (
     <React.Fragment>
       <Head>
@@ -88,9 +106,17 @@ export default function MyApp(props) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <PrimarySearchAppBar />
-        <div className={classes.offset} />
-        <Component {...pageProps} />
+        <MUICookieConsent 
+            cookieName="mySiteCookieConsent"
+            //componentType="Dialog" // default value is Snackbar
+            message={<span aria-label="chilli" role="img">Welcome to <PowerIcon fontSize="inherit"/>URLpow.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue to site. GDPR, done. ✅</div></span>}
+            //"
+        /> 
+        <div style={cookied ? {pointerEvents: "all", opacity: 1} : {pointerEvents: "none", opacity: 0.4}}>
+            <PrimarySearchAppBar />
+            <div className={classes.offset} />
+            <Component {...pageProps} />
+        </div>
       </ThemeProvider>
     </React.Fragment>
   );
