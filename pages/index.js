@@ -105,7 +105,9 @@ function Index(props) {
   const submit = (e) => { 
 
     console.log("SUBMIT!");
-    
+
+    this.drawerToggle();
+
   };
 
   const [open, setOpen] = React.useState(false);

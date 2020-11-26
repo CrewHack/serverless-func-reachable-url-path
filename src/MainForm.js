@@ -106,11 +106,8 @@ export default class MainForm extends React.Component {
         const { user } = this.state;
 
         if (event.type === "mousedown" || event.type === "ontouchstart") {
-            //this.setState({ message: "Mouse Down"});
             user["submitted"] = true;
             this.setState({ user });
-        } else {
-            //this.setState({ message: "Mouse Up"});
         }
     }
 
@@ -122,6 +119,10 @@ export default class MainForm extends React.Component {
 
     handleSubmit = () => {
         // your submit logic
+
+        const { user } = this.state;
+        user["open"] = !user.open;
+        this.setState({ user });
 
         console.log("handle submit here");
 
