@@ -84,6 +84,7 @@ export default class MainForm extends React.Component {
 
         return (
             <ValidatorForm
+                style={{marginTop: "-8px"}}
                 onSubmit={this.handleSubmit}
             >
                 <TextValidator 
@@ -102,11 +103,7 @@ export default class MainForm extends React.Component {
                     style={user.open ? {backgroundColor: "white"} : {backgroundColor: "#F7F9FB"}}
                 />
 
-                <span>&nbsp;&nbsp;</span>
-
-                <Button style={{color: "#FFFFFF", backgroundColor: "#14a37f"}} fullWidth variant="contained" type="submit">Measure URL power</Button>
-
-                <span>&nbsp;&nbsp;</span>
+                <Button style={{color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}} fullWidth variant="contained" type="submit">Measure URL power</Button>
 
             </ValidatorForm>
         );
