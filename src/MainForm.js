@@ -56,16 +56,18 @@ export default class MainForm extends React.Component {
           
           this.props.drawerToggle();
         }
-      };
+    };
 
     handleBlur = event => {
 
         console.log(event);
 
         const { name, value } = event.target;
-        if (name === "url") {
+
+        if (name === "url" && event.relatedTarget.name !== "submit") {
           // set true as second parameter to onBlur required validation
           //this.emailRef.current.validate(value);
+
           console.log("blur!");
 
           const { user } = this.state;
@@ -121,7 +123,7 @@ export default class MainForm extends React.Component {
                     //type=i.e. "password" etc.
                 />
 
-                <Button onClick={this.handleClick} style={{color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}} fullWidth variant="contained" type="submit">Measure URL power</Button>
+                <Button name="submit" onClick={this.handleClick} style={{color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}} fullWidth variant="contained" type="submit">Measure URL power</Button>
 
             </ValidatorForm>
         );
