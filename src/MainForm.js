@@ -62,9 +62,14 @@ export default class MainForm extends React.Component {
 
         console.log(event);
 
+        if (event.relatedTarget && event.relatedTarget.name === "submit")
+        {
+            return true;
+        }
+
         const { name, value } = event.target;
 
-        if (name === "url" && event.relatedTarget.name !== "submit") {
+        if (name === "url" ) {
           // set true as second parameter to onBlur required validation
           //this.emailRef.current.validate(value);
 
@@ -78,8 +83,6 @@ export default class MainForm extends React.Component {
 
           this.props.drawerToggle();
         }
-
-        return true;
     };
 
     handleClick = () => {
