@@ -76,23 +76,26 @@ export default class MainForm extends React.Component {
         {
             return true;
         }
+        else
+        {
 
-        const { name, value } = event.target;
+            const { name, value } = event.target;
 
-        if (name === "url" ) {
-          // set true as second parameter to onBlur required validation
-          //this.emailRef.current.validate(value);
+            if (name === "url" ) {
+              // set true as second parameter to onBlur required validation
+              //this.emailRef.current.validate(value);
 
-          console.log("blur!");
+              console.log("blur!");
 
-          const { user } = this.state;
-          user["open"] = !user.open;
-          this.setState({ user });
+              const { user } = this.state;
+              user["open"] = !user.open;
+              this.setState({ user });
 
-          console.log(user.open);
+              console.log(user.open);
 
-          //this.props.drawerToggle();
-        }
+              this.props.drawerToggle();
+            }
+        }  
     };
 
     handleClick = () => {
