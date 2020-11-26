@@ -144,7 +144,7 @@ function Index(props) {
         <span>&nbsp;&nbsp;</span>
 
         <Card style={{marginBottom: "10px", marginTop: "-8px"}} className={clsx(!open && classes.card, open && classes.activatecard)}>
-            <CardContent style={{paddingBottom: "4px"}}>
+            <CardContent style={{paddingBottom: "4px", paddingTop: "-8px"}}>
                 <Grid container>
                     <Grid style={{width: "16.66%"}} item >
                         <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><NetworkCheckIcon fontSize="large" style={{color:"#00000087"}}/></Card>
