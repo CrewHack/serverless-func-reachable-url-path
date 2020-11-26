@@ -75,6 +75,12 @@ export default class MainForm extends React.Component {
         }
       };
 
+      handleClick = () => {
+
+        console.log("handle click here");
+
+    }
+
     handleSubmit = () => {
         // your submit logic
 
@@ -107,7 +113,7 @@ export default class MainForm extends React.Component {
                     //type=i.e. "password" etc.
                 />
 
-                <Button style={{color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}} fullWidth variant="contained" type="submit">Measure URL power</Button>
+                <Button onClick={this.handleClick} style={{color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}} fullWidth variant="contained" type="submit">Measure URL power</Button>
 
             </ValidatorForm>
         );
