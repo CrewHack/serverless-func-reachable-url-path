@@ -53,13 +53,13 @@ export default class MainForm extends React.Component {
     }
 
     handleFocus = event => {
+        const { user } = this.state;
         const { name, value } = event.target;
-        if (name === "url") {
+        if (name === "url" && !user.open) {
           // set true as second parameter to onBlur required validation
           //this.emailRef.current.validate(value);
           console.log("focus!");
 
-          const { user } = this.state;
           user["open"] = !user.open;
           this.setState({ user });
 
@@ -108,6 +108,9 @@ export default class MainForm extends React.Component {
         if (event.type === "mousedown" || event.type === "ontouchstart") {
             user["submitted"] = true;
             this.setState({ user });
+
+            //user["open"] = false;
+            //this.setState({ user });
         }
     }
 
@@ -119,10 +122,6 @@ export default class MainForm extends React.Component {
 
     handleSubmit = () => {
         // your submit logic
-
-        const { user } = this.state;
-        user["open"] = !user.open;
-        this.setState({ user });
 
         console.log("handle submit here");
 
