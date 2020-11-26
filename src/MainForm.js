@@ -138,7 +138,7 @@ export default class MainForm extends React.Component {
 
                 <Button 
                     name="submit" 
-                    onClick={this.handleClick} 
+                    //onClick={this.handleClick} 
                     style={
                         user.validUrl 
                         ?
