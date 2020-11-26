@@ -10,7 +10,8 @@ export default class MainForm extends React.Component {
         user: {
             url: '',
             urlValid: false,
-            open: false
+            open: false,
+            submitted: false
         },
     };
 
@@ -70,9 +71,11 @@ export default class MainForm extends React.Component {
 
     handleBlur = event => {
 
+        const { user } = this.state;
+
         console.log(event);
 
-        if (event.relatedTarget && event.relatedTarget.name === "submit")
+        if (event.relatedTarget && event.relatedTarget.name === "submit" || user.submitted)
         {
             return true;
         }
@@ -97,6 +100,19 @@ export default class MainForm extends React.Component {
             }
         }  
     };
+
+    handleEvent = (event) => {
+
+        const { user } = this.state;
+
+        if (event.type === "mousedown") {
+            //this.setState({ message: "Mouse Down"});
+            user["submitted"] = true;
+            this.setState({ user });
+        } else {
+            //this.setState({ message: "Mouse Up"});
+        }
+    }
 
     handleClick = () => {
 
@@ -140,6 +156,9 @@ export default class MainForm extends React.Component {
                 />
 
                 <Button 
+                    onMouseDown={ this.handleEvent } 
+                    onMouseUp={ this.handleEvent } 
+                    //tabindex="0"
                     name="submit" 
                     //onClick={this.handleClick} 
                     style={
