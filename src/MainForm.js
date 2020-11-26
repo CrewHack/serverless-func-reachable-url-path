@@ -60,8 +60,6 @@ export default class MainForm extends React.Component {
 
     handleBlur = event => {
 
-        return true;
-
         console.log(event);
 
         const { name, value } = event.target;
@@ -78,9 +76,11 @@ export default class MainForm extends React.Component {
 
           this.props.drawerToggle();
         }
-      };
 
-      handleClick = () => {
+        return true;
+    };
+
+    handleClick = () => {
 
         console.log("handle click here");
 
@@ -103,9 +103,9 @@ export default class MainForm extends React.Component {
                 onSubmit={this.handleSubmit}
             >
                 <TextValidator 
-                inputProps={{
-                    autoCapitalize: 'none',
-                  }}
+                    inputProps={{
+                        autoCapitalize: 'none',
+                    }}
                     fullWidth 
                     onBlur={this.handleBlur}
                     onFocus={this.handleFocus}
