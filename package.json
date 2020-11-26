@@ -13,6 +13,7 @@
     "chrome-aws-lambda": "latest",
     "clsx": "^1.1.1",
     "framer-motion": "^2.9.4",
+    "is-valid-http-url": "^1.0.3",
     "material-ui-cookie-consent": "^0.1.0",
     "next": "latest",
     "next-pwa": "latest",
@@ -20,7 +21,9 @@
     "puppeteer": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "styled-components": "^5.2.1"
+    "react-material-ui-form-validator": "^2.1.1",
+    "styled-components": "^5.2.1",
+    "valid-url": "^1.0.9"
   },
   "scripts": {
     "dev": "next dev",

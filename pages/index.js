@@ -6,8 +6,8 @@ import ProTip from '../src/ProTip';
 //import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 //import Image from '../src/Image';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+//import TextField from '@material-ui/core/TextField';
+//import Button from '@material-ui/core/Button';
 import MUICookieConsent from 'material-ui-cookie-consent';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -22,6 +22,7 @@ import SecurityIcon from '@material-ui/icons/Security';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 import LinkIcon from '@material-ui/icons/Link';
 import clsx from 'clsx';
+import MainForm from '../src/MainForm';
 
 const styles = {
   card: {
@@ -85,17 +86,25 @@ const styles = {
 
 function Index(props) {
 
+  /*const handleChange = (event) => {
+    const url = event.target.value;
+    setUrl(url);
+  }*/
+
   const { classes } = props;
 
   const drawerToggle = (e) => { 
 
-    e.preventDefault(); e.stopPropagation();
+    //e.preventDefault(); 
+    //e.stopPropagation();
     window.scrollTo(0,-300); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
 
     setOpen(!open);
   };
 
   const [open, setOpen] = React.useState(false);
+
+  const [url, setUrl] = React.useState('');
 
   return (
 
@@ -122,11 +131,14 @@ function Index(props) {
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}>
             <CardContent style={{paddingBottom: "2px"}}>
-                <TextField className={clsx(!open && classes.close, open && classes.open)} onFocus={drawerToggle} onBlur={drawerToggle} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power" />
+   
+                <MainForm drawerToggle={drawerToggle.bind(this)}/>
+
+                {/*<TextField className={clsx(!open && classes.close, open && classes.open)} onFocus={drawerToggle} onBlur={drawerToggle} fullWidth id="standard-basic" label="&nbsp;&nbsp;Enter URL to measure power"/>*/}
             </CardContent>
-            <CardActions>
+            {/*<CardActions>
                 <Button style={{color: "#FFFFFF", backgroundColor: "#14a37f"}} fullWidth color="primary" variant="contained">Measure URL power</Button>
-            </CardActions>
+            </CardActions>*/}
         </Card>
 
         <span>&nbsp;&nbsp;</span>
