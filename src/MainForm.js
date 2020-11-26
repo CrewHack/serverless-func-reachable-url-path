@@ -91,7 +91,7 @@ export default class MainForm extends React.Component {
 
           console.log(user.open);
 
-          this.props.drawerToggle();
+          //this.props.drawerToggle();
         }
     };
 
