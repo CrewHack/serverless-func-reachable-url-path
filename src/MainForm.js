@@ -9,11 +9,15 @@ export default class MainForm extends React.Component {
     state = {
         user: {
             url: '',
+            urlValid: false,
             open: false
         },
     };
 
     componentDidMount() {
+
+        const { user } = this.state;
+
         // custom rule will have name 'isUrl'
         ValidatorForm.addValidationRule('isUrl', (value) => {
 
@@ -23,8 +27,14 @@ export default class MainForm extends React.Component {
             // check URL here for validity
             if (!isUrl(url))
             {
-              return false; // not valid
+                user["validUrl"] = false;
+                this.setState({ user });
+
+                return false; // not valid
             }
+
+            user["validUrl"] = true;
+            this.setState({ user });
 
             return true; // valid
         });
@@ -126,7 +136,21 @@ export default class MainForm extends React.Component {
                     //type=i.e. "password" etc.
                 />
 
-                <Button name="submit" onClick={this.handleClick} style={{color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}} fullWidth variant="contained" type="submit">Measure URL power</Button>
+                <Button 
+                    name="submit" 
+                    onClick={this.handleClick} 
+                    style={
+                        user.validUrl 
+                        ?
+                        {color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}
+                        :
+                        {color: "#FFFFFF", backgroundColor: "#676666", marginTop: "6px", marginBottom: "6px"}
+                    } 
+                    fullWidth 
+                    variant="contained" 
+                    type="submit">
+                        Measure URL power
+                </Button>
 
             </ValidatorForm>
         );
