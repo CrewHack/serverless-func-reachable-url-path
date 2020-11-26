@@ -61,7 +61,7 @@ export default class MainForm extends React.Component {
     handleBlur = event => {
 
         console.log(event);
-        
+
         const { name, value } = event.target;
         if (name === "url") {
           // set true as second parameter to onBlur required validation
@@ -101,6 +101,9 @@ export default class MainForm extends React.Component {
                 onSubmit={this.handleSubmit}
             >
                 <TextValidator 
+                inputProps={{
+                    autoCapitalize: 'none',
+                  }}
                     fullWidth 
                     onBlur={this.handleBlur}
                     onFocus={this.handleFocus}
