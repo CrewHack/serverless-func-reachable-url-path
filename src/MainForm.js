@@ -99,8 +99,8 @@ export default class MainForm extends React.Component {
                     errorMessages={['this field is required','Checking URL validity: Please enter a valid URL...']}
                     value={user.url}
                     autoComplete="off"
-                    //type="password"
                     style={user.open ? {backgroundColor: "white"} : {backgroundColor: "#F7F9FB"}}
+                    //type=i.e. "password" etc.
                 />
 
                 <Button style={{color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}} fullWidth variant="contained" type="submit">Measure URL power</Button>

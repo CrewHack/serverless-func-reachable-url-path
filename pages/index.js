@@ -129,7 +129,7 @@ function Index(props) {
           Measure any URL's power.
         </Typography>}
 
-        <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}>
+        <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-8px"}}>
             <CardContent style={{paddingBottom: "2px"}}>
    
                 <MainForm drawerToggle={drawerToggle.bind(this)}/>
