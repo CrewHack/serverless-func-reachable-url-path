@@ -126,9 +126,9 @@ function Index(props) {
 
     drawerToggle();
 
-    const res = await fetch("/api/performance", {
+    const res = await fetch("https://serverless-func-reachable-url-path.vercel.app/api/performance", {
       headers: {
-         authorization: "yo"
+         Authorization: "yo"
        }
     });
 
