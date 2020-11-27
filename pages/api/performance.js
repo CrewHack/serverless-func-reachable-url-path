@@ -51,8 +51,8 @@ export const getPerformance = async (req, res) => {
   var myFetchedData = await response.json();
 
   //trigger Bubble Workflow
-  var baseUrl = "https://marketheart.allied-techs.com/api/1.1/wf/testendpoint?url=";
-  response = await fetch();
+  /*var baseUrl = "https://marketheart.allied-techs.com/api/1.1/wf/testendpoint?url=";
+  response = await fetch();*/
 
   res.statusCode = 200
   res.json(myFetchedData)

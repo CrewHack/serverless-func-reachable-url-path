@@ -120,11 +120,17 @@ function Index(props) {
     setOpen(!open);
   };
 
-  const submit = (e) => { 
+  const submit = async (e) => { 
 
     console.log("SUBMIT!");
 
-    this.drawerToggle();
+    drawerToggle();
+
+    const res = await fetch("/api/performance");
+
+    const test = await res.json();
+
+    console.log(test);
 
   };
 
