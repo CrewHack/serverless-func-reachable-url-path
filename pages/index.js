@@ -126,7 +126,11 @@ function Index(props) {
 
     drawerToggle();
 
-    const res = await fetch("/api/performance");
+    const res = await fetch("/api/performance", {
+      headers: {
+         authorization: "yo"
+       }
+    });
 
     const test = await res.json();
 
