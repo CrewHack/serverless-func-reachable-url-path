@@ -126,9 +126,11 @@ function Index(props) {
 
     drawerToggle();
 
-    const res = await fetch("https://serverless-func-reachable-url-path.vercel.app/api/performance", {
+    // https://serverless-func-reachable-url-path.vercel.app
+    const res = await fetch("/api/performance", {
       headers: {
-         Authorization: "yo"
+         "Authorization": "Apikey 1234567890abcdef",
+         "X-Secret-Key": "djewbdjnewdjknwejkdnkjwe"
        }
     });
 

@@ -6,6 +6,7 @@ const exePath =
   process.platform === "win32"
     ? "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
     : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
+    
 
 export const getOptions = async isDev => {
   
@@ -28,12 +29,11 @@ export const getPerformance = async (req, res) => {
 
   res.setHeader('Access-Control-Allow-Credentials', true)
   res.setHeader('Access-Control-Allow-Origin', '*')
-  // another common pattern
-  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
   res.setHeader(
     'Access-Control-Allow-Headers',
-    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization'
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization, X-Secret-Key'
   )
 
   /*var url = "https://allied-techs.com";
@@ -56,7 +56,40 @@ export const getPerformance = async (req, res) => {
     )) 
   );*/
 
-  console.log(req.headers);
+  if (req.headers.authorization === undefined)
+  {
+    console.log("Not authorized.");
+    res.statusCode = 401;
+    res.json({"Authorization": "Unauthorized."});
+    return {res};
+  }
+  else
+  {
+
+    if (req.headers['x-secret-key'] === undefined) 
+    {
+      console.log("Not authorized.");
+      res.statusCode = 401;
+      res.json({"Authorization": "Unauthorized."});
+      return {res};
+    }
+    else // has Authorization & X-Secret-Key headers, check if valid values and then if authorized user
+    {
+
+      if (! req.headers.authorization.includes("Apikey "))
+      {
+        console.log("Not authorized.");
+        res.statusCode = 401;
+        res.json({"Authorization": "Unauthorized."});
+        return {res};
+      }
+
+      var apiKey = req.headers.authorization.split("Apikey ")[1];
+ 
+      console.log(apiKey)
+
+    }
+  }
 
   //save to Bubble DB
   const response = await fetch("https://marketheart.allied-techs.com/api/1.1/obj/Urls");
@@ -68,7 +101,6 @@ export const getPerformance = async (req, res) => {
 
   res.statusCode = 200
   res.json(myFetchedData)
-  //myFetchedData
 
   return { res };
 };
