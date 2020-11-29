@@ -7,7 +7,7 @@ const BackgroundVideo = () => {
   useEffect(() => {
     setTimeout(()=>{
       videoRef.current.play()
-    },5000)
+    },100)
   }, []);
 
   return <Container maxWidth="lg">

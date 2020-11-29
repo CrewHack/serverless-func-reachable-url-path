@@ -192,8 +192,8 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography style={{color: "#FFFFFF"}} className={classes.title} variant="h6">
-            <PowerIcon style={{color: "#FFFFFF"}}/>
-            URLpow
+            {/*<PowerIcon style={{color: "#FFFFFF"}}/>*/}
+            Getridox Miracles
           </Typography>
           {/*<div className={classes.search}>
             <div className={classes.searchIcon}>
