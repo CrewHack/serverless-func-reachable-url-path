@@ -86,8 +86,8 @@ const BackgroundVideo = () => {
   }
   else
   {
-      vw = "100%";
-      vh = "100%";
+      vw = "1000px";
+      vh = "1000px";
   }
 
   return <Container id="videoContainer" style={{paddingRight: "0px", paddingLeft: "0px"}} maxWidth="lg">
