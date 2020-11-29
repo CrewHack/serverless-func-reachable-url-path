@@ -4,7 +4,9 @@ import Button from '@material-ui/core/Button';
 
 const BackgroundVideo = () => {
 
-  const [currentVideo, setCurrentVideo] = useState(0);
+  //const [currentVideo, setCurrentVideo] = useState(0);
+
+  var currentVideo = 0;
   const numVideos = 10;
 
   const videoRef = useRef()
@@ -34,7 +36,6 @@ const BackgroundVideo = () => {
 
   function onEnded()
   { 
-    
     const video_player = document.getElementById("videoPlayer");
 
     var curVideo = currentVideo+1;
@@ -42,13 +43,16 @@ const BackgroundVideo = () => {
     {
         curVideo = 0;
     }
+    currentVideo = curVideo;
+
+    console.log(curVideo);
     
     video_player.setAttribute("src", videoSource[curVideo]);
     fadeIt();
 
     video_player.play();
 
-    setCurrentVideo(curVideo + 1);
+    //setCurrentVideo(curVideo + 1);
   }
 
   function fade(element) {
