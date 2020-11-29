@@ -88,7 +88,18 @@ export default function MyApp(props) {
 
   const timeout = setInterval(() => {
     if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
-      setCookied(true);
+
+      clearInterval();
+
+      setCookied(true); // visitor accepted cookies
+
+      // check for fullScreen elements on the DOM & make 'em happen
+      let videoContainer = document.getElementById("videoContainer");
+      if (videoContainer && videoContainer.requestFullscreen)
+      {
+          videoContainer.requestFullscreen();
+      }
+
     }
     else
     {
