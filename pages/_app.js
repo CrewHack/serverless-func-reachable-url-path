@@ -22,6 +22,8 @@ export default function MyApp(props) {
   const { Component, pageProps } = props;
   const classes = useStyles();
 
+  var acceptedCookieConsentClick = false;
+
   var picoModalClosed = false;
 
   React.useEffect(() => {
@@ -84,22 +86,39 @@ export default function MyApp(props) {
       console.log(document.getElementsByTagName("script"));
     }
 
+    if ('ontouchstart' in document.documentElement) {
+      //Attach code for touch event listeners
+      document.addEventListener("touchstart", myFunc, false);
+    } else {
+      //Attach code for mouse event listeners
+      document.addEventListener("mousedown", myFunc, false);
+    }
+
   }, []);
 
   const timeout = setInterval(() => {
     if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
 
-      clearInterval();
+      clearInterval(timeout);
 
       setCookied(true); // visitor accepted cookies
 
       // check for fullScreen elements on the DOM & make 'em happen
-      let videoContainer = document.getElementById("videoContainer");
-      if (videoContainer && videoContainer.requestFullscreen)
+      try
       {
-          videoContainer.requestFullscreen();
-      }
+          let videoContainer = document.getElementById("videoContainer");
 
+          if (videoContainer && videoContainer.requestFullscreen && acceptedCookieConsentClick)
+          {
+              videoContainer.requestFullscreen();
+
+              acceptedCookieConsentClick = false;
+          }
+      }
+      catch(e)
+      { 
+          console.log(e);
+      }
     }
     else
     {
@@ -108,6 +127,11 @@ export default function MyApp(props) {
   }, 500);
 
   const [cookied, setCookied] = React.useState(false);
+
+  function myFunc()
+  {
+      acceptedCookieConsentClick = true;
+  }
 
   return (
     <React.Fragment>
