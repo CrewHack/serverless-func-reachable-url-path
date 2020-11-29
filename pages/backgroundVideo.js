@@ -28,7 +28,7 @@ const BackgroundVideo = () => {
       }}>
     <source src="/1_Getridox.mp4" type="video/mp4"/>
   </video>
-  <Button variant="contained" fullWidth style={{height: "50px", color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "-200px"}}>Read More</Button>
+  <Button variant="contained" fullWidth style={{height: "50px", color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "0px"}}>Read More</Button>
 </Container>
 }
 
