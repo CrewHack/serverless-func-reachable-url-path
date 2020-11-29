@@ -45,10 +45,10 @@ const BackgroundVideo = () => {
     }
     currentVideo = curVideo;
 
-    console.log(curVideo);
+    //console.log(curVideo);
     
     video_player.setAttribute("src", videoSource[curVideo]);
-    fadeIt();
+    //fadeIt();
 
     video_player.play();
 

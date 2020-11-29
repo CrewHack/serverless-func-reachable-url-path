@@ -77,13 +77,13 @@ export default function MyApp(props) {
 
     const jssStylesNew = document.querySelector('#jss-server-side');
     if (jssStylesNew && jssStylesNew.parentNode) {
-      console.log("nope");
+      //console.log("nope");
     }
     else
     {
-      console.log("removed");
+      //console.log("removed");
 
-      console.log(document.getElementsByTagName("script"));
+      //console.log(document.getElementsByTagName("script"));
     }
 
     if ('ontouchstart' in document.documentElement) {
