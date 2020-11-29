@@ -1,34 +1,90 @@
-import React, {useEffect, useRef} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
 const BackgroundVideo = () => {
+
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const numVideos = 10;
+
   const videoRef = useRef()
 
   useEffect(() => {
     setTimeout(()=>{
-      videoRef.current.play()
+      videoRef.current.play();
+      clearTimeout();
     },100)
   }, []);
 
+  function onEnded()
+  {
+    //console.log("video ended"); 
+    
+    const video_player = document.getElementById("videoPlayer");
+
+    console.log(currentVideo);
+
+    var curVideo = currentVideo+1;
+    if (curVideo >= numVideos)
+    {
+        curVideo = 0;
+    }
+    
+    video_player.setAttribute("src", videoSource[curVideo]);
+    onCanPlayThrough();
+
+    video_player.play();
+
+    setCurrentVideo(currentVideo + 1);
+  }
+
+  function onLoadedMetaData(d)
+  {
+      //console.log(d);
+  }
+
+  function fade(element) {
+    var op = 0;
+    var timer = setInterval(function() {
+        if (op >= 1) clearInterval(timer);
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1 || 0.1;
+    }, 50);
+  }
+
+  function onCanPlayThrough() {
+    setTimeout(function() {
+        var e = document.getElementById('videoPlayer');
+        fade(e);
+        clearTimeout();
+    }, 50);
+  };
+
+  // TO-DO: dynamically get videos from /videos dir
+  const videoSource = ["1_Getridox.mp4", "2_Getridox.mp4","3_Getridox.mp4","4_Getridox.mp4","5_Getridox.mp4","6_Getridox.mp4","7_Getridox.mp4","8_Getridox.mp4","9_Getridox.mp4","10_Getridox.mp4"]
+
   return <Container style={{paddingRight: "0px", paddingLeft: "0px"}} maxWidth="lg">
   <video
+      id="videoPlayer"
+      onEnded={onEnded}
+      //onLoadedMetadata={onLoadedMetaData}
+      //onCanPlayThrough={onCanPlayThrough}
       ref={videoRef}
       controls
-      width="100%"
-      loop
+      width="360px"
+      height="640px"
+      //loop
       muted
       style={{
         opacity: 1,
         position: "relative",
-        width: "100%",
-        height: "100%",
         left: 0,
         top: 0,
       }}>
-    <source src="/1_Getridox.mp4" type="video/mp4"/>
+    <source src={videoSource[currentVideo]} type="video/mp4"/>
   </video>
-  <Button variant="contained" fullWidth style={{height: "50px", color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "-95px"}}>Read More</Button>
+  <Button variant="contained" fullWidth style={{height: "50px", color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "-95px"}}>Read More about Getridox</Button>
 </Container>
 }
 
