@@ -39,7 +39,7 @@ const BackgroundVideo = () => {
 
     video_player.play();
 
-    setCurrentVideo(currentVideo + 1);
+    setCurrentVideo(curVideo + 1);
   }
 
   function fade(element) {
