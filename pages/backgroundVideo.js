@@ -76,14 +76,28 @@ const BackgroundVideo = () => {
   // TO-DO: dynamically get videos from /videos dir
   const videoSource = ["1_Getridox.mp4", "2_Getridox.mp4","3_Getridox.mp4","4_Getridox.mp4","5_Getridox.mp4","6_Getridox.mp4","7_Getridox.mp4","8_Getridox.mp4","9_Getridox.mp4","10_Getridox.mp4"]
 
+  var vw = null;
+  var vh = null;
+
+  if (process.browser)
+  {
+      vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+      vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+  }
+  else
+  {
+      vw = "100%";
+      vh = "100%";
+  }
+
   return <Container id="videoContainer" style={{paddingRight: "0px", paddingLeft: "0px"}} maxWidth="lg">
   <video
       id="videoPlayer"
       onEnded={onEnded}
       ref={videoRef}
       //controls
-      width="100%"
-      height="100%"
+      width={vw}
+      height={vh}
       //loop
       muted
       style={{
