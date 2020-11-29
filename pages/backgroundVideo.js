@@ -14,11 +14,11 @@ const BackgroundVideo = () => {
     setTimeout(()=>{
         let v = document.getElementById("videoPlayer");
 
-    v.height = window.screen.availHeight
-    v.width = window.screen.availWidth
+        v.height = v.clientHeight; // window.screen.availHeight
+        v.width = v.clientWidth; // window.screen.availWidth
 
-      videoRef.current.play();
-      clearTimeout();
+        videoRef.current.play();
+        clearTimeout();
     },100)
 
   }, []);
