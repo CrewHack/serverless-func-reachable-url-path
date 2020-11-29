@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from "react"
 import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
 
 const BackgroundVideo = () => {
   const videoRef = useRef()
@@ -10,7 +11,7 @@ const BackgroundVideo = () => {
     },100)
   }, []);
 
-  return <Container maxWidth="lg">
+  return <Container style={{paddingRight: "0px", paddingLeft: "0px"}} maxWidth="lg">
   <video
       ref={videoRef}
       controls
@@ -18,6 +19,7 @@ const BackgroundVideo = () => {
       loop
       muted
       style={{
+        opacity: 1,
         position: "relative",
         width: "100%",
         height: "100%",
@@ -26,6 +28,7 @@ const BackgroundVideo = () => {
       }}>
     <source src="/1_Getridox.mp4" type="video/mp4"/>
   </video>
+  <Button variant="contained" fullWidth style={{height: "50px", color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "-200px"}}>Read More</Button>
 </Container>
 }
 

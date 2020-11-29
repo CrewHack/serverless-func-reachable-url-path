@@ -113,8 +113,8 @@ export default function MyApp(props) {
             //"
         /> 
         <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "none", opacity: 0.4, transition: "all .7s ease"}}>
-            <PrimarySearchAppBar />
-            <div className={classes.offset} />
+            {/*<PrimarySearchAppBar />*/}
+            {/*<div className={classes.offset} />*/}
             <Component {...pageProps} />
         </div>
       </ThemeProvider>
