@@ -10,19 +10,23 @@ const BackgroundVideo = () => {
   const videoRef = useRef()
 
   useEffect(() => {
+
     setTimeout(()=>{
+        let v = document.getElementById("videoPlayer");
+
+    v.height = window.screen.availHeight
+    v.width = window.screen.availWidth
+
       videoRef.current.play();
       clearTimeout();
     },100)
+
   }, []);
 
   function onEnded()
-  {
-    //console.log("video ended"); 
+  { 
     
     const video_player = document.getElementById("videoPlayer");
-
-    console.log(currentVideo);
 
     var curVideo = currentVideo+1;
     if (curVideo >= numVideos)
@@ -31,16 +35,11 @@ const BackgroundVideo = () => {
     }
     
     video_player.setAttribute("src", videoSource[curVideo]);
-    onCanPlayThrough();
+    fadeIt();
 
     video_player.play();
 
     setCurrentVideo(currentVideo + 1);
-  }
-
-  function onLoadedMetaData(d)
-  {
-      //console.log(d);
   }
 
   function fade(element) {
@@ -53,7 +52,7 @@ const BackgroundVideo = () => {
     }, 50);
   }
 
-  function onCanPlayThrough() {
+  function fadeIt() {
     setTimeout(function() {
         var e = document.getElementById('videoPlayer');
         fade(e);
@@ -68,12 +67,10 @@ const BackgroundVideo = () => {
   <video
       id="videoPlayer"
       onEnded={onEnded}
-      //onLoadedMetadata={onLoadedMetaData}
-      //onCanPlayThrough={onCanPlayThrough}
       ref={videoRef}
       controls
-      width="360px"
-      height="640px"
+      width="100%"
+      height="100%"
       //loop
       muted
       style={{
