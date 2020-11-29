@@ -55,7 +55,7 @@ const BackgroundVideo = () => {
     //setCurrentVideo(curVideo + 1);
   }
 
-  function fade(element) {
+  /*function fade(element) {
     var op = 0;
     var timer = setInterval(function() {
         if (op >= 1) clearInterval(timer);
@@ -71,7 +71,7 @@ const BackgroundVideo = () => {
         fade(e);
         clearTimeout();
     }, 50);
-  };
+  };*/
 
   // TO-DO: dynamically get videos from /videos dir
   const videoSource = ["1_Getridox.mp4", "2_Getridox.mp4","3_Getridox.mp4","4_Getridox.mp4","5_Getridox.mp4","6_Getridox.mp4","7_Getridox.mp4","8_Getridox.mp4","9_Getridox.mp4","10_Getridox.mp4"]
@@ -86,7 +86,7 @@ const BackgroundVideo = () => {
   }
   else
   {
-      vw = "100%"; // test
+      vw = "100%"; 
       vh = "100%";
   }
 

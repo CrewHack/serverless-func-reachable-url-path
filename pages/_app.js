@@ -112,6 +112,10 @@ export default function MyApp(props) {
           {
               videoContainer.requestFullscreen();
 
+              let v = document.getElementById("videoPlayer");
+
+              v.muted = false;
+
               acceptedCookieConsentClick = false;
           }
       }
