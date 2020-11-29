@@ -14,18 +14,12 @@ const BackgroundVideo = () => {
   useEffect(() => {
 
     setTimeout(()=>{
-        //let v = document.getElementById("videoPlayer");
-
-        //v.height = v.clientHeight; // window.screen.availHeight
-        //v.width = v.clientWidth; // window.screen.availWidth
-
         videoRef.current.play();
         clearTimeout();
     },100)
 
     setTimeout(()=>{
         let v = document.getElementById("videoPlayer");
-
         v.height = v.clientHeight; // window.screen.availHeight
         v.width = v.clientWidth; // window.screen.availWidth
 

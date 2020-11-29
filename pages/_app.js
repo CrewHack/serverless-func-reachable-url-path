@@ -114,7 +114,7 @@ export default function MyApp(props) {
 
               let v = document.getElementById("videoPlayer");
 
-              v.muted = false;
+              // v.muted = false; // turn sound back on
 
               acceptedCookieConsentClick = false;
           }
