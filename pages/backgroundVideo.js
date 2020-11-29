@@ -68,7 +68,7 @@ const BackgroundVideo = () => {
       id="videoPlayer"
       onEnded={onEnded}
       ref={videoRef}
-      controls
+      //controls
       width="100%"
       height="100%"
       //loop
