@@ -129,7 +129,7 @@ function Index(props) {
     // https://serverless-func-reachable-url-path.vercel.app
     const res = await fetch("/api/performance", {
       headers: {
-         "Authorization": "Apikey 1234567890abcdef",
+         "Authorization": "1234567890abcdef",
          "X-Secret-Key": "djewbdjnewdjknwejkdnkjwe"
        }
     });

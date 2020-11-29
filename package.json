@@ -13,6 +13,7 @@
     "@material-ui/icons": "latest",
     "chrome-aws-lambda": "latest",
     "clsx": "^1.1.1",
+    "cryptr": "^6.0.2",
     "framer-motion": "^2.9.4",
     "is-valid-http-url": "^1.0.3",
     "js-cookie": "^2.2.1",
@@ -28,7 +29,7 @@
     "valid-url": "^1.0.9"
   },
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next dev", 
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
