@@ -175,6 +175,7 @@
                             class: "title"
                         }, [this.title])]);
                     this.port.appendChild(t), this.input = l("input", {
+                        autocapitalize="words",
                         type: "text",
                         class: "input",
                         placeholder: this.placeholderText,
