@@ -179,6 +179,7 @@
                         class: "input",
                         id: "yo",
                         autofocus: true,
+                        autocapitalize: "words",
                         placeholder: this.placeholderText,
                         keyup: function (t, n) {
                             e.handleInput(t, n)
