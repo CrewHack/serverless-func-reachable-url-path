@@ -177,7 +177,7 @@
                     this.port.appendChild(t), this.input = l("input", {
                         type: "text",
                         class: "input",
-                        id: "yo",
+                        id: this.placeholderText === "Enter Full Name" ? "yoname" : "yoemail",
                         autofocus: true,
                         autocapitalize: this.placeholderText === "Enter Full Name" ? "words" : "off",
                         placeholder: this.placeholderText,
