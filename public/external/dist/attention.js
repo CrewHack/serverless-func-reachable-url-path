@@ -179,7 +179,7 @@
                         class: "input",
                         id: "yo",
                         autofocus: true,
-                        autocapitalize: "words",
+                        autocapitalize: this.placeholderText === "Enter Full Name" ? "words" : "off",
                         placeholder: this.placeholderText,
                         keyup: function (t, n) {
                             e.handleInput(t, n)
