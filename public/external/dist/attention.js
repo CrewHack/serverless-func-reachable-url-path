@@ -178,6 +178,7 @@
                         type: "text",
                         class: "input",
                         id: "yo",
+                        autofocus,
                         placeholder: this.placeholderText,
                         keyup: function (t, n) {
                             e.handleInput(t, n)
