@@ -177,6 +177,7 @@
                     this.port.appendChild(t), this.input = l("input", {
                         type: "text",
                         class: "input",
+                        id: "yo",
                         placeholder: this.placeholderText,
                         keyup: function (t, n) {
                             e.handleInput(t, n)
