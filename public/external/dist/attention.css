@@ -80,6 +80,11 @@
     color: #fff
 }
 
+.attention-component .button:hover {
+    background-color: #f3a42d;
+    color: #fff
+}
+
 .attention-component .buttons {
     margin-top: 20px;
     text-align: center
