@@ -324,7 +324,7 @@ function Index(props) {
             </CardContent>
             <CardActions style={{paddingTop: "0px", paddingBottom: "0px"}}>
                 {!open && <ProTip/>}
-                {open && <Typography className={classes.root} color="textSecondary">Let's do this!</Typography>}
+                {open && <Typography className={classes.root} color="error">Let's do this!</Typography>}
             </CardActions>
         </Card>
 

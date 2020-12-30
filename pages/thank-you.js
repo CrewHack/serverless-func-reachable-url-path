@@ -12,12 +12,20 @@ export default function ThankYou() {
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Next.js example
+          Thank you for your interest!
         </Typography>
-        <Button variant="contained" color="primary" component={Link} naked href="/">
-          Go to the main page
+        <Typography variant="h6" component="h1" gutterBottom>
+         A rep from acceptBTC will be in touch soon.
+        </Typography>
+
+        <Typography>
+         In the meantime, please check out a real-world example of acceptBTC in action in an eCommerce shop: <Button variant="contained" color="primary" component={Link} naked href="https://www.style-element.co">
+          View Example
         </Button>
-        <ProTip />
+        </Typography>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
         <Copyright />
       </Box>
     </Container>
