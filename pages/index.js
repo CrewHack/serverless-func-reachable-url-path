@@ -227,6 +227,7 @@ function Index(props) {
           style={{
           display: "flex",
           justifyContent: "left",
+          marginBottom: "-8px"
           }}
           >
           <span style={{
