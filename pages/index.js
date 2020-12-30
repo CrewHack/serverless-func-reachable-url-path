@@ -164,9 +164,9 @@ function Index(props) {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("spinner").style.display = "block";
 
-    console.log("SUBMIT!");
+    //("SUBMIT!");
 
-    console.log(data);
+    //console.log(data);
 
     //drawerToggle();
 
@@ -182,7 +182,7 @@ function Index(props) {
 
     const test = await res.json();
 
-    console.log(test.response);
+    //console.log(test.response);
 
     document.getElementById("overlay").style.display = "none";
     document.getElementById("spinner").style.display = "none";
