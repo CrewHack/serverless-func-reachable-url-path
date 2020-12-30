@@ -216,7 +216,7 @@ function Index(props) {
 
         {/*{!open && */}
         <Typography gutterBottom>
-          Add a 'Bitcoin Accepted Here' badge like this to your site today!
+          Get your 'Bitcoin Accepted Here' badge today!
         </Typography>
         {/*}*/}
         
