@@ -170,7 +170,7 @@ export default class MainForm extends React.Component {
                         ?
                         {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px"} // #14a37f
                         :
-                        {color: "#FFFFFF", backgroundColor: "#676666", marginTop: "6px", marginBottom: "6px"}
+                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px"} // #676666
                     } 
                     fullWidth 
                     variant="contained" 
