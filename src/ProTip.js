@@ -12,7 +12,7 @@ function LightBulbIcon(props) {
   );
 }
 
-const textArray = ["Does your business accept Bitcoin yet?", "It's 2021, crypto is here to stay.", "Add a 'Buy with Bitcoin' button today!", "Increase your revenue with crypto!", "We'll help you hook it all up.", "We specialize in payment technology.", "Accept crypto payments instantly.", "Accept crypto payments securely.", "Start accepting BTC payments today!"];
+const textArray = ["Does your business accept Bitcoin yet?", "It's 2021, crypto is here to stay.", "Add a 'Buy with Bitcoin' button today!", "Increase your revenue with crypto!", "We'll help you hook it all up for FREE.", "It's easy, get started now!", "We specialize in payment technology.", "Accept crypto payments instantly.", "Accept crypto payments securely.", "Start accepting BTC payments today!"];
 
 class ProTip extends Component {
   constructor() {

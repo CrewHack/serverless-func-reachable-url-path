@@ -12,11 +12,24 @@ export default function ThankYou() {
     <Container maxWidth="sm">
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Thank you for your interest!
+          Thank you, let's get you started accepting Bitcoin & other cryptocurrency payments right away.
         </Typography>
+
         <Typography variant="h6" component="h1" gutterBottom>
-         A rep from acceptBTC will be in touch soon. *Please check your email inbox to confirm your subscription in order to receive a follow-up.
+         The process is simple. 
         </Typography>
+
+        <Typography variant="h6" component="h1" gutterBottom>
+         1. Do this. 
+        </Typography>
+
+        <div>&nbsp;</div>
+
+        <Typography>
+        <i>*Please check your email inbox to confirm your subscription in order to receive a follow-up.</i>
+        </Typography>
+
+        <div>&nbsp;</div>
 
         <Typography>
          In the meantime, please check out a real-world example of acceptBTC in action in an eCommerce shop - look for the orange 'Buy with Bitcoin' button on the product page. It's live, give it a try!: <Button variant="contained" color="primary" component={Link} naked href="https://www.style-element.co/product/mens-silver-grey-classic-aviator-sunglasses">
