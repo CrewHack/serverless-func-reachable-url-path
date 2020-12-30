@@ -26,6 +26,7 @@ import clsx from 'clsx';
 import MainForm from '../src/MainForm';
 //import { useCookieWatcher, useCookie } from '@fcannizzaro/react-use-cookie-watcher'
 //import Cookies from 'js-cookie';
+import Image from 'next/image'
 
 const styles = {
   disabledDiv: {
@@ -173,6 +174,21 @@ function Index(props) {
         {!open && <Typography variant="h2" component="h2" gutterBottom>
           Start accepting Bitcoin & other crypto payments.
         </Typography>}
+
+        {!open && <Typography variant="h6" component="h6" gutterBottom>
+          Add a 'Bitcoin Accepted Here' button like this to your site today!
+        </Typography>}
+
+        
+
+        <Image
+          src="/external/Bitcoin_accepted_here_printable.png"
+          alt="Add a 'Bitcoin Accepted Here' button to your website"
+          width={200}
+          height={76}
+        />
+
+        <div>&nbsp;</div>
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-1px"}}>
             <CardContent style={{paddingBottom: "2px"}}>
