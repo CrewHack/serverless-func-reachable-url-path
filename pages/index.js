@@ -230,6 +230,16 @@ function Index(props) {
         </div>
         }
 
+        {open &&
+          <div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        }
+
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-1px"}}>
             <CardContent style={{paddingBottom: "2px"}}>
    
