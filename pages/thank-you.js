@@ -15,7 +15,7 @@ export default function ThankYou() {
           Thank you for your interest!
         </Typography>
         <Typography variant="h6" component="h1" gutterBottom>
-         A rep from acceptBTC will be in touch soon.
+         A rep from acceptBTC will be in touch soon. *Please check your email inbox to confirm your subscription in order to receive a follow-up.
         </Typography>
 
         <Typography>
