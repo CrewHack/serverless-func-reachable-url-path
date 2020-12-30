@@ -216,14 +216,19 @@ function Index(props) {
 
         {/*{!open && */}
         <Typography gutterBottom>
-          Get your 'Bitcoin Accepted Here' badge today!
+          Get your <Image
+          src="/external/Bitcoin_accepted_here_printable.png"
+          alt="Add a 'Bitcoin Accepted Here' badge to your website"
+          width={100}
+          height={38}
+        /> badge today!
         </Typography>
         {/*}*/}
         
         <div>&nbsp;</div>
         
         {/*{!open && */}
-        <div>
+        {/*<div>
         <Image
           src="/external/Bitcoin_accepted_here_printable.png"
           alt="Add a 'Bitcoin Accepted Here' badge to your website"
@@ -231,7 +236,7 @@ function Index(props) {
           height={38}
         />
         <div>&nbsp;</div>
-        </div>
+        </div>*/}
         {/*}*/}
 
         {/*{open &&
