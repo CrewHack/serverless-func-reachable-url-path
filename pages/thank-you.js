@@ -39,7 +39,7 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         2. Next, <a href="mailto:acceptbtc@allied-techs.com" target="_blank">email us</a> when you've completed STEP 1.
+         2. Next, <a href="mailto:support@acceptBTC.co" target="_blank">email us</a> when you've completed STEP 1.
         </Typography>
 
         {/*Next, sign up free here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2">
