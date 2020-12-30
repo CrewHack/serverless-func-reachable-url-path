@@ -236,7 +236,6 @@ function Index(props) {
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <p>&nbsp;</p>
           </div>
         }
 
