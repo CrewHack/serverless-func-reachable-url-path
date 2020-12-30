@@ -208,17 +208,21 @@ function Index(props) {
         </Typography>
         {/*}*/}
 
-        {!open && <Typography variant="h2" component="h2" gutterBottom>
+        {/*{!open &&  */}
+        <Typography variant="h2" component="h2" gutterBottom>
           Start accepting Bitcoin & other crypto payments.
-        </Typography>}
+        </Typography>
+        {/*}*/}
 
-        {!open && <Typography gutterBottom>
+        {/*{!open && */}
+        <Typography gutterBottom>
           Add a 'Bitcoin Accepted Here' badge like this to your site today!
-        </Typography>}
+        </Typography>
+        {/*}*/}
         
         <div>&nbsp;</div>
         
-        {!open && 
+        {/*{!open && */}
         <div>
         <Image
           src="/external/Bitcoin_accepted_here_printable.png"
@@ -228,16 +232,16 @@ function Index(props) {
         />
         <div>&nbsp;</div>
         </div>
-        }
+        {/*}*/}
 
-        {open &&
+        {/*{open &&
           <div>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <p>&nbsp;</p>
+            <div></div>
           </div>
-        }
+        }*/}
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-1px"}}>
             <CardContent style={{paddingBottom: "2px"}}>
@@ -286,7 +290,9 @@ function Index(props) {
 
       </Box>
 
-      {!open &&<Copyright />}
+      {/*{!open &&*/}
+        <Copyright />
+      {/*}*/}
 
     </Container>
   );
