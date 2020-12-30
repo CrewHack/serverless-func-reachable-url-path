@@ -8,7 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
-import PowerIcon from '@material-ui/icons/Power';
+//import PowerIcon from '@material-ui/icons/Power';
+import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
@@ -148,10 +149,11 @@ export default function MyApp(props) {
         <MUICookieConsent 
             cookieName="mySiteCookieConsent"
             //componentType="Dialog" // default value is Snackbar
-            message={<span aria-label="chilli" role="img">Welcome to <PowerIcon fontSize="inherit"/>URLpow.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue to site. GDPR, done. ✅</div></span>}
+            message={<span aria-label="chilli" role="img">Welcome to <AccountBalanceWalletOutlinedIcon fontSize="inherit"/>acceptBTC.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue. GDPR, done. ✅</div></span>}
             //"
         /> 
-        <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "none", opacity: 0.4, transition: "all .7s ease"}}>
+        <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}>
+        {/*pointerEvents: "none", opacity: 0.4, transition: "all .7s ease"*/}
             {/*<PrimarySearchAppBar />*/}
             {/*<div className={classes.offset} />*/}
             <Component {...pageProps} />
