@@ -70,9 +70,19 @@ const styles = {
     minWidth: 275,
     backgroundColor: "#ebeff2"
   },
+  card2: {
+    minWidth: 275,
+    backgroundColor: "#fbebd3"
+  },
   activatecard: {
     minWidth: 275,
     backgroundColor: "#F7F9FB",
+    transition: "all 1s ease",
+    animation: `$growShadow 2000ms infinite`
+  },
+  activatecard2: {
+    minWidth: 275,
+    backgroundColor: "#fbebd3",
     transition: "all 1s ease",
     animation: `$growShadow 2000ms infinite`
   },
@@ -230,9 +240,11 @@ function Index(props) {
           marginBottom: "-8px"
           }}
           >
+
           <span style={{
           marginTop: "12px",
           }}>Get your&nbsp;</span>
+
           <Image
           className = {classes.image}
           src="/external/Bitcoin_accepted_here_printable.png"
@@ -240,9 +252,11 @@ function Index(props) {
           width={135}
           height={50}
           /> 
+
           <span style={{
           marginTop: "12px",
           }}>&nbsp;badge today!</span>
+
           </div>
           
         </Typography>
@@ -285,8 +299,8 @@ function Index(props) {
 
         <span>&nbsp;&nbsp;</span>
 
-        <Card style={{marginBottom: "10px", marginTop: "-8px"}} className={clsx(!open && classes.card, open && classes.activatecard)}>
-            <CardContent style={{paddingBottom: "4px", marginTop: "-8px"}}>
+        <Card style={{marginBottom: "0px", marginTop: "-8px"}} className={clsx(!open && classes.card2, open && classes.activatecard2)}>
+            <CardContent style={{paddingBottom: "0px", marginTop: "-8px"}}>
                 {/*<Grid container>
                     <Grid style={{width: "16.66%"}} item >
                         <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><NetworkCheckIcon fontSize="large" style={{color:"#00000087"}}/></Card>
@@ -308,7 +322,7 @@ function Index(props) {
                     </Grid>                                                                             
                 </Grid>*/}
             </CardContent>
-            <CardActions style={{paddingTop: "4px", paddingBottom: "4px"}}>
+            <CardActions style={{paddingTop: "0px", paddingBottom: "0px"}}>
                 {!open && <ProTip/>}
                 {open && <Typography className={classes.root} color="textSecondary">Let's do this!</Typography>}
             </CardActions>

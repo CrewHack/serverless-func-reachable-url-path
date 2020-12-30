@@ -170,9 +170,9 @@ export default class MainForm extends React.Component {
                     style={
                         user.validUrl 
                         ?
-                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px"} // #14a37f
+                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px", height: "50px"} // #14a37f
                         :
-                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px"} // #676666
+                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px", height: "50px"} // #676666
                     } 
                     fullWidth 
                     variant="contained" 
