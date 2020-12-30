@@ -227,8 +227,8 @@ function Index(props) {
         <Image
           src="/external/Bitcoin_accepted_here_printable.png"
           alt="Add a 'Bitcoin Accepted Here' badge to your website"
-          width={200}
-          height={76}
+          width={100}
+          height={38}
         />
         <div>&nbsp;</div>
         </div>
