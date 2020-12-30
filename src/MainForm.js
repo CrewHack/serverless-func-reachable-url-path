@@ -148,7 +148,7 @@ export default class MainForm extends React.Component {
                     onBlur={this.handleBlur}
                     onFocus={this.handleFocus}
                     id="standard-basic"
-                    label="&nbsp;&nbsp;Enter email to begin"
+                    label="&nbsp;&nbsp;Enter email to start accepting Bitcoin"
                     onChange={this.handleChange}
                     name="url"
                     validators={['required','isUrl']}

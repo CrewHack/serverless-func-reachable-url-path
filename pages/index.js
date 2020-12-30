@@ -217,10 +217,11 @@ function Index(props) {
         {/*{!open && */}
         <Typography gutterBottom>
           Get your <Image
+          style={{top: "12px"}}
           src="/external/Bitcoin_accepted_here_printable.png"
           alt="Add a 'Bitcoin Accepted Here' badge to your website"
-          width={100}
-          height={38}
+          width={135}
+          height={50}
         /> badge today!
         </Typography>
         {/*}*/}
