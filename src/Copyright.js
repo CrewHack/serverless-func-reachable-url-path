@@ -7,7 +7,7 @@ export default function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <MuiLink color="inherit" href="https://material-ui.com/">
-        AcceptBTC.io
+        acceptBTC.io
       </MuiLink>{' '}
       {new Date().getFullYear()}.
     </Typography>

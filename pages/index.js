@@ -167,7 +167,7 @@ function Index(props) {
         {/*{open && */}
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
-          {!open ? 'Accept BTC' : ''}
+          {!open ? 'acceptBTC' : ''}
         </Typography>
         {/*}*/}
 
@@ -179,16 +179,17 @@ function Index(props) {
           Add a 'Bitcoin Accepted Here' button like this to your site today!
         </Typography>}
 
-        
-
+        {!open && 
+        <div>
         <Image
           src="/external/Bitcoin_accepted_here_printable.png"
           alt="Add a 'Bitcoin Accepted Here' button to your website"
           width={200}
           height={76}
         />
-
         <div>&nbsp;</div>
+        </div>
+        }
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-1px"}}>
             <CardContent style={{paddingBottom: "2px"}}>
