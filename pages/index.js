@@ -27,8 +27,14 @@ import MainForm from '../src/MainForm';
 //import { useCookieWatcher, useCookie } from '@fcannizzaro/react-use-cookie-watcher'
 //import Cookies from 'js-cookie';
 import Image from 'next/image'
+import { ClassNames } from '@emotion/react';
 
 const styles = {
+
+  image: {
+    /*top: "20px!important"*/
+    textAlign: "center"
+  },
 
   overlay: {
     display: "none",
@@ -82,7 +88,7 @@ const styles = {
   },
   animatedItemExiting: {
     color: "#FF9900", // #14a37f
-    transform: "rotate(540deg)", //translateY(80%) 
+    transform: "rotate(720deg)", //translateY(80%) 
     transition: "all .7s ease",
     animation: `$myEffectExit 2000ms ease`
   },
@@ -216,13 +222,28 @@ function Index(props) {
 
         {/*{!open && */}
         <Typography gutterBottom>
-          Get your <Image
-          style={{top: "12px"}}
+          
+          <div
+          style={{
+          display: "flex",
+          justifyContent: "left",
+          }}
+          >
+          <span style={{
+          marginTop: "12px",
+          }}>Get your&nbsp;</span>
+          <Image
+          className = {classes.image}
           src="/external/Bitcoin_accepted_here_printable.png"
           alt="Add a 'Bitcoin Accepted Here' badge to your website"
           width={135}
           height={50}
-        /> badge today!
+          /> 
+          <span style={{
+          marginTop: "12px",
+          }}>&nbsp;badge today!</span>
+          </div>
+          
         </Typography>
         {/*}*/}
         
