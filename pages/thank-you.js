@@ -55,7 +55,7 @@ export default function ThankYou() {
           <div>&nbsp;</div>
 
         <Typography>
-         That's it! Easy, isn't it? It's quick to implement, too. <b>You can get up & running accepting Bitcoin payment today.</b> <p>Need inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. Give it a try!</p>
+         That's it! Easy, isn't it? It's quick to implement, too. <b>You can get up & running accepting Bitcoin payments today.</b> <p>Need inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. Give it a try!</p>
         </Typography>
 
         {/*<div>&nbsp;</div>*/}
