@@ -82,7 +82,7 @@ const styles = {
   },
   animatedItemExiting: {
     color: "#FF9900", // #14a37f
-    transform: "translateY(80%) rotate(540deg)",
+    transform: "rotate(540deg)", //translateY(80%) 
     transition: "all .7s ease",
     animation: `$myEffectExit 2000ms ease`
   },
@@ -204,7 +204,7 @@ function Index(props) {
         {/*{open && */}
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
-          {!open ? 'acceptBTC' : ''}
+          {!open ? 'acceptBTC' : 'acceptBTC'}
         </Typography>
         {/*}*/}
 
