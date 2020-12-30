@@ -175,10 +175,12 @@ function Index(props) {
           Start accepting Bitcoin & other crypto payments.
         </Typography>}
 
-        {!open && <Typography variant="h6" component="h6" gutterBottom>
+        {!open && <Typography variant="h7" component="h7" gutterBottom>
           Add a 'Bitcoin Accepted Here' badge like this to your site today!
         </Typography>}
-
+        
+        <div>&nbsp;</div>
+        
         {!open && 
         <div>
         <Image
