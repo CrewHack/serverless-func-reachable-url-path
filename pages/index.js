@@ -84,7 +84,7 @@ const styles = {
     minWidth: 275,
     backgroundColor: "#fdf4e7",
     transition: "all 1s ease",
-    animation: `$growShadow 2000ms infinite`
+    /*animation: `$growShadow 2000ms infinite`*/
   },
   open : {
     backgroundColor: "white"
