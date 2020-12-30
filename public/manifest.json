@@ -1,6 +1,6 @@
 {
-    "name": "next-pwa",
-    "short_name": "next-pwa",
+    "name": "acceptBTC",
+    "short_name": "acceptBTC",
     "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#FFFFFF",
