@@ -19,7 +19,7 @@ export default function ThankYou() {
         </Typography>
 
         <Typography>
-         In the meantime, please check out a real-world example of acceptBTC in action in an eCommerce shop - look for the orange 'Buy with Bitcoin' button. It's live, give it a try!: <Button variant="contained" color="primary" component={Link} naked href="https://www.style-element.co/product/mens-silver-grey-classic-aviator-sunglasses">
+         In the meantime, please check out a real-world example of acceptBTC in action in an eCommerce shop - look for the orange 'Buy with Bitcoin' button on the product page. It's live, give it a try!: <Button variant="contained" color="primary" component={Link} naked href="https://www.style-element.co/product/mens-silver-grey-classic-aviator-sunglasses">
           View Example
         </Button>
         </Typography>
