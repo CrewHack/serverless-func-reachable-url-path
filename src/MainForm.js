@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import isEmail from 'validator/lib/isEmail';
 
 const isUrl = require('is-valid-http-url');
 
@@ -26,7 +27,8 @@ export default class MainForm extends React.Component {
             const url = value;
 
             // check URL here for validity
-            if (!isUrl(url))
+            //if (!isUrl(url))
+            if (!isEmail(url))
             {
                 user["validUrl"] = false;
                 this.setState({ user });
@@ -144,11 +146,11 @@ export default class MainForm extends React.Component {
                     onBlur={this.handleBlur}
                     onFocus={this.handleFocus}
                     id="standard-basic"
-                    label="&nbsp;&nbsp;Enter URL to measure power"
+                    label="&nbsp;&nbsp;Enter email to begin"
                     onChange={this.handleChange}
                     name="url"
                     validators={['required','isUrl']}
-                    errorMessages={['this field is required','Checking URL validity: Please enter a valid URL...']}
+                    errorMessages={['this field is required','Checking email validity: Please enter a valid email...']}
                     value={user.url}
                     autoComplete="off"
                     style={user.open ? {backgroundColor: "white"} : {backgroundColor: "#F7F9FB"}}
@@ -166,14 +168,14 @@ export default class MainForm extends React.Component {
                     style={
                         user.validUrl 
                         ?
-                        {color: "#FFFFFF", backgroundColor: "#14a37f", marginTop: "6px", marginBottom: "6px"}
+                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px"} // #14a37f
                         :
                         {color: "#FFFFFF", backgroundColor: "#676666", marginTop: "6px", marginBottom: "6px"}
                     } 
                     fullWidth 
                     variant="contained" 
                     type="submit">
-                        Measure URL power
+                        Accept Bitcoin Payments
                 </Button>
 
             </ValidatorForm>

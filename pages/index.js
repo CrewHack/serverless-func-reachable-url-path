@@ -15,6 +15,7 @@ import CardContent from '@material-ui/core/CardContent';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import PowerIcon from '@material-ui/icons/Power';
+import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import Grid from '@material-ui/core/Grid';
 import TimerIcon from '@material-ui/icons/Timer';
 import NetworkCheckIcon from '@material-ui/icons/NetworkCheck';
@@ -55,10 +56,11 @@ const styles = {
     backgroundColor: "#F7F9FB",
   },
   animatedItem: {
-    animation: `$myEffect 1000ms ease`
+    animation: `$myEffect 1000ms ease`,
+    color: "#FF9900", // #14a37f
   },
   animatedItemExiting: {
-    color: "#14a37f", 
+    color: "#FF9900", // #14a37f
     transform: "translateY(80%) rotate(540deg)",
     transition: "all .7s ease",
     animation: `$myEffectExit 2000ms ease`
@@ -86,13 +88,13 @@ const styles = {
   },
   "@keyframes growShadow": {
     "0%": {
-      boxShadow: "3px 2px 1px -1px #4CAF50, 0px 1px 1px 0px #4CAF50, 0px 1px 3px 0px #4CAF50",
+      boxShadow: "3px 2px 1px -1px #FF9900, 0px 1px 1px 0px #FF9900, 0px 1px 3px 0px #FF9900", //#4CAF50
     },
     "50%": {
-      boxShadow: "5px 4px 3px 1px #4CAF50, 2px 2px 2px 1px #4CAF50, 2px 3px 5px 2px #4CAF50",
+      boxShadow: "5px 4px 3px 1px #FF9900, 2px 2px 2px 1px #FF9900, 2px 3px 5px 2px #FF9900",
     },
     "100%": {
-      boxShadow: "3px 2px 1px -1px #4CAF50, 0px 1px 1px 0px #4CAF50, 0px 1px 3px 0px #4CAF50",
+      boxShadow: "3px 2px 1px -1px #FF9900, 0px 1px 1px 0px #FF9900, 0px 1px 3px 0px #FF9900",
     }
   }
 };
@@ -163,13 +165,13 @@ function Index(props) {
 
         {/*{open && */}
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
-          <PowerIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
-          {!open ? 'URLpow' : ''}
+          <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
+          {!open ? 'Accept BTC' : ''}
         </Typography>
         {/*}*/}
 
         {!open && <Typography variant="h2" component="h2" gutterBottom>
-          Measure any URL's power.
+          Start accepting Bitcoin & other crypto payments.
         </Typography>}
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-1px"}}>
@@ -188,7 +190,7 @@ function Index(props) {
 
         <Card style={{marginBottom: "10px", marginTop: "-8px"}} className={clsx(!open && classes.card, open && classes.activatecard)}>
             <CardContent style={{paddingBottom: "4px", marginTop: "-8px"}}>
-                <Grid container>
+                {/*<Grid container>
                     <Grid style={{width: "16.66%"}} item >
                         <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><NetworkCheckIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>
@@ -207,7 +209,7 @@ function Index(props) {
                     <Grid style={{width: "16.66%"}} item >
                         <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>                                                                             
-                </Grid>
+                </Grid>*/}
             </CardContent>
             <CardActions style={{paddingTop: "4px", paddingBottom: "4px"}}>
                 {!open && <ProTip/>}
