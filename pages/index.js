@@ -176,14 +176,14 @@ function Index(props) {
         </Typography>}
 
         {!open && <Typography variant="h6" component="h6" gutterBottom>
-          Add a 'Bitcoin Accepted Here' button like this to your site today!
+          Add a 'Bitcoin Accepted Here' badge like this to your site today!
         </Typography>}
 
         {!open && 
         <div>
         <Image
           src="/external/Bitcoin_accepted_here_printable.png"
-          alt="Add a 'Bitcoin Accepted Here' button to your website"
+          alt="Add a 'Bitcoin Accepted Here' badge to your website"
           width={200}
           height={76}
         />
