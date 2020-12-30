@@ -29,6 +29,26 @@ import MainForm from '../src/MainForm';
 import Image from 'next/image'
 
 const styles = {
+
+  overlay: {
+    display: "none",
+    position: "fixed",
+    top:0,
+    left:0,
+    width:"100%",
+    height:"100%",
+    background: "rgba(0, 0, 0, 0.6)",
+    zIndex: 10
+  },
+
+  spinner: {
+    zIndex: 12,
+    display: "none",
+    position: "fixed", /* or absolute */
+    top: "50%",
+    left: "50%"
+  },
+
   disabledDiv: {
     pointerEvents: "none",
     opacity: 0.4
@@ -123,23 +143,37 @@ function Index(props) {
     setOpen(!open);
   };
 
-  const submit = async (e) => { 
+  const submit = async (data) => { 
+
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("spinner").style.display = "block";
 
     console.log("SUBMIT!");
 
-    drawerToggle();
+    console.log(data);
+
+    //drawerToggle();
 
     // https://serverless-func-reachable-url-path.vercel.app
     const res = await fetch("/api/performance", {
       headers: {
          "Authorization": "1234567890abcdef",
          "X-Secret-Key": "djewbdjnewdjknwejkdnkjwe"
-       }
+       },
+       method: 'POST',
+       body: JSON.stringify({email: data})
     });
 
     const test = await res.json();
 
-    console.log(test);
+    console.log(test.response);
+
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("spinner").style.display = "none";
+
+    //if (process.browser) {
+      window.location = "/thank-you";
+    //}
 
   };
 
@@ -152,6 +186,9 @@ function Index(props) {
   return (
 
     <Container maxWidth="sm">
+
+      <div className={classes.overlay} id="overlay"></div>
+      <img className={classes.spinner} id="spinner" src="/external/847.gif" alt="Submitting acceptBTC form" />
 
       <Box my={4}>
 
@@ -175,7 +212,7 @@ function Index(props) {
           Start accepting Bitcoin & other crypto payments.
         </Typography>}
 
-        {!open && <Typography variant="h7" component="h7" gutterBottom>
+        {!open && <Typography gutterBottom>
           Add a 'Bitcoin Accepted Here' badge like this to your site today!
         </Typography>}
         
@@ -240,7 +277,7 @@ function Index(props) {
 
       </Box>
 
-      <Copyright />
+      {!open &&<Copyright />}
 
     </Container>
   );

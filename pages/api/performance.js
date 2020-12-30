@@ -25,8 +25,8 @@ const exePath =
   };
 };*/
 
-const Cryptr = require('cryptr');
-const cryptr = new Cryptr('myTotalySecretKey');
+//const Cryptr = require('cryptr');
+//const cryptr = new Cryptr('myTotalySecretKey');
 
 export const getPerformance = async (req, res) => {
 
@@ -51,6 +51,9 @@ export const getPerformance = async (req, res) => {
   );*/
 
   // api/performance/[userName]
+
+  var data = JSON.parse(req.body);
+  console.log(data.email);
 
   res.setHeader('Access-Control-Allow-Credentials', true)
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -96,17 +99,17 @@ export const getPerformance = async (req, res) => {
 
       // make sure Authorization & X-Secret-Key are in the correct format, if not don't bother w/Bubble DB lookup
 
-      let userName = "stu@allied-techs.com";
-      let apiKey = req.headers.authorization;
-      let secretKey = req.headers['x-secret-key'];
-      let apiHash = cryptr.encrypt(userName+"|"+apiKey+"|"+secretKey); 
+      //let userName = "stu@allied-techs.com";
+      //let apiKey = req.headers.authorization;
+      //let secretKey = req.headers['x-secret-key'];
+      //let apiHash = cryptr.encrypt(userName+"|"+apiKey+"|"+secretKey); 
       
-      console.log(apiHash);
+      //console.log(apiHash);
 
-      console.log(cryptr.decrypt(apiHash));
+      //console.log(cryptr.decrypt(apiHash));
 
-      const response = await fetch("https://marketheart.allied-techs.com/api/1.1/obj/Urls");
-      var myFetchedData = await response.json();
+      //const response = await fetch("https://marketheart.allied-techs.com/api/1.1/obj/Urls");
+      //var myFetchedData = await response.json();
 
       // First see if this encrypted apiHash exists in Bubble DB ApiHash table. 
       // Then make sure this apiHash record has not exceeded it's daily plan limit.
@@ -132,10 +135,34 @@ export const getPerformance = async (req, res) => {
 
       ////// If doesn't have record
       ////////Return 401 Unauthorized
+
+      //email capture bubbledb, which triggers posting to integromat webhook which adds subscriber to aweber
+      const settings = {
+      method: 'POST',
+        /*headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        }*/
+      };
+
+      var baseUrl = "https://marketheart.allied-techs.com/api/1.1/wf/saveemailaweber?email=" + data.email;
+
+      try 
+      {
+        let response = await fetch(baseUrl, settings);
+        res.statusCode = 200;
+        //res.json(response)
+        res.json({response: "success"})
+      } 
+      catch (e) 
+      {
+        console.log(e);
+        res.statusCode = 400;
+        res.json({response: "error"})
+      }
       
-      
-      res.statusCode = 200;
-      res.json(myFetchedData)
+      //res.statusCode = 200;
+      //res.json(myFetchedData)
 
       return { res };
     }

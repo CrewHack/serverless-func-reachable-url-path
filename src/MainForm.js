@@ -127,7 +127,9 @@ export default class MainForm extends React.Component {
 
         console.log("handle submit here");
 
-        this.props.submit();
+        const { user } = this.state;
+
+        this.props.submit(user.url);
     }
 
     render() {
