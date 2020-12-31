@@ -29,6 +29,10 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    if (process.browser) {
+      navigator.serviceWorker.register('/OneSignalSDKWorker.js');
+    }
+
     var observer = new MutationObserver(function (mutations) {
 
       var picoWidget = document.getElementById("pico-widget-container");
