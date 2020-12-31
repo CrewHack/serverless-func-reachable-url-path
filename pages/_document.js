@@ -9,7 +9,7 @@ const APP_DESCRIPTION = 'This is the acceptBTC app.'
 export default class MyDocument extends Document {
 
   render() {
-    
+
     return (
       <Html lang="en">
         <Head>
