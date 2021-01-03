@@ -19,7 +19,7 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography>
-        <i>*Please check your email to confirm your subscription to our free service so we can better help you.</i>
+        <i>*Please check your inbox to confirm your email so we can better serve you.</i>
         </Typography>
 
         <div>&nbsp;</div>
@@ -31,7 +31,7 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         1. First, sign up for a free account here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC" target="_blank">
+         1. First, sign up for a free account here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step1" target="_blank">
           STEP 1
         </Button>
         </Typography>
@@ -39,7 +39,9 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         2. Next, <a href="mailto:support@acceptBTC.co" target="_blank">email us</a> when you've completed STEP 1.
+         2. Next, sign up for a free account here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2" target="_blank">
+          STEP 2
+        </Button>
         </Typography>
 
         {/*Next, sign up free here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2">
@@ -49,13 +51,13 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         3. Lastly, we'll reply with instructions to activate.
+         3. Lastly, add #2 to #1. <a href="mailto:support@acceptBTC.co" target="_blank">Email us</a> if you need help.
         </Typography>
 
           <div>&nbsp;</div>
 
         <Typography>
-         That's it! Easy, isn't it? It's quick to implement, too. <b>You can get up & running accepting Bitcoin payments today.</b> <p>Need inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. Give it a try!</p>
+         That's it! Easy, isn't it? Quick to implement, too. <b>You can get up & running accepting Bitcoin payments today!</b> <p>Need inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. Give it a try!</p>
         </Typography>
 
         {/*<div>&nbsp;</div>*/}
@@ -67,7 +69,7 @@ export default function ThankYou() {
   <div>&nbsp;</div>
 
         <Typography style={{fontSize: "12px"}}>
-        <i>Why do we offer this service for free? </i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. We believe in crypto. The 3 step method we describe above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin in the year 2021. But the clock is ticking. And you're not accepting Bitcoin payments yet?? It's time to to act <b>now ⏱️ </b>
+        <i>Why do we offer this free educational service? </i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. We believe in crypto. The 3 step method we describe above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. But the clock is ticking. And you're not accepting Bitcoin payments yet?? It's time to to act <b>now ⏱️ </b>
         </Typography>
 
         <div>&nbsp;</div>
@@ -100,9 +102,10 @@ export default function ThankYou() {
 
         <div>&nbsp;</div>
         <div>&nbsp;</div>
-        <Copyright />
-        <div>&nbsp;</div>
+        
       </Box>
+      <Copyright />
+        <div>&nbsp;</div>
     </Container>
   );
 }
