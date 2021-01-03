@@ -226,7 +226,7 @@ function Index(props) {
 
         {/*{!open &&  */}
         <Typography variant="h2" component="h2" gutterBottom>
-          Start accepting Bitcoin & other crypto payments. Free service.
+          Start accepting Bitcoin & other crypto payments today.
         </Typography>
         {/*}*/}
 
