@@ -33,7 +33,7 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         1. First, sign up for a free account here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step1" target="_blank">
+         1. First, sign up for free account here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step1" target="_blank">
           STEP 1
         </Button>
         </Typography>
@@ -41,7 +41,7 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         2. Next, sign up for a free account here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2" target="_blank">
+         2. Next, register here (it is also free!): <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2" target="_blank">
           STEP 2
         </Button>
         </Typography>
@@ -53,10 +53,10 @@ export default function ThankYou() {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         3. Lastly, add #2 to #1. <a href="mailto:support@acceptBTC.co" target="_blank">Email us</a> if you need help.
+         3. Last, integrate #1 and #2. <a href="mailto:support@acceptBTC.co" target="_blank">Email us</a> for help.
         </Typography>
 
-          <div>&nbsp;</div>
+        <div>&nbsp;</div>
 
         <Typography>
          That's it! Easy, isn't it? Quick to implement, too. <b>You can get up & running accepting Bitcoin payments today!</b> <p>Need inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. Give it a try!</p>
