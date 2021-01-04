@@ -248,13 +248,13 @@ function Index(props) {
           marginTop: "12px",
           }}>Get your&nbsp;</span>
 
-          <Image
+          {/*<Image
           className = {classes.image}
           src="/external/Bitcoin_accepted_here_printable.png"
           alt="Add a 'Bitcoin Accepted Here' badge to your website"
           width={135}
           height={50}
-          /> 
+          /> */}
 
           <span style={{
           marginTop: "12px",
