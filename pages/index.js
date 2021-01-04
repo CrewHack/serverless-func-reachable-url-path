@@ -154,7 +154,7 @@ function Index(props) {
 
     //e.preventDefault(); 
     //e.stopPropagation();
-    window.scrollTo(0,-300); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
+    //window.scrollTo(0,-300); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
 
     setOpen(!open);
   };
@@ -186,6 +186,8 @@ function Index(props) {
 
     document.getElementById("overlay").style.display = "none";
     document.getElementById("spinner").style.display = "none";
+
+    localStorage.setItem("submitted", "yes")
 
     //if (process.browser) {
       window.location = "/thank-you";

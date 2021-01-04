@@ -10,6 +10,7 @@ import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
 //import PowerIcon from '@material-ui/icons/Power';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
+import Router from "next/router";
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
@@ -30,6 +31,12 @@ export default function MyApp(props) {
   let deferredPrompt;
 
   React.useEffect(() => {
+
+    var submitted = localStorage.getItem("submitted") === "yes";
+    if (submitted)
+    {
+      Router.push('/thank-you');
+    }
     
     window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent the mini-infobar from appearing on mobile
@@ -119,7 +126,10 @@ export default function MyApp(props) {
 
       setCookied(true); // visitor accepted cookies
 
-      deferredPrompt.prompt();
+      if (deferredPrompt)
+      {
+        deferredPrompt.prompt();
+      }
 
       // check for fullScreen elements on the DOM & make 'em happen
       /*try
