@@ -101,6 +101,7 @@ const styles = {
   animatedItemExiting: {
     color: "#FF9900", // #14a37f
     transform: "rotate(720deg)", //translateY(80%) 
+    WebkitTransform: "rotate(720deg)",
     transition: "all .7s ease",
     animation: `$myEffectExit 2000ms ease`
   },
