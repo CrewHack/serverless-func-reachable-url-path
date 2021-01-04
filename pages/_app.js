@@ -34,7 +34,7 @@ export default function MyApp(props) {
 
     var submitted = localStorage.getItem("submitted") === "yes";
 
-    /*if (Router.pathname === '/thank-you')
+    if (Router.pathname === '/thank-you')
     {
         if (!submitted)
         {
@@ -45,7 +45,7 @@ export default function MyApp(props) {
     if (submitted)
     {
       Router.push('/thank-you');
-    }*/
+    }
     
     window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent the mini-infobar from appearing on mobile
@@ -60,7 +60,7 @@ export default function MyApp(props) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
     }
 
-    var observer = new MutationObserver(function (mutations) {
+    /*var observer = new MutationObserver(function (mutations) {
 
       var picoWidget = document.getElementById("pico-widget-container");
 
@@ -99,7 +99,7 @@ export default function MyApp(props) {
       childList: true,
       characterData: true,
       subtree: true
-    });
+    });*/
 
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -118,13 +118,13 @@ export default function MyApp(props) {
       //console.log(document.getElementsByTagName("script"));
     }
 
-    if ('ontouchstart' in document.documentElement) {
+    /*if ('ontouchstart' in document.documentElement) {
       //Attach code for touch event listeners
       document.addEventListener("touchstart", myFunc, false);
     } else {
       //Attach code for mouse event listeners
       document.addEventListener("mousedown", myFunc, false);
-    }
+    }*/
 
   }, []);
 
@@ -177,10 +177,10 @@ export default function MyApp(props) {
 
   const [cookied, setCookied] = React.useState(false);
 
-  function myFunc()
+  /*function myFunc()
   {
       acceptedCookieConsentClick = true;
-  }
+  }*/
 
   return (
     <React.Fragment>
