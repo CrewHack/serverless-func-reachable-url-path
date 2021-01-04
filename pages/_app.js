@@ -52,9 +52,9 @@ export default function MyApp(props) {
       deferredPrompt = e;
     });
 
-    if (process.browser) {
+    //if (process.browser) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
-    }
+    //}
 
     /*var observer = new MutationObserver(function (mutations) {
 
@@ -137,6 +137,9 @@ export default function MyApp(props) {
     localStorage.setItem("cookied", "yes")
     setCookied(true);
     
+    console.log("aloha!");
+    console.log(deferredPrompt);
+
     if (deferredPrompt)
     {
       deferredPrompt.prompt();
