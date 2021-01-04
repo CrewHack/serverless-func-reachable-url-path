@@ -29,6 +29,15 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+
+    //if (process.browser) {
+      navigator.serviceWorker.register('/OneSignalSDKWorker.js');
+    //}
+
     var acceptedCookies = localStorage.getItem("cookied") === "yes";
     setCookied(acceptedCookies);
 
@@ -46,15 +55,6 @@ export default function MyApp(props) {
     {
       Router.push('/thank-you');
     }
-    
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-    });
-
-    //if (process.browser) {
-      navigator.serviceWorker.register('/OneSignalSDKWorker.js');
-    //}
 
     /*var observer = new MutationObserver(function (mutations) {
 
