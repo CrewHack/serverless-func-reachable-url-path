@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 // import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
+import Address from '../src/Address';
 import Image from 'next/image'
 
 export default function ThankYou() {
@@ -105,6 +106,9 @@ export default function ThankYou() {
         <div>&nbsp;</div>
         
       </Box>
+
+      <Address />
+      
       <Copyright />
         <div>&nbsp;</div>
     </Container>
