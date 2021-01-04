@@ -8,12 +8,58 @@ import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Address from '../src/Address';
 import Image from 'next/image'
+import { withStyles } from '@material-ui/core/styles';
+import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
-export default function ThankYou() {
+const styles = {
+  animatedItem: {
+    animation: `$myEffect 2000ms ease`,
+    color: "#FF9900", // #14a37f
+  },
+  animatedItemExiting: {
+    color: "#FF9900", // #14a37f
+    transform: "rotate(720deg)", //translateY(80%) 
+    transition: "all .7s ease",
+    animation: `$myEffectExit 2000ms ease`
+  },
+  "@keyframes myEffect": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(-200%) rotate(1440deg)"
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)"
+    }
+  },
+  "@keyframes myEffectExit": {
+    "0%": {
+      opacity: 1,
+    },
+    "50%": {
+      opacity: 0.33,
+    },
+    "100%": {
+      opacity: 1,
+    }
+  },
+}
+
+//export default function ThankYou() {
+function ThankYou(props) {  
+
+  const { classes } = props;
   
   return (
     <Container maxWidth="sm">
       <Box my={4}>
+        <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
+          <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: false})} fontSize="inherit" /> 
+          {'acceptBTC'}
+        </Typography>
+
         <Typography variant="h4" component="h1" gutterBottom>
           Smart move! Now, let's get you started accepting Bitcoin & other cryptocurrency payments right away.
         </Typography>
@@ -71,7 +117,7 @@ export default function ThankYou() {
   <div>&nbsp;</div>
 
         <Typography style={{fontSize: "12px"}}>
-        <i>Why do we offer this free educational service? </i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. We believe in crypto. The 3 step method we describe above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. But the clock is ticking. And you're not accepting Bitcoin payments yet?? It's time to to act <b>now ⏱️ </b>
+        <i>Why do we offer this free educational service? </i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived for <i>you</i> to get paid in Bitcoin instead of traditional fiat currency variants. The 3 step method above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
         </Typography>
 
         <div>&nbsp;</div>
@@ -114,3 +160,9 @@ export default function ThankYou() {
     </Container>
   );
 }
+
+ThankYou.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(ThankYou);
