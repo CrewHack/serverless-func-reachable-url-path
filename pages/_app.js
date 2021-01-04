@@ -29,6 +29,13 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    /*var str = navigator.userAgent;
+    var i = str.indexOf("Instagram");
+    if (i != -1) {
+      document.write("<a target=\"_blank\" href=\"https://acceptbtc.co/\">Proceed</a>");
+      window.stop();
+    }*/
+
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
@@ -38,10 +45,10 @@ export default function MyApp(props) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
     }
 
-    var acceptedCookies = sessionStorage.getItem("cookied") === "yes";
+    var acceptedCookies = localStorage.getItem("cookied") === "yes";
     setCookied(acceptedCookies);
 
-    var submitted = sessionStorage.getItem("submitted") === "yes";
+    var submitted = localStorage.getItem("submitted") === "yes";
 
     if (Router.pathname === '/thank-you')
     {
@@ -134,7 +141,7 @@ export default function MyApp(props) {
 
   function cookieHandle()
   {
-    sessionStorage.setItem("cookied", "yes")
+    localStorage.setItem("cookied", "yes")
     setCookied(true);
     
     //console.log("aloha!");
