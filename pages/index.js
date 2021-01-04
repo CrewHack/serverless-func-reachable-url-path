@@ -95,7 +95,7 @@ const styles = {
     backgroundColor: "#F7F9FB",
   },
   animatedItem: { 
-    animation: `$myEffect 1000ms ease`,
+    animation: `$myEffect 750ms ease`,
     color: "#FF9900", 
   },
   animatedItemExiting: {
