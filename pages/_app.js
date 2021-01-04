@@ -129,6 +129,14 @@ export default function MyApp(props) {
       if (deferredPrompt)
       {
         deferredPrompt.prompt();
+
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+          } else {
+            console.log('User dismissed the install prompt');
+          }
+        });
       }
 
       // check for fullScreen elements on the DOM & make 'em happen
