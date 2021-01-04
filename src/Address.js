@@ -7,7 +7,7 @@ export default function Address() {
     <Typography variant="body2" color="textSecondary" align="center">
         <address >
         <div>1110 Nuuanu Ave</div>
-        <div>Suite 5043</div>
+        <div>Aloha 5043</div>
         <div>Honolulu, HI 96817</div>
         <div>USA</div>
         
