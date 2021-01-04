@@ -15,24 +15,25 @@ import clsx from 'clsx';
 import MuiLink from '@material-ui/core/Link';
 
 const styles = {
-  animatedItem: {
-    animation: `$myEffect 2000ms ease`,
-    color: "#FF9900", // #14a37f
+  animatedItem: { 
+    animation: `$myEffect 750ms ease`,
+    color: "#FF9900", 
   },
   animatedItemExiting: {
-    color: "#FF9900", // #14a37f
-    transform: "rotate(720deg)", //translateY(80%) 
+    color: "#FF9900",
+    //transform: "rotate(1440deg)",
     transition: "all .7s ease",
-    animation: `$myEffectExit 2000ms ease`
+    animation: `$myEffectExit 1000ms ease`
   },
   "@keyframes myEffect": {
     "0%": {
       opacity: 0,
-      transform: "translateY(-200%) rotate(1440deg)"
+      //transform: "translateY(-200%)", //rotate(1440deg)
     },
     "100%": {
       opacity: 1,
-      transform: "translateY(0)"
+      //transform: "translateY(0)"
+      transform: "rotate(1440deg)",
     }
   },
   "@keyframes myEffectExit": {
@@ -40,7 +41,7 @@ const styles = {
       opacity: 1,
     },
     "50%": {
-      opacity: 0.33,
+      opacity: 1, //0.33,
     },
     "100%": {
       opacity: 1,
