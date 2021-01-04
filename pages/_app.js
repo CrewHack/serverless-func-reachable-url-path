@@ -175,7 +175,7 @@ export default function MyApp(props) {
             message={<span aria-label="chilli" role="img">Welcome to <AccountBalanceWalletOutlinedIcon fontSize="inherit"/>acceptBTC.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue. GDPR, done. ✅</div></span>}
             //"
         /> 
-        <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}>
+        <div style={true ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}> {/*cookied*/}
         {/*pointerEvents: "none", opacity: 0.4, transition: "all .7s ease"*/}
             {/*<PrimarySearchAppBar />*/}
             {/*<div className={classes.offset} />*/}
