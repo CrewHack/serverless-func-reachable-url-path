@@ -15,20 +15,20 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import PowerIcon from '@material-ui/icons/Power';
+//import PowerIcon from '@material-ui/icons/Power';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
-import Grid from '@material-ui/core/Grid';
+/*import Grid from '@material-ui/core/Grid';
 import TimerIcon from '@material-ui/icons/Timer';
 import NetworkCheckIcon from '@material-ui/icons/NetworkCheck';
 import SecurityIcon from '@material-ui/icons/Security';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
-import LinkIcon from '@material-ui/icons/Link';
+import LinkIcon from '@material-ui/icons/Link';*/
 import clsx from 'clsx';
 import MainForm from '../src/MainForm';
 //import { useCookieWatcher, useCookie } from '@fcannizzaro/react-use-cookie-watcher'
 //import Cookies from 'js-cookie';
 import Image from 'next/image'
-import { ClassNames } from '@emotion/react';
+//import { ClassNames } from '@emotion/react';
 
 const styles = {
 

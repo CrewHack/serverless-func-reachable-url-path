@@ -7,7 +7,7 @@ import theme from '../src/theme';
 import { makeStyles } from '@material-ui/core/styles';
 //import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 import MUICookieConsent from 'material-ui-cookie-consent';
-import Cookies from 'js-cookie';
+//import Cookies from 'js-cookie';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import Router from "next/router";
 
@@ -23,13 +23,14 @@ export default function MyApp(props) {
   const { Component, pageProps } = props;
   const classes = useStyles();
 
-  //var acceptedCookieConsentClick = false;
-
   //var picoModalClosed = false;
 
   let deferredPrompt;
 
   React.useEffect(() => {
+
+    var acceptedCookies = localStorage.getItem("cookied") === "yes";
+    setCookied(acceptedCookies);
 
     var submitted = localStorage.getItem("submitted") === "yes";
 
@@ -47,9 +48,7 @@ export default function MyApp(props) {
     }
     
     window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the mini-infobar from appearing on mobile
       e.preventDefault();
-      // Stash the event so it can be triggered later.
       deferredPrompt = e;
     });
 
@@ -104,28 +103,10 @@ export default function MyApp(props) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
 
-    const jssStylesNew = document.querySelector('#jss-server-side');
-    if (jssStylesNew && jssStylesNew.parentNode) {
-      //console.log("nope");
-    }
-    else
-    {
-      //console.log("removed");
-
-      //console.log(document.getElementsByTagName("script"));
-    }
-
-    /*if ('ontouchstart' in document.documentElement) {
-      //Attach code for touch event listeners
-      document.addEventListener("touchstart", myFunc, false);
-    } else {
-      //Attach code for mouse event listeners
-      document.addEventListener("mousedown", myFunc, false);
-    }*/
-
   }, []);
 
-  const timeout = setInterval(() => {
+  //the in-app Instagram browser does bow allow making use of cookies :(
+  /*const timeout = setInterval(() => {
     if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
 
       clearInterval(timeout);
@@ -149,14 +130,28 @@ export default function MyApp(props) {
     {
       setCookied(false);
     }
-  }, 500);
+  }, 500);*/
+
+  function cookieHandle()
+  {
+    localStorage.setItem("cookied", "yes")
+    setCookied(true);
+    
+    if (deferredPrompt)
+    {
+      deferredPrompt.prompt();
+
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
+        }
+      });
+    }
+  }
 
   const [cookied, setCookied] = React.useState(false);
-
-  /*function myFunc()
-  {
-      acceptedCookieConsentClick = true;
-  }*/
 
   return (
     <React.Fragment>
@@ -167,12 +162,13 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <MUICookieConsent 
+            onAccept={cookieHandle}
             cookieName="mySiteCookieConsent"
             //componentType="Dialog" // default value is Snackbar
             message={<span aria-label="chilli" role="img">Welcome to <AccountBalanceWalletOutlinedIcon fontSize="inherit"/>acceptBTC.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue. GDPR, done. ✅</div></span>}
             //"
         /> 
-        <div style={true ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}> {/*cookied*/}
+        <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}>
         {/*pointerEvents: "none", opacity: 0.4, transition: "all .7s ease"*/}
             {/*<PrimarySearchAppBar />*/}
             {/*<div className={classes.offset} />*/}
