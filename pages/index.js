@@ -100,7 +100,7 @@ const styles = {
   },
   animatedItemExiting: {
     color: "#FF9900",
-    transform: "rotate(1440deg)",
+    //transform: "rotate(1440deg)",
     transition: "all .7s ease",
     animation: `$myEffectExit 1000ms ease`
   },
@@ -120,7 +120,7 @@ const styles = {
       opacity: 1,
     },
     "50%": {
-      opacity: 0.33,
+      opacity: 1, //0.33,
     },
     "100%": {
       opacity: 1,
