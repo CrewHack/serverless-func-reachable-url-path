@@ -29,6 +29,7 @@ import MainForm from '../src/MainForm';
 //import Cookies from 'js-cookie';
 import Image from 'next/image'
 //import { ClassNames } from '@emotion/react';
+import MuiLink from '@material-ui/core/Link';
 
 const styles = {
 
@@ -221,10 +222,12 @@ function Index(props) {
         <div className={clsx(!cookied && classes.disabledDiv, cookied && classes.enabledDiv)}> cookie {hasAcceptedCookies ? 'found' : 'not found'}*/}
 
         {/*{open && */}
+        <MuiLink color="inherit" href="/">
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
           {!open ? 'acceptBTC' : 'acceptBTC'}
         </Typography>
+        </MuiLink>
         {/*}*/}
 
         {/*{!open &&  */}
@@ -342,6 +345,12 @@ function Index(props) {
         <Typography style={{fontSize: "12px"}}>
         <i>Why do we offer this free educational service? </i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived to get paid in Bitcoin instead of traditional fiat currency variants. The 3 step method we will teach you is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
         </Typography>
+
+      <div>&nbsp;</div>
+
+      <MuiLink color="inherit" href="/privacy-policy">
+        Privacy Policy
+      </MuiLink>{' '}
 
       <div>&nbsp;</div>
 

@@ -12,6 +12,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import MuiLink from '@material-ui/core/Link';
 
 const styles = {
   animatedItem: {
@@ -55,10 +56,12 @@ function ThankYou(props) {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
+        <MuiLink color="inherit" href="/">
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: false})} fontSize="inherit" /> 
           {'acceptBTC'}
         </Typography>
+        </MuiLink>
 
         <Typography variant="h4" component="h1" gutterBottom>
           Smart move! Now, let's get you started accepting Bitcoin & other cryptocurrency payments right away.
@@ -121,6 +124,12 @@ function ThankYou(props) {
         </Typography>
 
         <div>&nbsp;</div>
+
+      <MuiLink href="/privacy-policy">
+        Privacy Policy
+      </MuiLink>{' '}
+
+      <div>&nbsp;</div>
 
 <div
   style={{
