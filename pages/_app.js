@@ -29,12 +29,14 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    localStorage.clear();
+
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
     });
 
-    if (process.browser && navigator) {
+    if (process.browser && navigator && navigator.serviceWorker) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
     }
 
