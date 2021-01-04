@@ -13,7 +13,7 @@ export default function Address() {
 
         <div><a href="mailto:support@acceptbtc.co" target="_blank">support@acceptbtc.co</a></div>
         
-        <a href="https://m.me/acceptbtc" target="_blank">m.me/acceptbtc</a>
+        <a href="https://m.me/acceptbtc" target="_blank" rel="noopener">m.me/acceptbtc</a>
         </address>
         
     </Typography>
