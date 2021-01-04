@@ -34,7 +34,7 @@ export default function MyApp(props) {
 
     var submitted = localStorage.getItem("submitted") === "yes";
 
-    if (Router.pathname === '/thank-you')
+    /*if (Router.pathname === '/thank-you')
     {
         if (!submitted)
         {
@@ -45,7 +45,7 @@ export default function MyApp(props) {
     if (submitted)
     {
       Router.push('/thank-you');
-    }
+    }*/
     
     window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent the mini-infobar from appearing on mobile
