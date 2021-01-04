@@ -8,7 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
-//import PowerIcon from '@material-ui/icons/Power';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import Router from "next/router";
 
@@ -24,9 +23,9 @@ export default function MyApp(props) {
   const { Component, pageProps } = props;
   const classes = useStyles();
 
-  var acceptedCookieConsentClick = false;
+  //var acceptedCookieConsentClick = false;
 
-  var picoModalClosed = false;
+  //var picoModalClosed = false;
 
   let deferredPrompt;
 
@@ -47,18 +46,18 @@ export default function MyApp(props) {
       Router.push('/thank-you');
     }
     
-    window.addEventListener('beforeinstallprompt', (e) => {
+    /*window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent the mini-infobar from appearing on mobile
       e.preventDefault();
       // Stash the event so it can be triggered later.
       deferredPrompt = e;
       // Update UI notify the user they can install the PWA
       //showInstallPromotion();
-    });
+    });*/
 
-    if (process.browser) {
+    /*if (process.browser) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
-    }
+    }*/
 
     /*var observer = new MutationObserver(function (mutations) {
 
@@ -128,7 +127,7 @@ export default function MyApp(props) {
 
   }, []);
 
-  const timeout = setInterval(() => {
+  /*const timeout = setInterval(() => {
     if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
 
       clearInterval(timeout);
@@ -147,27 +146,6 @@ export default function MyApp(props) {
           }
         });
       }
-
-      // check for fullScreen elements on the DOM & make 'em happen
-      /*try
-      {
-          let videoContainer = document.getElementById("videoContainer");
-
-          if (videoContainer && videoContainer.requestFullscreen && acceptedCookieConsentClick)
-          {
-              videoContainer.requestFullscreen();
-
-              let v = document.getElementById("videoPlayer");
-
-              // v.muted = false; // turn sound back on
-
-              acceptedCookieConsentClick = false;
-          }
-      }
-      catch(e)
-      { 
-          console.log(e);
-      }*/
     }
     else
     {
@@ -176,6 +154,7 @@ export default function MyApp(props) {
   }, 500);
 
   const [cookied, setCookied] = React.useState(false);
+  */
 
   /*function myFunc()
   {
