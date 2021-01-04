@@ -74,7 +74,7 @@ const styles = {
   },
   card2: {
     minWidth: 275,
-    backgroundColor: "#fdf4e7"
+    backgroundColor: "#fffcf7"
   },
   activatecard: {
     minWidth: 275,
@@ -84,7 +84,7 @@ const styles = {
   },
   activatecard2: {
     minWidth: 275,
-    backgroundColor: "#fdf4e7",
+    backgroundColor: "#fffcf7",
     transition: "all 1s ease",
     /*animation: `$growShadow 2000ms infinite`*/
   },

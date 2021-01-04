@@ -4,16 +4,16 @@ import Typography from '@material-ui/core/Typography';
 export default function Address() {
   return (
     
-    <Typography variant="body1" color="textSecondary" align="center">
+    <Typography color="textSecondary" align="center">
         <address >
         <div>1110 Nuuanu Ave</div>
         <div>Suite 5043</div>
         <div>Honolulu, HI 96817</div>
         <div>USA</div>
 
-        <div><a href="mailto:support@acceptbtc.co" target="_blank">support@acceptbtc.co</a></div>
+        <div style={{fontSize: "18px"}}><a href="mailto:support@acceptbtc.co" target="_blank">support@acceptbtc.co</a></div>
         
-        <a href="https://m.me/acceptbtc" target="_blank" rel="noopener">m.me/acceptbtc</a>
+        <div style={{fontSize: "18px"}}><a href="https://m.me/acceptbtc" target="_blank" rel="noopener">m.me/acceptbtc</a></div>
         </address>
         
     </Typography>
