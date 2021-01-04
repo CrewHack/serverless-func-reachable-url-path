@@ -7,7 +7,7 @@ import theme from '../src/theme';
 import { makeStyles } from '@material-ui/core/styles';
 //import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 import MUICookieConsent from 'material-ui-cookie-consent';
-//import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import Router from "next/router";
 
@@ -41,6 +41,7 @@ export default function MyApp(props) {
       deferredPrompt = e;
     });
 
+    //the in-app Instagram browser does not allow making use of serviceWorkers :(
     if (process.browser && navigator && navigator.serviceWorker) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
     }
@@ -58,7 +59,7 @@ export default function MyApp(props) {
         }
     }
   
-    if (submitted)
+    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined")
     {
       Router.push('/thank-you');
     }
@@ -112,7 +113,6 @@ export default function MyApp(props) {
 
   }, []);
 
-  //the in-app Instagram browser does bow allow making use of cookies :(
   /*const timeout = setInterval(() => {
     if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
 
