@@ -348,12 +348,6 @@ function Index(props) {
 
       <div>&nbsp;</div>
 
-      <MuiLink color="inherit" href="/privacy-policy">
-        Privacy Policy
-      </MuiLink>{' '}
-
-      <div>&nbsp;</div>
-
       {/*{!open &&*/}
         <Copyright />
       {/*}*/}

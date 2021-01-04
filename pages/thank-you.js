@@ -123,12 +123,6 @@ function ThankYou(props) {
         <i>Why do we offer this free educational service? </i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived for <i>you</i> to get paid in Bitcoin instead of traditional fiat currency variants. The 3 step method above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
         </Typography>
 
-        <div>&nbsp;</div>
-
-      <MuiLink href="/privacy-policy">
-        Privacy Policy
-      </MuiLink>{' '}
-
       <div>&nbsp;</div>
 
 <div
