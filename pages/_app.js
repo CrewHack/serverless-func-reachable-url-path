@@ -29,8 +29,6 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
-    localStorage.clear();
-
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
@@ -40,10 +38,10 @@ export default function MyApp(props) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
     }
 
-    var acceptedCookies = localStorage.getItem("cookied") === "yes";
+    var acceptedCookies = sessionStorage.getItem("cookied") === "yes";
     setCookied(acceptedCookies);
 
-    var submitted = localStorage.getItem("submitted") === "yes";
+    var submitted = sessionStorage.getItem("submitted") === "yes";
 
     if (Router.pathname === '/thank-you')
     {
@@ -136,7 +134,7 @@ export default function MyApp(props) {
 
   function cookieHandle()
   {
-    localStorage.setItem("cookied", "yes")
+    sessionStorage.setItem("cookied", "yes")
     setCookied(true);
     
     console.log("aloha!");
