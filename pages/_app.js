@@ -119,8 +119,10 @@ export default function MyApp(props) {
 
       setCookied(true); // visitor accepted cookies
 
+      deferredPrompt.prompt();
+
       // check for fullScreen elements on the DOM & make 'em happen
-      try
+      /*try
       {
           let videoContainer = document.getElementById("videoContainer");
 
@@ -138,7 +140,7 @@ export default function MyApp(props) {
       catch(e)
       { 
           console.log(e);
-      }
+      }*/
     }
     else
     {
