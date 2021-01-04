@@ -137,8 +137,8 @@ export default function MyApp(props) {
     sessionStorage.setItem("cookied", "yes")
     setCookied(true);
     
-    console.log("aloha!");
-    console.log(deferredPrompt);
+    //console.log("aloha!");
+    //console.log(deferredPrompt);
 
     if (deferredPrompt)
     {
