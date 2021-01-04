@@ -94,25 +94,25 @@ const styles = {
   close: {
     backgroundColor: "#F7F9FB",
   },
-  animatedItem: {
-    animation: `$myEffect 2000ms ease`,
-    color: "#FF9900", // #14a37f
+  animatedItem: { 
+    animation: `$myEffect 1000ms ease`,
+    color: "#FF9900", 
   },
   animatedItemExiting: {
-    color: "#FF9900", // #14a37f
-    transform: "rotate(720deg)", //translateY(80%) 
-    WebkitTransform: "rotate(720deg)",
+    color: "#FF9900",
+    transform: "rotate(1440deg)",
     transition: "all .7s ease",
-    animation: `$myEffectExit 2000ms ease`
+    animation: `$myEffectExit 1000ms ease`
   },
   "@keyframes myEffect": {
     "0%": {
       opacity: 0,
-      transform: "translateY(-200%) rotate(1440deg)"
+      //transform: "translateY(-200%)", //rotate(1440deg)
     },
     "100%": {
       opacity: 1,
-      transform: "translateY(0)"
+      //transform: "translateY(0)"
+      transform: "rotate(1440deg)",
     }
   },
   "@keyframes myEffectExit": {
@@ -225,7 +225,7 @@ function Index(props) {
         {/*{open && */}
         <MuiLink color="inherit" href="/">
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
-          <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" /> 
+          <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" />
           {!open ? 'acceptBTC' : 'acceptBTC'}
         </Typography>
         </MuiLink>

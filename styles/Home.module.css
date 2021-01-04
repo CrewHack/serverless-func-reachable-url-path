@@ -125,3 +125,38 @@
 .buttonLabel {
   color: black;
 }
+
+.animatedItem {
+  animation: '$myEffect 2000ms ease';
+  color: #FF9900;
+}
+
+.animatedItemExiting {
+  color: #FF9900;
+  transform: rotate(720deg);
+  transition: all .7s ease;
+  animation: '$myEffectExit 2000ms ease';
+}
+
+@keyframes myEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%) rotate(1440deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes myEffectExit {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.33;
+  }
+  100% {
+    opacity: 1;
+  }
+}
