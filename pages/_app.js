@@ -34,9 +34,9 @@ export default function MyApp(props) {
       deferredPrompt = e;
     });
 
-    //if (process.browser) {
-      //navigator.serviceWorker.register('/OneSignalSDKWorker.js');
-    //}
+    if (process.browser && navigator) {
+      navigator.serviceWorker.register('/OneSignalSDKWorker.js');
+    }
 
     var acceptedCookies = localStorage.getItem("cookied") === "yes";
     setCookied(acceptedCookies);
