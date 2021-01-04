@@ -9,6 +9,7 @@ import Copyright from '../src/Copyright';
 import Image from 'next/image'
 
 export default function ThankYou() {
+  
   return (
     <Container maxWidth="sm">
       <Box my={4}>

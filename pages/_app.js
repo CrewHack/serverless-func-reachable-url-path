@@ -33,6 +33,15 @@ export default function MyApp(props) {
   React.useEffect(() => {
 
     var submitted = localStorage.getItem("submitted") === "yes";
+
+    if (Router.pathname === '/thank-you')
+    {
+        if (!submitted)
+        {
+          Router.push('/');
+        }
+    }
+  
     if (submitted)
     {
       Router.push('/thank-you');
