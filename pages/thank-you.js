@@ -86,7 +86,7 @@ export default function ThankYou() {
 
   <span style={{
   marginTop: "12px",
-  }}>Follow the 3 steps above to get your&nbsp;</span>
+  }}>Get your&nbsp;</span>
 
   <Image
   style={{textAlign: "center"}}
@@ -108,7 +108,7 @@ export default function ThankYou() {
       </Box>
 
       <Address />
-      
+
       <Copyright />
         <div>&nbsp;</div>
     </Container>
