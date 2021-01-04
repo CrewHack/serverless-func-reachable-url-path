@@ -26,7 +26,7 @@ export default function ThankYou() {
 
         <div>&nbsp;</div>
 
-        <Typography variant="h6" component="h1" gutterBottom>
+        <Typography variant="h5" component="h5" gutterBottom>
          Let's begin. The process is simple, 3 steps.
         </Typography>
 
