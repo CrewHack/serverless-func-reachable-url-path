@@ -27,10 +27,10 @@ export default function MyApp(props) {
 
   var picoModalClosed = false;
 
+  let deferredPrompt;
+
   React.useEffect(() => {
-
-    let deferredPrompt;
-
+    
     window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent the mini-infobar from appearing on mobile
       e.preventDefault();
