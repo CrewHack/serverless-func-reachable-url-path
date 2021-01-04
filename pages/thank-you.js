@@ -159,7 +159,12 @@ function ThankYou(props) {
 
       <Address />
 
-      <Copyright />
+      <div>&nbsp;</div>
+
+<Typography style={{fontSize: "12px", textAlign: "center"}}>
+  <Copyright />
+</Typography>
+
         <div>&nbsp;</div>
     </Container>
   );
