@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import { makeStyles } from '@material-ui/core/styles';
-import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
+//import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
@@ -46,18 +46,16 @@ export default function MyApp(props) {
       Router.push('/thank-you');
     }
     
-    /*window.addEventListener('beforeinstallprompt', (e) => {
+    window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent the mini-infobar from appearing on mobile
       e.preventDefault();
       // Stash the event so it can be triggered later.
       deferredPrompt = e;
-      // Update UI notify the user they can install the PWA
-      //showInstallPromotion();
-    });*/
+    });
 
-    /*if (process.browser) {
+    if (process.browser) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
-    }*/
+    }
 
     /*var observer = new MutationObserver(function (mutations) {
 
@@ -127,7 +125,7 @@ export default function MyApp(props) {
 
   }, []);
 
-  /*const timeout = setInterval(() => {
+  const timeout = setInterval(() => {
     if (typeof Cookies.get('mySiteCookieConsent') !== "undefined"){
 
       clearInterval(timeout);
@@ -154,7 +152,6 @@ export default function MyApp(props) {
   }, 500);
 
   const [cookied, setCookied] = React.useState(false);
-  */
 
   /*function myFunc()
   {
