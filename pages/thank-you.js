@@ -102,8 +102,8 @@ export default function ThankYou() {
 
   </div>
 
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
+        {/*<div>&nbsp;</div>
+        <div>&nbsp;</div>*/}
         
       </Box>
 
