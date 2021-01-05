@@ -29,6 +29,11 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    if (Router.pathname === '/start')
+    {
+      Router.push('/');
+    }
+
     /*var str = navigator.userAgent;
     var i = str.indexOf("Instagram");
     if (i != -1) {
