@@ -25,6 +25,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-material-ui-form-validator": "^2.1.1",
+    "react-player": "^2.7.2",
     "styled-components": "^5.2.1",
     "valid-url": "^1.0.9",
     "validator": "^13.5.2"
