@@ -20,6 +20,7 @@
     "material-ui-cookie-consent": "^0.1.0",
     "next": "latest",
     "next-pwa": "latest",
+    "next-videos": "^1.4.0",
     "prop-types": "latest",
     "puppeteer": "latest",
     "react": "latest",
