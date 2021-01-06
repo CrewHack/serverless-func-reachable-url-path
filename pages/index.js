@@ -332,8 +332,8 @@ function Index(props) {
                  <video width="100%" src={require('../public/external/btc-accepted-here.mp4')} id="promo-video" preload="true" autoPlay muted></video>  
             </CardContent>
             <CardActions style={{paddingTop: "0px", paddingBottom: "0px"}}>
-                {!open && <ProTip/>}
-                {open && <Typography className={classes.root} color="error">Let's do this!</Typography>}
+                {open && <ProTip/>}
+                {!open && <Typography className={classes.root} color="error">Let's do this!</Typography>}
             </CardActions>
         </Card>
 
