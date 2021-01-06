@@ -71,7 +71,7 @@ const styles = {
   },
   card: {
     minWidth: 275,
-    backgroundColor: "#ebeff2"
+    //backgroundColor: "#ebeff2"
   },
   card2: {
     minWidth: 275,
@@ -184,7 +184,7 @@ function Index(props) {
        body: JSON.stringify({email: data})
     });
 
-    const test = await res.json();
+    //const test = await res.json();
 
     //console.log(test.response);
 
@@ -329,6 +329,7 @@ function Index(props) {
                         <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>                                                                             
                 </Grid>*/}
+                 <video width="100%" src={require('../public/external/btc-accepted-here.mp4')} id="promo-video" preload="true" autoPlay muted></video>  
             </CardContent>
             <CardActions style={{paddingTop: "0px", paddingBottom: "0px"}}>
                 {!open && <ProTip/>}
@@ -340,15 +341,9 @@ function Index(props) {
 
       </Box>
 
-      <div>&nbsp;</div>
-
-      <video src={require('../public/example.mp4')} id="wrVideo" preload="true" autoplay muted></video>  
-
-<div>&nbsp;</div>
-
-        <Typography style={{fontSize: "12px", textAlign: "center"}}>
+      <Typography style={{fontSize: "12px", textAlign: "center"}}>
         <i>Why do we offer this free educational service? </i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived to get paid in Bitcoin instead of traditional fiat currency variants. The 3 step method we will teach you is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. You can get started today. With our setup, you don't have to wait on the blockchain to complete processing the transactions and receive your crypo payment, nearly 97% of all transactions are approved almost INSTANTLY! We make accepting BTC payments just as easy as accepting traditional payments like credit and debit cards. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
-        </Typography>
+      </Typography>
 
       <div>&nbsp;</div>
 

@@ -18,6 +18,8 @@ export default class MainForm extends React.Component {
 
     componentDidMount() {
 
+        this.props.drawerToggle();
+
         const { user } = this.state;
 
         // custom rule will have name 'isUrl'
@@ -170,9 +172,9 @@ export default class MainForm extends React.Component {
                     style={
                         user.validUrl 
                         ?
-                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px", height: "50px"} // #14a37f
+                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px", height: "50px"} 
                         :
-                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px", height: "50px"} // #676666
+                        {color: "#FFFFFF", backgroundColor: "#FF9900", marginTop: "6px", marginBottom: "6px", height: "50px"} 
                     } 
                     fullWidth 
                     variant="contained" 
