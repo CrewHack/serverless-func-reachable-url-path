@@ -342,7 +342,7 @@ function Index(props) {
 
       <div>&nbsp;</div>
 
-      <ReactPlayer url="external/btc-accepted-here.mp4" />
+      <ReactPlayer url="https://acceptbtc.co/external/btc-accepted-here.mp4" />
 
 <div>&nbsp;</div>
 
