@@ -18,18 +18,12 @@ export default class MainForm extends React.Component {
 
     componentDidMount() {
 
-        //this.props.drawerToggle();
-
         const { user } = this.state;
 
-        // custom rule will have name 'isUrl'
         ValidatorForm.addValidationRule('isUrl', (value) => {
 
-            //this.state.user.url;
             const url = value;
 
-            // check URL here for validity
-            //if (!isUrl(url))
             if (!isEmail(url))
             {
                 user["validUrl"] = false;
@@ -46,24 +40,22 @@ export default class MainForm extends React.Component {
     }
 
     componentWillUnmount() {
-        // remove rule when it is not needed
+
         ValidatorForm.removeValidationRule('isUrl');
     }
 
     handleChange = (event) => {
+
         const { user } = this.state;
         user[event.target.name] = event.target.value;
         this.setState({ user });
     }
 
     handleFocus = event => {
+
         const { user } = this.state;
         const { name, value } = event.target;
         if (name === "url" && !user.open) {
-          // set true as second parameter to onBlur required validation
-          //this.emailRef.current.validate(value);
-          console.log("focus!");
-
           user["open"] = !user.open;
           this.setState({ user });
 
@@ -77,22 +69,15 @@ export default class MainForm extends React.Component {
 
         const { user } = this.state;
 
-        console.log(event);
-
         if (event.relatedTarget && event.relatedTarget.name === "submit" || user.submitted)
         {
             return true;
         }
         else
         {
-
             const { name, value } = event.target;
 
             if (name === "url" ) {
-              // set true as second parameter to onBlur required validation
-              //this.emailRef.current.validate(value);
-
-              console.log("blur!");
 
               const { user } = this.state;
               user["open"] = !user.open;
@@ -112,22 +97,14 @@ export default class MainForm extends React.Component {
         if (event.type === "mousedown" || event.type === "ontouchstart") {
             user["submitted"] = true;
             this.setState({ user });
-
-            //user["open"] = false;
-            //this.setState({ user });
         }
     }
 
-    handleClick = () => {
+    /*handleClick = () => {
 
-        console.log("handle click here");
-
-    }
+    }*/
 
     handleSubmit = () => {
-        // your submit logic
-
-        console.log("handle submit here");
 
         const { user } = this.state;
 
@@ -135,6 +112,7 @@ export default class MainForm extends React.Component {
     }
 
     render() {
+        
         const { user } = this.state;
 
         return (

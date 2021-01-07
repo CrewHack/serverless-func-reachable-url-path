@@ -2,9 +2,6 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-// import ProTip from '../src/ProTip';
-import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Address from '../src/Address';
 import Image from 'next/image'
@@ -15,24 +12,22 @@ import clsx from 'clsx';
 import MuiLink from '@material-ui/core/Link';
 
 const styles = {
+
   animatedItem: { 
     animation: `$myEffect 750ms ease`,
     color: "#FF9900", 
   },
   animatedItemExiting: {
     color: "#FF9900",
-    //transform: "rotate(1440deg)",
     transition: "all .7s ease",
     animation: `$myEffectExit 1000ms ease`
   },
   "@keyframes myEffect": {
     "0%": {
       opacity: 0,
-      //transform: "translateY(-200%)", //rotate(1440deg)
     },
     "100%": {
       opacity: 1,
-      //transform: "translateY(0)"
       transform: "rotate(1440deg)",
     }
   },
@@ -55,8 +50,10 @@ function PrivacyPolicy(props) {
   const { classes } = props;
   
   return (
+
     <Container maxWidth="sm">
       <Box my={4}>
+
         <MuiLink color="inherit" href="/">
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: false})} fontSize="inherit" /> 
@@ -65,114 +62,114 @@ function PrivacyPolicy(props) {
         </MuiLink>
 
         <Typography>
-        <p>PRIVACY POLICY</p>
+            <p>PRIVACY POLICY</p>
 
-        <p>Last updated December 30th, 2020</p>
+            <p>Last updated December 30th, 2020</p>
  
 
-        <p>INTRODUCTION</p>
+            <p>INTRODUCTION</p>
 
-        <p>Accept BTC (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [name of website.com] [and our mobile application], including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the “Site”). Please read this privacy policy carefully.  If you do not agree with the terms of this privacy policy, please do not access the site. </p>
+            <p>Accept BTC (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [name of website.com] [and our mobile application], including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the “Site”). Please read this privacy policy carefully.  If you do not agree with the terms of this privacy policy, please do not access the site. </p>
 
-        <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason.  We will alert you about any changes by updating the “Last Updated” date of this Privacy Policy.  Any changes or modifications will be effective immediately upon posting the updated Privacy Policy on the Site, and you waive the right to receive specific notice of each such change or modification. </p>
+            <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason.  We will alert you about any changes by updating the “Last Updated” date of this Privacy Policy.  Any changes or modifications will be effective immediately upon posting the updated Privacy Policy on the Site, and you waive the right to receive specific notice of each such change or modification. </p>
 
-        <p>You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Site after the date such revised Privacy Policy is posted.  </p>
+            <p>You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Site after the date such revised Privacy Policy is posted.  </p>
 
-        <p>COLLECTION OF YOUR INFORMATION</p>
+            <p>COLLECTION OF YOUR INFORMATION</p>
 
-        <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
+            <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
 
-        <p>Personal Data </p>
-        <p>Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us [when you register with the Site [or our mobile application,] or] when you choose to participate in various activities related to the Site [and our mobile application], such as online chat and message boards. You are under no obligation to provide us with personal information of any kind, however your refusal to do so may prevent you from using certain features of the Site [and our mobile application].</p>
+            <p>Personal Data </p>
+            <p>Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us [when you register with the Site [or our mobile application,] or] when you choose to participate in various activities related to the Site [and our mobile application], such as online chat and message boards. You are under no obligation to provide us with personal information of any kind, however your refusal to do so may prevent you from using certain features of the Site [and our mobile application].</p>
 
-        <p>Derivative Data </p>
-        <p>Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site. [If you are using our mobile application, this information may also include your device name and type, your operating system, your phone number, your country, your likes and replies to a post, and other interactions with the application and other users via server log files, as well as any other information you choose to provide.]</p>
+            <p>Derivative Data </p>
+            <p>Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site. [If you are using our mobile application, this information may also include your device name and type, your operating system, your phone number, your country, your likes and replies to a post, and other interactions with the application and other users via server log files, as well as any other information you choose to provide.]</p>
 
-        <p>Financial Data </p>
-        <p>Financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site [or our mobile application]. [We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor, [Amazon Payments,] [Authornize.Net,]  [Braintree Payments,] [Chargify,] [Dwolla,] [Google Checkout,] [Paypal,] [SafeCharge,] [Stripe,] [WePay,] [2Checkout,] [other], and you are encouraged to review their privacy policy and contact them directly for responses to your questions.]</p>
+            <p>Financial Data </p>
+            <p>Financial information, such as data related to your payment method (e.g. valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site [or our mobile application]. [We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor, [Amazon Payments,] [Authornize.Net,]  [Braintree Payments,] [Chargify,] [Dwolla,] [Google Checkout,] [Paypal,] [SafeCharge,] [Stripe,] [WePay,] [2Checkout,] [other], and you are encouraged to review their privacy policy and contact them directly for responses to your questions.]</p>
 
-        <p>Facebook Permissions  </p>
-        <p>The Site [and our mobile application] may by default access your Facebook basic account information, including your name, email, gender, birthday, current city, and profile picture URL, as well as other information that you choose to make public. We may also request access to other permissions related to your account, such as friends, checkins, and likes, and you may choose to grant or deny us access to each individual permission. For more information regarding Facebook permissions, refer to the Facebook Permissions Reference page.</p>
+            <p>Facebook Permissions  </p>
+            <p>The Site [and our mobile application] may by default access your Facebook basic account information, including your name, email, gender, birthday, current city, and profile picture URL, as well as other information that you choose to make public. We may also request access to other permissions related to your account, such as friends, checkins, and likes, and you may choose to grant or deny us access to each individual permission. For more information regarding Facebook permissions, refer to the Facebook Permissions Reference page.</p>
 
-        <p>Data From Social Networks </p>
-        <p>User information from social networking sites, such as [Apple’s Game Center, Facebook, Google+, Instagram, Pinterest, Twitter], including your name, your social network username, location, gender, birth date, email address, profile picture, and public data for contacts, if you connect your account to such social networks. [If you are using our mobile application, this information may also include the contact information of anyone you invite to use and/or join our mobile application.]</p>
+            <p>Data From Social Networks </p>
+            <p>User information from social networking sites, such as [Apple’s Game Center, Facebook, Google+, Instagram, Pinterest, Twitter], including your name, your social network username, location, gender, birth date, email address, profile picture, and public data for contacts, if you connect your account to such social networks. [If you are using our mobile application, this information may also include the contact information of anyone you invite to use and/or join our mobile application.]</p>
 
-        <p>Mobile Device Data </p>
-        <p>Device information, such as your mobile device ID, model, and manufacturer, and information about the location of your device, if you access the Site from a mobile device.</p>
+            <p>Mobile Device Data </p>
+            <p>Device information, such as your mobile device ID, model, and manufacturer, and information about the location of your device, if you access the Site from a mobile device.</p>
 
-        <p>Third-Party Data </p>
-        <p>Information from third parties, such as personal information or network friends, if you connect your account to the third party and  grant the Site permission to access this information.</p>
+            <p>Third-Party Data </p>
+            <p>Information from third parties, such as personal information or network friends, if you connect your account to the third party and  grant the Site permission to access this information.</p>
 
-        <p>Data From Contests, Giveaways, and Surveys </p>
-        <p>Personal and other information you may provide when entering contests or giveaways and/or responding to surveys.</p>
+            <p>Data From Contests, Giveaways, and Surveys </p>
+            <p>Personal and other information you may provide when entering contests or giveaways and/or responding to surveys.</p>
 
-        <p>Mobile Application Information</p>
-        <p>If you connect using our mobile application:</p>
+            <p>Mobile Application Information</p>
+            <p>If you connect using our mobile application:</p>
 
-        <p>●	Geo-Location Information. We may request access or permission to and track location-based information from your mobile device, either continuously or while you are using our mobile application, to provide location-based services. If you wish to change our access or permissions, you may do so in your device’s settings.</p>
-        <p>●	Mobile Device Access. We may request access or permission to certain features from your mobile device, including your mobile device’s [bluetooth, calendar, camera, contacts, microphone, reminders, sensors, SMS messages, social media accounts, storage,] and other features. If you wish to change our access or permissions, you may do so in your device’s settings.</p>
-        <p>●	Mobile Device Data. We may collect device information (such as your mobile device ID, model and manufacturer), operating system, version information and IP address.</p>
-        <p>●	Push Notifications. We may request to send you push notifications regarding your account or the Application. If you wish to opt-out from receiving these types of communications, you may turn them off in your device’s settings.</p>
+            <p>●	Geo-Location Information. We may request access or permission to and track location-based information from your mobile device, either continuously or while you are using our mobile application, to provide location-based services. If you wish to change our access or permissions, you may do so in your device’s settings.</p>
+            <p>●	Mobile Device Access. We may request access or permission to certain features from your mobile device, including your mobile device’s [bluetooth, calendar, camera, contacts, microphone, reminders, sensors, SMS messages, social media accounts, storage,] and other features. If you wish to change our access or permissions, you may do so in your device’s settings.</p>
+            <p>●	Mobile Device Data. We may collect device information (such as your mobile device ID, model and manufacturer), operating system, version information and IP address.  </p>
+            <p>●	Push Notifications. We may request to send you push notifications regarding your account or the Application. If you wish to opt-out from receiving these types of communications, you may turn them off in your device’s settings.</p>
 
-        <p>USE OF YOUR INFORMATION </p>
+            <p>USE OF YOUR INFORMATION </p>
 
-        <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience.  Specifically, we may use information collected about you via the Site [or our mobile application] to: </p>
+            <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience.  Specifically, we may use information collected about you via the Site [or our mobile application] to: </p>
 
-        <p>●	Administer sweepstakes, promotions, and contests. </p>
-        <p>●	Assist law enforcement and respond to subpoena.</p>
-        <p>●	Compile anonymous statistical data and analysis for use internally or with third parties. </p>
-        <p>●	Create and manage your account.</p>
-        <p>●	Deliver targeted advertising, coupons, newsletters, and other information regarding promotions and the Site [and our mobile application] to you. </p>
-        <p>●	Email you regarding your account or order.</p>
-        <p>●	Enable user-to-user communications.</p>
-        <p>●	Fulfill and manage purchases, orders, payments, and other transactions related to the Site [and our mobile application].</p>
-        <p>●	Generate a personal profile about you to make future visits to the Site [and our mobile application] more personalized.</p>
-        <p>●	Increase the efficiency and operation of the Site [and our mobile application].</p>
-        <p>●	Monitor and analyze usage and trends to improve your experience with the Site [and our mobile application].</p>
-        <p>●	Notify you of updates to the Site [and our mobile application]s.</p>
-        <p>●	Offer new products, services, [mobile applications,] and/or recommendations to you.</p>
-        <p>●	Perform other business activities as needed.</p>
-        <p>●	Prevent fraudulent transactions, monitor against theft, and protect against criminal activity.</p>
-        <p>●	Process payments and refunds.</p>
-        <p>●	Request feedback and contact you about your use of the Site [and our mobile application] . </p>
-        <p>●	Resolve disputes and troubleshoot problems.</p>
-        <p>●	Respond to product and customer service requests.</p>
-        <p>●	Send you a newsletter.</p>
-        <p>●	Solicit support for the Site  [and our mobile application].</p>
-        <p>●	[Other]</p>
+            <p>●	Administer sweepstakes, promotions, and contests. </p>
+            <p>●	Assist law enforcement and respond to subpoena.</p>
+            <p>●	Compile anonymous statistical data and analysis for use internally or with third parties. </p>
+            <p>●	Create and manage your account.</p>
+            <p>●	Deliver targeted advertising, coupons, newsletters, and other information regarding promotions and the Site [and our mobile application] to you. </p>
+            <p>●	Email you regarding your account or order.</p>
+            <p>●	Enable user-to-user communications.</p>
+            <p>●	Fulfill and manage purchases, orders, payments, and other transactions related to the Site [and our mobile application].</p>
+            <p>●	Generate a personal profile about you to make future visits to the Site [and our mobile application] more personalized.</p>
+            <p>●	Increase the efficiency and operation of the Site [and our mobile application].</p>
+            <p>●	Monitor and analyze usage and trends to improve your experience with the Site [and our mobile application].</p>
+            <p>●	Notify you of updates to the Site [and our mobile application]s.</p>
+            <p>●	Offer new products, services, [mobile applications,] and/or recommendations to you.</p>
+            <p>●	Perform other business activities as needed.</p>
+            <p>●	Prevent fraudulent transactions, monitor against theft, and protect against criminal activity.</p>
+            <p>●	Process payments and refunds.</p>
+            <p>●	Request feedback and contact you about your use of the Site [and our mobile application] . </p>
+            <p>●	Resolve disputes and troubleshoot problems.</p>
+            <p>●	Respond to product and customer service requests.</p>
+            <p>●	Send you a newsletter.</p>
+            <p>●	Solicit support for the Site  [and our mobile application].</p>
+            <p>●	[Other]</p>
 
-        <p>DISCLOSURE OF YOUR INFORMATION</p>
+            <p>DISCLOSURE OF YOUR INFORMATION</p>
 
-        <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows:  </p>
+            <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows:  </p>
 
-        <p>By Law or to Protect Rights </p>
-        <p>If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.  This includes exchanging information with other entities for fraud protection and credit risk reduction.</p>
+            <p>By Law or to Protect Rights </p>
+            <p>If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.  This includes exchanging information with other entities for fraud protection and credit risk reduction.</p>
 
-        <p>Third-Party Service Providers </p>
-        <p>We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.  </p>
+            <p>Third-Party Service Providers </p>
+            <p>We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.  </p>
 
-        <p>Marketing Communications</p>
-        <p>With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes, as permitted by law.</p>
+            <p>Marketing Communications</p>
+            <p>With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes, as permitted by law.</p>
 
-        <p>Interactions with Other Users </p>
-        <p>If you interact with other users of the Site [and our mobile application], those users may see your name, profile photo, and descriptions of your activity, including sending invitations to other users, chatting with other users, liking posts, following blogs. </p>
+            <p>Interactions with Other Users </p>
+            <p>If you interact with other users of the Site [and our mobile application], those users may see your name, profile photo, and descriptions of your activity, including sending invitations to other users, chatting with other users, liking posts, following blogs. </p>
 
-        <p>Online Postings</p>
-        <p>When you post comments, contributions or other content to the Site [or our mobile applications], your posts may be viewed by all users and may be publicly distributed outside the Site [and our mobile application] in perpetuity. </p>
+            <p>Online Postings</p>
+            <p>When you post comments, contributions or other content to the Site [or our mobile applications], your posts may be viewed by all users and may be publicly distributed  outside the Site [and our mobile application] in perpetuity. </p>
 
-        <p>Third-Party Advertisers </p>
-        <p>We may use third-party advertising companies to serve ads when you visit the Site [or our mobile application]. These companies may use information about your visits to the Site [and our mobile application] and other websites that are contained in web cookies in order to provide advertisements about goods and services of interest to you. </p>
+            <p>Third-Party Advertisers </p>
+            <p>We may use third-party advertising companies to serve ads when you visit the Site [or our mobile application]. These companies may use information about your visits to the Site [and our mobile application] and other websites that are contained in web cookies in order to provide advertisements about goods and services of interest to you.   </p>
 
-        <p>Affiliates </p>
-        <p>We may share your information with our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include our parent company and any subsidiaries, joint venture partners or other companies that we control or that are under common control with us.</p>
+            <p>Affiliates </p>
+            <p>We may share your information with our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include our parent company and any subsidiaries, joint venture partners or other companies that we control or that are under common control with us.</p>
 
-        <p>Business Partners </p>
-        <p>We may share your information with our business partners to offer you certain products, services or promotions. </p>
+            <p>Business Partners </p>
+            <p>We may share your information with our business partners to offer you certain products, services or promotions. </p>
 
-        <p>[Offer Wall  </p>
-          <p>Our mobile application may display a third-party hosted “offer wall.”  Such an offer wall allows third-party advertisers to offer virtual currency, gifts, or other items to users in return for acceptance and completion of an advertisement offer.  Such an offer wall may appear in our mobile application and be displayed to you based on certain data, such as your geographic area or demographic information.  When you click on an offer wall, you will leave our mobile application.  A unique identifier, such as your user ID, will be shared with the offer wall provider in order to prevent fraud and properly credit your account.]    </p>
+            <p>[Offer Wall  </p>
+            <p>Our mobile application may display a third-party hosted “offer wall.”  Such an offer wall allows third-party advertisers to offer virtual currency, gifts, or other items to users in return for acceptance and completion of an advertisement offer.  Such an offer wall may appear in our mobile application and be displayed to you based on certain data, such as your geographic area or demographic information.  When you click on an offer wall, you will leave our mobile application.  A unique identifier, such as your user ID, will be shared with the offer wall provider in order to prevent fraud and properly credit your account.]    </p>
 
-          <p>[Social Media Contacts  </p>
+            <p>[Social Media Contacts  </p>
             <p>If you connect to the Site [or our mobile application] through a social network, your contacts on the social network will see your name, profile photo, and descriptions of your activity.] </p>
 
             <p>Other Third Parties</p>
@@ -226,53 +223,47 @@ function PrivacyPolicy(props) {
             <p>Emails and Communications</p>
             <p>If you no longer wish to receive correspondence, emails, or other communications from us, you may opt-out by:</p>
             <p>●	Noting your preferences at the time you register your account with the Site [or our mobile application]</p>
-<p>●	Logging into your account settings and updating your preferences.</p>
-<p>●	Contacting us using the contact information provided below</p>
-<p>If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly. </p>
+            <p>●	Logging into your account settings and updating your preferences.</p>
+            <p>●	Contacting us using the contact information provided below</p>
+            <p>If you no longer wish to receive correspondence, emails, or other communications from third parties, you are responsible for contacting the third party directly. </p>
 
-<p>CALIFORNIA PRIVACY RIGHTS</p>
+            <p>CALIFORNIA PRIVACY RIGHTS</p>
 
-<p>California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.</p>
+            <p>California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.</p>
+  
+            <p>If you are under 18 years of age, reside in California, and have a registered account with the Site [or our mobile application], you have the right to request removal of unwanted data that you publicly post on the Site [or our mobile application]. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside in California.  We will make sure the data is not publicly displayed on the Site [or our mobile application], but please be aware that the data may not be completely or comprehensively removed from our systems.</p>
 
-<p>If you are under 18 years of age, reside in California, and have a registered account with the Site [or our mobile application], you have the right to request removal of unwanted data that you publicly post on the Site [or our mobile application]. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside in California.  We will make sure the data is not publicly displayed on the Site [or our mobile application], but please be aware that the data may not be completely or comprehensively removed from our systems.</p>
+            <p>CONTACT US</p>
 
-<p>CONTACT US</p>
-
-<p>If you have questions or comments about this Privacy Policy, please contact us at support@acceptbtc.co.</p>
-
-
-
+            <p>If you have questions or comments about this Privacy Policy, please contact us at support@acceptbtc.co.</p>
 
         </Typography>
 
-<div
-  style={{
-  display: "flex",
-  justifyContent: "left",
-  marginBottom: "-8px"
-  }}
-  >
+        <div
+          style={{
+          display: "flex",
+          justifyContent: "left",
+          marginBottom: "-8px"
+        }}
+        >
 
-  <span style={{
-  marginTop: "12px",
-  }}>Get your&nbsp;</span>
+        <span style={{
+        marginTop: "12px",
+        }}>Get your&nbsp;</span>
 
-  <Image
-  style={{textAlign: "center"}}
-  src="/external/Bitcoin_accepted_here_printable.png"
-  alt="Add a 'Bitcoin Accepted Here' badge to your website"
-  width={135}
-  height={50}
-  /> 
+        <Image
+          style={{textAlign: "center"}}
+          src="/external/Bitcoin_accepted_here_printable.png"
+          alt="Add a 'Bitcoin Accepted Here' badge to your website"
+          width={135}
+          height={50}
+        /> 
 
-  <span style={{
-  marginTop: "12px",
-  }}>&nbsp;badge today!</span>
+        <span style={{
+        marginTop: "12px",
+        }}>&nbsp;badge today!</span>
 
-  </div>
-
-        {/*<div>&nbsp;</div>
-        <div>&nbsp;</div>*/}
+        </div>
         
       </Box>
 
@@ -280,16 +271,17 @@ function PrivacyPolicy(props) {
 
       <div>&nbsp;</div>
 
-<Typography style={{fontSize: "12px", textAlign: "center"}}>
-  <Copyright />
-</Typography>
+      <Typography style={{fontSize: "12px", textAlign: "center"}}>
+        <Copyright />
+      </Typography>
 
-        <div>&nbsp;</div>
+      <div>&nbsp;</div>
     </Container>
   );
 }
 
 PrivacyPolicy.propTypes = {
+  
   classes: PropTypes.object.isRequired,
 };
 

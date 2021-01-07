@@ -5,7 +5,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import { makeStyles } from '@material-ui/core/styles';
-//import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
@@ -46,7 +45,7 @@ export default function MyApp(props) {
       deferredPrompt = e;
     });
 
-    //the in-app Instagram browser does not allow making use of serviceWorkers :(
+    //the in-app Instagram browser (& other non-standarddoes not allow making use of serviceWorkers :(
     if (process.browser && navigator && navigator.serviceWorker) {
       navigator.serviceWorker.register('/OneSignalSDKWorker.js');
     }
@@ -146,11 +145,9 @@ export default function MyApp(props) {
 
   function cookieHandle()
   {
+
     localStorage.setItem("cookied", "yes")
     setCookied(true);
-    
-    //console.log("aloha!");
-    //console.log(deferredPrompt);
 
     if (deferredPrompt)
     {
@@ -169,6 +166,7 @@ export default function MyApp(props) {
   const [cookied, setCookied] = React.useState(false);
 
   return (
+    
     <React.Fragment>
       <Head>
         <title>acceptBTC</title>
@@ -181,10 +179,8 @@ export default function MyApp(props) {
             cookieName="mySiteCookieConsent"
             //componentType="Dialog" // default value is Snackbar
             message={<span aria-label="chilli" role="img">Welcome to <AccountBalanceWalletOutlinedIcon fontSize="inherit"/>acceptBTC.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue. GDPR, done. ✅</div></span>}
-            //"
         /> 
         <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}>
-        {/*pointerEvents: "none", opacity: 0.4, transition: "all .7s ease"*/}
             {/*<PrimarySearchAppBar />*/}
             {/*<div className={classes.offset} />*/}
             <Component {...pageProps} />
@@ -195,6 +191,7 @@ export default function MyApp(props) {
 }
 
 MyApp.propTypes = {
+  
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 };

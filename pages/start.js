@@ -2,9 +2,6 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-// import ProTip from '../src/ProTip';
-import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Address from '../src/Address';
 import Image from 'next/image'
@@ -15,24 +12,22 @@ import clsx from 'clsx';
 import MuiLink from '@material-ui/core/Link';
 
 const styles = {
+
   animatedItem: { 
     animation: `$myEffect 750ms ease`,
     color: "#FF9900", 
   },
   animatedItemExiting: {
     color: "#FF9900",
-    //transform: "rotate(1440deg)",
     transition: "all .7s ease",
     animation: `$myEffectExit 1000ms ease`
   },
   "@keyframes myEffect": {
     "0%": {
       opacity: 0,
-      //transform: "translateY(-200%)", //rotate(1440deg)
     },
     "100%": {
       opacity: 1,
-      //transform: "translateY(0)"
       transform: "rotate(1440deg)",
     }
   },
@@ -64,38 +59,34 @@ function Start(props) {
         </MuiLink>
 
         <Typography>
-        <p>Launching acceptBTC.co...</p>
-
+          <p>Launching acceptBTC.co...</p>
         </Typography>
 
-<div
-  style={{
-  display: "flex",
-  justifyContent: "left",
-  marginBottom: "-8px"
-  }}
-  >
+        <div
+          style={{
+          display: "flex",
+          justifyContent: "left",
+          marginBottom: "-8px"
+          }}
+        >
 
-  <span style={{
-  marginTop: "12px",
-  }}>Get your&nbsp;</span>
+        <span style={{
+        marginTop: "12px",
+        }}>Get your&nbsp;</span>
 
-  <Image
-  style={{textAlign: "center"}}
-  src="/external/Bitcoin_accepted_here_printable.png"
-  alt="Add a 'Bitcoin Accepted Here' badge to your website"
-  width={135}
-  height={50}
-  /> 
+        <Image
+          style={{textAlign: "center"}}
+          src="/external/Bitcoin_accepted_here_printable.png"
+          alt="Add a 'Bitcoin Accepted Here' badge to your website"
+          width={135}
+          height={50}
+        /> 
 
-  <span style={{
-  marginTop: "12px",
-  }}>&nbsp;badge today!</span>
+        <span style={{
+          marginTop: "12px",
+        }}>&nbsp;badge today!</span>
 
-  </div>
-
-        {/*<div>&nbsp;</div>
-        <div>&nbsp;</div>*/}
+        </div>
         
       </Box>
 
@@ -103,16 +94,17 @@ function Start(props) {
 
       <div>&nbsp;</div>
 
-<Typography style={{fontSize: "12px", textAlign: "center"}}>
-  <Copyright />
-</Typography>
+      <Typography style={{fontSize: "12px", textAlign: "center"}}>
+        <Copyright />
+      </Typography>
 
-        <div>&nbsp;</div>
+      <div>&nbsp;</div>
     </Container>
   );
 }
 
 Start.propTypes = {
+  
   classes: PropTypes.object.isRequired,
 };
 

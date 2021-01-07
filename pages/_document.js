@@ -11,23 +11,25 @@ export default class MyDocument extends Document {
   render() {
 
     return (
+
       <Html lang="en">
+
         <Head>
 
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com/" ></link> 
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com/" ></link>  
+          <link rel="dns-prefetch" href="https://www.googletagmanager.com/" ></link> 
+          <link rel="dns-prefetch" href="https://fonts.googleapis.com/" ></link>  
 
-        {/* Google Tag Manager HEAD snippet*/}
-        <script dangerouslySetInnerHTML={
-            {
-                __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var
-                f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-PMKP29S');</script>`, //GTM-WNXSTVT <- team@urlpow.com
-            }
-        }
-        />
-        {/* End Google Tag Manager HEAD snippet*/}
+          {/* Google Tag Manager HEAD snippet*/}
+          <script dangerouslySetInnerHTML={
+              {
+                  __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var
+                  f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                  })(window,document,'script','dataLayer','GTM-PMKP29S');</script>`, //GTM-WNXSTVT <- team@urlpow.com
+              }
+          }
+          />
+          {/* End Google Tag Manager HEAD snippet*/}
 
           <meta name='application-name' content={APP_NAME} />
           <meta name='apple-mobile-web-app-capable' content='yes' />
@@ -65,6 +67,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" media="none" onload="if(media!='all')media='all'"></link>
 
         </Head>
+
         <body>
             {/* <!-- Google Tag Manager BODY snippet (noscript) --> */}
             <noscript dangerouslySetInnerHTML={
@@ -80,6 +83,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+
       </Html>
     );
   }
@@ -122,6 +126,7 @@ MyDocument.getInitialProps = async (ctx) => {
   const initialProps = await Document.getInitialProps(ctx);
 
   return {
+
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
     styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],

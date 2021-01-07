@@ -15,7 +15,6 @@ export default function Address() {
         
         <div style={{fontSize: "20px", marginTop: "3px",  marginBottom: "3px"}}><a href="https://m.me/acceptbtc" target="_blank" rel="noopener">m.me/acceptbtc</a></div>
         </address>
-        
     </Typography>
   );
 }

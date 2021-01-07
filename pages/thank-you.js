@@ -3,7 +3,6 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-// import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Address from '../src/Address';
@@ -15,24 +14,22 @@ import clsx from 'clsx';
 import MuiLink from '@material-ui/core/Link';
 
 const styles = {
+
   animatedItem: { 
     animation: `$myEffect 750ms ease`,
     color: "#FF9900", 
   },
   animatedItemExiting: {
     color: "#FF9900",
-    //transform: "rotate(1440deg)",
     transition: "all .7s ease",
     animation: `$myEffectExit 1000ms ease`
   },
   "@keyframes myEffect": {
     "0%": {
       opacity: 0,
-      //transform: "translateY(-200%)", //rotate(1440deg)
     },
     "100%": {
       opacity: 1,
-      //transform: "translateY(0)"
       transform: "rotate(1440deg)",
     }
   },
@@ -49,12 +46,12 @@ const styles = {
   },
 }
 
-//export default function ThankYou() {
 function ThankYou(props) {  
 
   const { classes } = props;
   
   return (
+
     <Container maxWidth="sm">
       <Box my={4}>
         <MuiLink color="inherit" href="/">
@@ -96,10 +93,6 @@ function ThankYou(props) {
         </Button>
         </Typography>
 
-        {/*Next, sign up free here: <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2">
-          STEP 2
-  </Button>*/}
-
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
@@ -112,65 +105,61 @@ function ThankYou(props) {
          That's it! Easy, isn't it? Quick to implement, too. <b>You can get up & running accepting Bitcoin payments today!</b> <p>Need inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. Give it a try!</p>
         </Typography>
 
-        {/*<div>&nbsp;</div>*/}
-
         <Button variant="contained" color="grey" component={Link} naked href="https://www.style-element.co/product/mens-silver-grey-classic-aviator-sunglasses?ref=acceptBTC" target="_blank">
           View Example Shop
         </Button>
 
-  <div>&nbsp;</div>
+        <div>&nbsp;</div>
 
-      <Typography style={{fontSize: "12px", textAlign: "center"}}>
-        <i><b>Why do we offer this free educational service?</b></i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived to get paid in Bitcoin in addition to traditional fiat currency variants. Our gateway also accepts 150 traditonal payments methods like debit & credit cards & more. The 3 step method we've taught you above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. You can get started today. With our setup, you don't have to wait on the blockchain to complete processing the transactions and receive your crypo payment, nearly 97% of all transactions are approved almost instantly. We make accepting BTC payments just as easy as accepting traditional payments like credit and debit cards. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
-      </Typography>
+        <Typography style={{fontSize: "12px", textAlign: "center"}}>
+            <i><b>Why do we offer this free educational service?</b></i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived to get paid in Bitcoin in addition to traditional fiat currency variants. Our gateway also accepts 150 traditonal payments methods like debit & credit cards & more. The 3 step method we've taught you above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. You can get started today. With our setup, you don't have to wait on the blockchain to complete processing the transactions and receive your crypo payment, nearly 97% of all transactions are approved almost instantly. We make accepting BTC payments just as easy as accepting traditional payments like credit and debit cards. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
+        </Typography>
 
-      <div>&nbsp;</div>
+        <div>&nbsp;</div>
 
-<div
-  style={{
-  display: "flex",
-  justifyContent: "left",
-  marginBottom: "-8px"
-  }}
-  >
+        <div
+          style={{
+          display: "flex",
+          justifyContent: "left",
+          marginBottom: "-8px"
+          }}
+        >
 
-  <span style={{
-  marginTop: "12px",
-  }}>Get your&nbsp;</span>
+        <span style={{
+        marginTop: "12px",
+        }}>Get your&nbsp;</span>
 
-  <Image
-  style={{textAlign: "center"}}
-  src="/external/Bitcoin_accepted_here_printable.png"
-  alt="Add a 'Bitcoin Accepted Here' badge to your website"
-  width={135}
-  height={50}
-  /> 
+        <Image
+           style={{textAlign: "center"}}
+           src="/external/Bitcoin_accepted_here_printable.png"
+           alt="Add a 'Bitcoin Accepted Here' badge to your website"
+           width={135}
+           height={50}
+        /> 
 
-  <span style={{
-  marginTop: "12px",
-  }}>&nbsp;badge today!</span>
+        <span style={{
+          marginTop: "12px",
+        }}>&nbsp;badge today!</span>
 
-  </div>
-
-        {/*<div>&nbsp;</div>
-        <div>&nbsp;</div>*/}
+        </div>
         
       </Box>
 
       <Address />
 
       <div>&nbsp;</div>
+ 
+      <Typography style={{fontSize: "12px", textAlign: "center"}}>
+        <Copyright />
+      </Typography>
 
-<Typography style={{fontSize: "12px", textAlign: "center"}}>
-  <Copyright />
-</Typography>
-
-        <div>&nbsp;</div>
+      <div>&nbsp;</div>
     </Container>
   );
 }
 
 ThankYou.propTypes = {
+  
   classes: PropTypes.object.isRequired,
 };
 

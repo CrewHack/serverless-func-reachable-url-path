@@ -7,10 +7,12 @@ import NextLink from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 
 const NextComposed = React.forwardRef(function NextComposed(props, ref) {
+
   // eslint-disable-next-line react/prop-types
   const { as, href, replace, scroll, passHref, shallow, prefetch, ...other } = props;
 
   return (
+
     <NextLink
       href={href}
       prefetch={prefetch}
@@ -28,6 +30,7 @@ const NextComposed = React.forwardRef(function NextComposed(props, ref) {
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
 function Link(props) {
+
   const {
     href,
     activeClassName = 'active',
@@ -53,6 +56,7 @@ function Link(props) {
 }
 
 Link.propTypes = {
+  
   activeClassName: PropTypes.string,
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   className: PropTypes.string,
