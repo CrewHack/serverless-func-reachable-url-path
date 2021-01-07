@@ -157,7 +157,7 @@ export default class MainForm extends React.Component {
                     errorMessages={['this field is required','Checking email validity: Please enter a valid email...']}
                     value={user.url}
                     autoComplete="off"
-                    style={user.open ? {backgroundColor: "white"} : {backgroundColor: "#F7F9FB"}}
+                    style={user.open ? {backgroundColor: "white"} : {backgroundColor: "#fffcf7"}}
                     //type=i.e. "password" etc.
                 />
 

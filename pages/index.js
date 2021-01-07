@@ -79,7 +79,7 @@ const styles = {
   },
   activatecard: {
     minWidth: 275,
-    backgroundColor: "#F7F9FB",
+    backgroundColor: "#fffcf7",
     transition: "all 1s ease",
     animation: `$growShadow 2000ms infinite`
   },
