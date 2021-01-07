@@ -276,7 +276,6 @@ function Index(props) {
         </Card>
 
         <div>&nbsp;</div>
-        <span>&nbsp;&nbsp;</span>
 
         <Card style={{marginBottom: "0px", marginTop: "-8px"}} className={clsx(!open && classes.card2, open && classes.activatecard2)}>
             <CardContent style={{paddingBottom: "0px", marginTop: "-8px"}}>
@@ -300,7 +299,7 @@ function Index(props) {
                         <Card className={clsx(!open && classes.close, open && classes.open)} style={{textAlign: "center", justifyContent: "center", alignItems: "center"}}><PowerIcon fontSize="large" style={{color:"#00000087"}}/></Card>
                     </Grid>                                                                             
                 </Grid>*/}
-                 <video width="100%" src={require('../public/external/btc-accepted-here.mp4')} id="promo-video" preload="true" autoPlay muted playsInline></video>  
+                 <video width="100%" src={require('../public/external/btc-accepted-here.mp4')} id="promo-video" preload="true" autoPlay muted playsInline loop></video>  
             </CardContent>
             <CardActions style={{paddingTop: "0px", paddingBottom: "0px"}}>
                 {!open && <ProTip/>}
