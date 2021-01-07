@@ -91,7 +91,7 @@ function ThankYou(props) {
         <div>&nbsp;</div>
 
         <Typography variant="h6" component="h1" gutterBottom>
-         2. Next, register here (it is also free!): <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2" target="_blank">
+         2. Next, register here (it is also free!): <Button variant="contained" color="primary" component={Link} naked href="https://bit.ly/acceptBTC-step2a" target="_blank">
           STEP 2
         </Button>
         </Typography>
