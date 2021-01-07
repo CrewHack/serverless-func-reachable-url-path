@@ -214,15 +214,6 @@ function Index(props) {
 
       <Box my={4}>
 
-        {/*<MUICookieConsent 
-            cookieName="mySiteCookieConsent"
-            //componentType="Dialog" // default value is Snackbar
-            message={<span aria-label="chilli" role="img">Welcome to <PowerIcon fontSize="inherit"/>URLpow.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue to site. GDPR, done. ✅</div></span>}
-            //"
-        />
-
-        <div className={clsx(!cookied && classes.disabledDiv, cookied && classes.enabledDiv)}> cookie {hasAcceptedCookies ? 'found' : 'not found'}*/}
-
         {/*{open && */}
         <MuiLink color="inherit" href="/">
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
@@ -241,7 +232,7 @@ function Index(props) {
         {/*{!open && */}
         <Typography gutterBottom>
           
-          <div
+          <span
           style={{
           display: "flex",
           justifyContent: "left",
@@ -265,33 +256,12 @@ function Index(props) {
           marginTop: "12px",
           }}>&nbsp;badge today!</span>
 
-          </div>
+          </span>
           
         </Typography>
         {/*}*/}
         
         <div>&nbsp;</div>
-        
-        {/*{!open && */}
-        {/*<div>
-        <Image
-          src="/external/Bitcoin_accepted_here_printable.png"
-          alt="Add a 'Bitcoin Accepted Here' badge to your website"
-          width={100}
-          height={38}
-        />
-        <div>&nbsp;</div>
-        </div>*/}
-        {/*}*/}
-
-        {/*{open &&
-          <div>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <div></div>
-          </div>
-        }*/}
 
         <Card className={clsx(!open && classes.card, open && classes.activatecard)} style={{textAlign: "center", justifyContent: "center", alignItems: "center", marginTop: "-1px"}}>
             <CardContent style={{paddingBottom: "2px"}}>
@@ -305,6 +275,7 @@ function Index(props) {
             </CardActions>*/}
         </Card>
 
+        <div>&nbsp;</div>
         <span>&nbsp;&nbsp;</span>
 
         <Card style={{marginBottom: "0px", marginTop: "-8px"}} className={clsx(!open && classes.card2, open && classes.activatecard2)}>
@@ -332,8 +303,8 @@ function Index(props) {
                  <video width="100%" src={require('../public/external/btc-accepted-here.mp4')} id="promo-video" preload="true" autoPlay muted playsInline></video>  
             </CardContent>
             <CardActions style={{paddingTop: "0px", paddingBottom: "0px"}}>
-                {open && <ProTip/>}
-                {!open && <Typography className={classes.root} color="error">Let's do this!</Typography>}
+                {!open && <ProTip/>}
+                {open && <Typography className={classes.root} color="error">Let's do this!</Typography>}
             </CardActions>
         </Card>
 

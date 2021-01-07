@@ -18,7 +18,7 @@ export default class MainForm extends React.Component {
 
     componentDidMount() {
 
-        this.props.drawerToggle();
+        //this.props.drawerToggle();
 
         const { user } = this.state;
 
