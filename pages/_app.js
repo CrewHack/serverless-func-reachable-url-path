@@ -28,7 +28,7 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
-    if (Router.pathname === '/start')
+    if (Router.pathname === '/start' || Router.pathname === '/go')
     {
       Router.push('/');
     }
