@@ -12,6 +12,7 @@ module.exports = withVideos(withPWA({
       {
         source: '/_error',
         destination: '/',
+        permanent: true,
       },
     ];
   },
