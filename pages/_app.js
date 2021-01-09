@@ -28,10 +28,10 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
-    if (Router.pathname === '/start' || Router.pathname === '/go')
+    /*if (Router.pathname === '/start' || Router.pathname === '/go')
     {
       Router.push('/');
-    }
+    }*/
 
     /*var str = navigator.userAgent;
     var i = str.indexOf("Instagram");

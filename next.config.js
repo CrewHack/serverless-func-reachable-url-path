@@ -9,7 +9,7 @@ module.exports = withVideos(withPWA({
   },
   async redirects() {
     return [
-      {
+      /*{
         source: '/_error',
         destination: '/',
         permanent: true,
@@ -18,7 +18,7 @@ module.exports = withVideos(withPWA({
         source: '/404',
         destination: '/',
         permanent: true,
-      }
+      }*/
     ];
   },
 }))
