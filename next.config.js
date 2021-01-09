@@ -6,5 +6,13 @@ module.exports = withVideos(withPWA({
     //dest: 'public',
     //sw: 'OneSignalSDKWorker.js',
     disable: true
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/_error',
+        destination: '/',
+      },
+    ];
+  },
 }))
