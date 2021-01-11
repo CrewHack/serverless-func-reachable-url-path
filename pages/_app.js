@@ -9,7 +9,6 @@ import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import Router from "next/router";
-import { useRouter } from 'next/router';
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
@@ -22,10 +21,6 @@ export default function MyApp(props) {
   
   const { Component, pageProps } = props;
   const classes = useStyles();
-
-  //const router2 = useRouter();
-  //const code2 = router2.query.code;
-  //console.log(code2); 
 
   //var picoModalClosed = false;
 
