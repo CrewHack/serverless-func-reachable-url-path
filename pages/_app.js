@@ -70,7 +70,7 @@ export default function MyApp(props) {
     {
         if (!submitted)
         {
-          Router.push('/');
+          //Router.push('/');
         }
     }
 
@@ -78,13 +78,13 @@ export default function MyApp(props) {
     {
         if (submitted && !paid)
         {
-          Router.push('/thank-you');
+          //Router.push('/thank-you');
         }
         else
         {
           if (!paid)
           {
-            Router.push('/');
+            //Router.push('/');
           }
         }
     }
@@ -93,11 +93,11 @@ export default function MyApp(props) {
     {
       if (!paid)
       {
-        Router.push('/thank-you');
+        //Router.push('/thank-you');
       }
       else //paid
       {
-        Router.push('/thank-you-payment');
+        //Router.push('/thank-you-payment');
       }
     }
 
