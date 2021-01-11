@@ -105,7 +105,7 @@ function ThankYou(props) {
         <div>&nbsp;</div>
 
         <Typography align="left" variant="h6" component="h1" gutterBottom>
-        <b>2.</b> Next, after receiving payment confirmation please check your email. We'll deliver the 3-Part Launch Guide directly to your inbox over the course of the next 3 days.
+        <b>2.</b> Next, after receiving payment confirmation please check your email. We'll deliver the 3-Part Launch Guide directly to your inbox over the course of the next 3 days, followed by your private consultation.
         </Typography>
 
         <div>&nbsp;</div>
