@@ -96,7 +96,7 @@ function ThankYou(props) {
         </Typography>*/}
    
         <Typography align="left" variant="h6" component="h1" gutterBottom>
-         <b>1.</b> First, buy the "Bitcoin Accepted Here" Launch Guide 2021 Edition on sale for <b>$20.21</b>:  
+         <b>1.</b> First, buy the "Bitcoin Accepted Here" Launch Guide 2021 Edition + Private Consultation on sale for <b>$20.21</b>:  
          <button style={{backgroundColor: "#FF9900"}} className="tap2pay-pay-btn" type="button" onClick={handleBuyClick}>
           Pay with Bitcoin <i>or</i><div className="tap2pay-safe-icons"></div>
          </button>
@@ -119,7 +119,7 @@ function ThankYou(props) {
        <div>&nbsp;</div>*/}
 
         <Typography>
-        We'll send the 1st installment within 24 hours of your purchase. Each of the 3 days will require less than an hour of work on your part. By Day 3 -- in <i>less than</i> 3 hours of work total -- we'll have you up & running accepting Bitcoin payments! It's that simple. Quick to implement, too. No paying overpriced consultants, developers or technical "gurus" - DIY! <b>You can started accepting Bitcoin payments today!</b> <p>Need inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. Give it a try!</p>
+        We'll send the 1st installment within 24 hours of your purchase. On Day 3 we'll connect you with a private consultant. Together we'll ensure success. Each of the 3 days leading up to your private consultation requires less than an hour of work on your part. By Day 3 -- in <i>less than</i> 3 hours of work total -- we'll have you up & running accepting Bitcoin payments! It's that simple. Quick to implement. No paying overpriced consultants, developers or technical "gurus" - Do It Yourself #DIY ! <b>You can started accepting Bitcoin payments today!</b> <p>Need some inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. That's where the magic really happens. Give it a try! Yes, our solution works with <i>any</i> business model, not just eCommerce.</p>
         </Typography>
 
         <Button variant="contained" color="grey" component={Link} naked href="https://www.style-element.co/product/mens-silver-grey-classic-aviator-sunglasses?ref=acceptBTC" target="_blank">
@@ -128,8 +128,8 @@ function ThankYou(props) {
 
         <div>&nbsp;</div>
 
-        <Typography style={{fontSize: "12px", textAlign: "center"}}>
-            <i><b>Why do we offer this educational service?</b></i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived to get paid in Bitcoin in addition to traditional fiat currency variants. Our gateway also accepts 150 traditonal payments methods like debit & credit cards & more. The 3 step method we've taught you above is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. You can get started today. With our setup, you don't have to wait on the blockchain to complete processing the transactions and receive your crypo payment, nearly 97% of all transactions are approved almost instantly. We make accepting BTC payments just as easy as accepting traditional payments like credit and debit cards. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
+        <Typography style={{fontSize: "12px", textAlign: "left"}}>
+            <i><b>Why do we offer this educational service?</b></i> Bitcoin revolutionized "money" forever. Your business will profit from the cryptocurrency innovations now becoming more & more mainstream by the minute. The time has arrived to get paid in Bitcoin in addition to traditional fiat currency variants. Our gateway also accepts 150+ traditonal payments methods like debit & credit cards & more. The method we'll teach you is <i>by far</i> the quickest & easiest way to start accepting Bitcoin as a payment method in the year 2021. You don't have to be a coder to implement, anyone can configure the setup quickly. You can get started today. With our setup, you don't have to wait on the blockchain to complete processing the transactions and receive your crypo payment, nearly 97% of all transactions are approved almost instantly. We make accepting BTC payments just as easy as accepting traditional payments like credit and debit cards. Are you accepting Bitcoin payments yet? Time to to act <b>now ⏱️ </b>
         </Typography>
 
         <div>&nbsp;</div>
