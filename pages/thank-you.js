@@ -96,7 +96,7 @@ function ThankYou(props) {
         </Typography>*/}
    
         <Typography align="left" variant="h6" component="h1" gutterBottom>
-         <b>1.</b> First, buy the "Bitcoin Accepted Here" Launch Guide 2021 Edition + Private Consultation on sale for <b>$20.21</b>:  
+         <b>1.</b> First, buy the "Bitcoin Accepted Here" Launch Guide 2021 Edition + Private Consultation on sale for <b>$20.21</b>. Enter a coupon code at checkout if you have one for an <i>additional</i> discount:  
          <button style={{backgroundColor: "#FF9900"}} className="tap2pay-pay-btn" type="button" onClick={handleBuyClick}>
           Pay with Bitcoin <i>or</i><div className="tap2pay-safe-icons"></div>
          </button>
