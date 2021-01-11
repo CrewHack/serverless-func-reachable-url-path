@@ -63,7 +63,7 @@ export default function MyApp(props) {
         }
     }
   
-    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined" && Router.pathname !== '/privacy-policy')
+    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined" && Router.pathname !== '/privacy-policy' && Router.pathname !== '/thank-you-payment')
     {
       Router.push('/thank-you');
     }
