@@ -74,7 +74,7 @@ function ThankYouPayment(props) {
         <div>&nbsp;</div>
 
         <Typography variant="h5" component="h5" gutterBottom>
-          <i>Please check your inbox for your receipt.</i> Within the next 24 hours we'll begin delivering your "BTC Accepted Here" Training Guide. We'll follow up with a Private Consultation.
+          <i>Please check your inbox for your receipt.</i> Within the next 24 hours we'll begin delivering your "BTC Accepted Here" Launch Guide. We'll follow up with a Private Consultation.
         </Typography>
 
         <div>&nbsp;</div>
