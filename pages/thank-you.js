@@ -78,7 +78,7 @@ function ThankYou(props) {
         <div>&nbsp;</div>
 
         <Typography variant="h5" component="h5" gutterBottom>
-         Let's begin. The process is simple, only <i>2 steps</i>. To complete:
+         Let's begin. The process is simple, only <i>2 steps</i>:
         </Typography>
 
         <div>&nbsp;</div>
@@ -96,7 +96,7 @@ function ThankYou(props) {
         </Typography>*/}
    
         <Typography align="left" variant="h6" component="h1" gutterBottom>
-         <b>1.</b> First, buy our <b>"Bitcoin Accepted Here" Launch Guide 2021 Edition + Private Consultation </b> on sale for <s style={{color: "red"}}>$49.99</s>&nbsp;<b style={{color: "green"}}>$20.21</b> <i>limited time offer</i>:  
+         <b>1.</b> First, buy our <b>"BTC Accepted Here" Launch Guide 2021 Edition + Private Consultation </b> on sale for <s style={{color: "red"}}>$49.99</s>&nbsp;<b style={{color: "green"}}>$20.21</b> <i>limited time offer</i>:  
          <Button style={{backgroundColor: "#FF9900"}} className="tap2pay-pay-btn" type="button" onClick={handleBuyClick}>
           Buy with Bitcoin&nbsp;<i style={{fontSize: "12px"}}>-or-</i><div className="tap2pay-safe-icons"></div>
          </Button>
