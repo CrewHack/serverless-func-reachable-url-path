@@ -37,6 +37,12 @@ export default class MainForm extends React.Component {
 
             return true; // valid
         });
+
+        var formsCollection = document.getElementsByTagName("form");
+        for(var i=0;i<formsCollection.length;i++)
+        {
+          formsCollection[i].classList.add("PicoSignupForm");
+        }
     }
 
     componentWillUnmount() {
@@ -117,6 +123,7 @@ export default class MainForm extends React.Component {
 
         return (
             <ValidatorForm
+                className="PicoSignupForm"
                 style={{marginTop: "-8px"}}
                 onSubmit={this.handleSubmit}
             >
@@ -136,7 +143,7 @@ export default class MainForm extends React.Component {
                     value={user.url}
                     autoComplete="off"
                     style={user.open ? {backgroundColor: "white"} : {backgroundColor: "#fffcf7"}}
-                    //type=i.e. "password" etc.
+                    type="email"
                 />
 
                 <Button 

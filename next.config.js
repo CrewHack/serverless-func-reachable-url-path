@@ -19,6 +19,7 @@ module.exports = withVideos(withPWA({
         destination: '/',
         permanent: true,
       }*/
+      //https://nextjs.org/docs/api-reference/next.config.js/redirects
     ];
   },
 }))
