@@ -9,6 +9,7 @@ import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import Router from "next/router";
+import { useRouter } from 'next/router';
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
@@ -22,11 +23,25 @@ export default function MyApp(props) {
   const { Component, pageProps } = props;
   const classes = useStyles();
 
+  //const router2 = useRouter();
+  //const code2 = router2.query.code;
+  //console.log(code2); 
+
   //var picoModalClosed = false;
 
   let deferredPrompt;
 
   React.useEffect(() => {
+
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+
+    if (code && Router.pathname === '/thank-you-payment')
+    {
+      console.log("paid");
+     
+      localStorage.setItem("paid", "yes")
+    }
 
     /*if (Router.pathname === '/start' || Router.pathname === '/go')
     {
@@ -54,6 +69,7 @@ export default function MyApp(props) {
     setCookied(acceptedCookies);
 
     var submitted = localStorage.getItem("submitted") === "yes";
+    var paid = localStorage.getItem("paid") === "yes";
 
     if (Router.pathname === '/thank-you')
     {
@@ -62,10 +78,32 @@ export default function MyApp(props) {
           Router.push('/');
         }
     }
-  
-    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined" && Router.pathname !== '/privacy-policy' && Router.pathname !== '/thank-you-payment')
+
+    if (Router.pathname === '/thank-you-payment')
     {
-      Router.push('/thank-you');
+        if (submitted && !paid)
+        {
+          Router.push('/thank-you');
+        }
+        else
+        {
+          if (!paid)
+          {
+            Router.push('/');
+          }
+        }
+    }
+  
+    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined" && Router.pathname !== '/privacy-policy')
+    {
+      if (!paid)
+      {
+        Router.push('/thank-you');
+      }
+      else //paid
+      {
+        Router.push('/thank-you-payment');
+      }
     }
 
     /*var observer = new MutationObserver(function (mutations) {

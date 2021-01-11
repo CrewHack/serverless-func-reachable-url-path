@@ -2,8 +2,6 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Address from '../src/Address';
 import Image from 'next/image'
@@ -12,6 +10,7 @@ import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceW
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import MuiLink from '@material-ui/core/Link';
+import { useRouter } from 'next/router';
 
 const styles = {
 
@@ -48,6 +47,11 @@ const styles = {
 
 function ThankYouPayment(props) {  
 
+  React.useEffect(() => {
+    window.addEventListener('load', (event) => {
+    });
+  }, []);
+
   const { classes } = props;
   
   return (
@@ -74,7 +78,7 @@ function ThankYouPayment(props) {
         <div>&nbsp;</div>
 
         <Typography variant="h5" component="h5" gutterBottom>
-          <i>Please check your inbox for your receipt.</i> Within the next 24 hours we'll begin delivering your "BTC Accepted Here" Launch Guide. We'll follow up with a Private Consultation.
+          <i>Please check your inbox for your receipt.</i> Within the next 24 hours we'll begin delivering your 3-Day "BTC Accepted Here" Launch Guide. We'll follow up with a Private Consultation on Messenger.
         </Typography>
 
         <div>&nbsp;</div>
