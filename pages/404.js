@@ -55,6 +55,7 @@ function Custom404(props) {
   const { classes } = props;
 
   React.useEffect(() => {
+    
     Router.push('/');
   })
   
