@@ -38,11 +38,6 @@ export default function MyApp(props) {
       localStorage.setItem("paid", "yes")
     }
 
-    /*if (Router.pathname === '/start' || Router.pathname === '/go')
-    {
-      Router.push('/');
-    }*/
-
     /*var str = navigator.userAgent;
     var i = str.indexOf("Instagram");
     if (i != -1) {
@@ -70,7 +65,7 @@ export default function MyApp(props) {
     {
         if (!submitted)
         {
-          //Router.push('/');
+          Router.push('/');
         }
     }
 
@@ -78,13 +73,13 @@ export default function MyApp(props) {
     {
         if (submitted && !paid)
         {
-          //Router.push('/thank-you');
+          Router.push('/thank-you');
         }
         else
         {
           if (!paid)
           {
-            //Router.push('/');
+            Router.push('/');
           }
         }
     }
@@ -93,11 +88,11 @@ export default function MyApp(props) {
     {
       if (!paid)
       {
-        //Router.push('/thank-you');
+        Router.push('/thank-you');
       }
       else //paid
       {
-        //Router.push('/thank-you-payment');
+        Router.push('/thank-you-payment');
       }
     }
 
