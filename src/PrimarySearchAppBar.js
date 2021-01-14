@@ -2,22 +2,47 @@ import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
+//import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 
 import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+//import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import PowerIcon from '@material-ui/icons/Power';
+//import PowerIcon from '@material-ui/icons/Power';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+
+//import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+
+import Router from "next/router";
+import Link from '../src/Link';
 
 const useStyles = makeStyles((theme) => ({
+
+  menuTitle: {
+    top: "10px",
+    position: "absolute",
+    left: "100px"
+  },
+
+  drawerPaper: {
+    width: "250px"
+  },
+
   grow: {
     flexGrow: 1,
   },
@@ -82,44 +107,104 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PrimarySearchAppBar() {
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+  const [isDrawerOpen, handleDrawerOpen] = React.useState(false);
+
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+  const doDrawerOpen = () => {
+
+    handleDrawerOpen(true);
+  };
+
+  const doDrawerClose = () => {
+
+    handleDrawerOpen(false);
+  };
+
   const handleProfileMenuOpen = (event) => {
+
     setAnchorEl(event.currentTarget);
   };
 
   const handleMobileMenuClose = () => {
+
     setMobileMoreAnchorEl(null);
   };
 
   const handleMenuClose = () => {
+
     setAnchorEl(null);
     handleMobileMenuClose();
   };
 
   const handleMobileMenuOpen = (event) => {
+
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
   const handleProfile = (event) => {
+
     setAnchorEl(null);
     handleMobileMenuClose();
-    var picoWidget = document.getElementById("pico-widget-container");
-    picoWidget.style.visibility = "visible";
-    picoWidget.style.display = "block";
+    //var picoWidget = document.getElementById("pico-widget-container");
+    //picoWidget.style.visibility = "visible";
+    //picoWidget.style.display = "block";
   };
 
   const handleAccount = (event) => {
+
     setAnchorEl(null);
     handleMobileMenuClose();
-    var picoWidget = document.getElementById("pico-widget-container");
-    picoWidget.style.visibility = "visible";
-    picoWidget.style.display = "block";
+    //var picoWidget = document.getElementById("pico-widget-container");
+    //picoWidget.style.visibility = "visible";
+    //picoWidget.style.display = "block";
+  };
+
+  const handleListClick = (index) => {
+
+    console.log(index);
+
+    if (index === 0)
+    {
+      handleDrawerOpen(false);
+      Router.push('/');
+    }
+
+    if (index === 1) // Install
+    {
+      handleDrawerOpen(false);
+      Router.push('/');
+    }
+
+    if (index === 2)
+    {
+      handleDrawerOpen(false);
+      Router.push('/members');
+    }
+
+    if (index === 3)
+    {
+      handleDrawerOpen(false);
+      Router.push('/about');
+    }
+
+    if (index === 4) // Buy
+    {
+      handleDrawerOpen(false);
+      Router.push('/');
+    }
+  };
+
+  const handleDividerListClick = (index) => {
+
+    console.log(index);
+    
   };
 
   const menuId = 'primary-search-account-menu';
@@ -179,6 +264,56 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
+  const list = 
+    <div
+      className={classes.list}
+      role="presentation"
+      //onClick={toggleDrawer(anchor, false)}
+      //onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Home', 'Install', 'Members Area', 'About', 'Buy'].map((text, index) => (
+          <ListItem button key={text} onClick={() => handleListClick(index)}>
+          <ListItemIcon>
+              {
+              index === 0 ? 
+                <InboxIcon /> : 
+                  index === 1 ?
+                    <InboxIcon /> : 
+                      index === 2 ?
+                        <InboxIcon /> : 
+                          index === 3 ?
+                            <InboxIcon /> : 
+                              index === 4 ?
+                                <InboxIcon /> : <InboxIcon /> 
+              }
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['Call', 'Email', 'Chat'].map((text, index) => (
+          <ListItem button key={text} onClick={() => handleDividerListClick(index)}>
+            <ListItemIcon>
+              {
+              index === 0 ? 
+                <InboxIcon /> : 
+                  index === 1 ?
+                    <InboxIcon /> : 
+                      index === 2 ?
+                        <InboxIcon /> : 
+                          index === 3 ?
+                            <InboxIcon /> : <InboxIcon />
+              }
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>;
+
   return (
     <div className={classes.grow}>
       <AppBar position="fixed"> {/*style={{backgroundColor: "#676666", color: "#FFFFFF"}}*/}
@@ -188,13 +323,16 @@ export default function PrimarySearchAppBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={doDrawerOpen}
           >
-            <MenuIcon />
+            <MenuIcon style={{color: "#FFFFFF"}}/>
           </IconButton>
+          <Link color="textSecondary" href="/">
           <Typography style={{color: "#FFFFFF"}} className={classes.title} variant="h6">
-            {/*<PowerIcon style={{color: "#FFFFFF"}}/>*/}
-            Getridox Miracles
+            <AccountBalanceWalletOutlinedIcon style={{color: "#FFFFFF"}}/>
+            acceptBTC
           </Typography>
+          </Link>
           {/*<div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -211,16 +349,16 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 2 new mails" color="inherit">
-              <Badge badgeContent={2} color="error">
-                <MailIcon />
+              <Badge badgeContent={2} style={{color: "#ffeb3b"}}>
+                <MailIcon style={{color: "#FFFFFF"}}/> 
               </Badge>
             </IconButton>
             <IconButton aria-label="show 3 new notifications" color="inherit">
-              <Badge badgeContent={3} color="error">
-                <NotificationsIcon />
+              <Badge badgeContent={3} style={{color: "#ffeb3b"}}>
+                <NotificationsIcon style={{color: "#FFFFFF"}}/>
               </Badge>
             </IconButton>
-            <IconButton
+            <IconButton style={{color: "#FFFFFF"}}
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -246,6 +384,33 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      <Drawer
+        //variant="persistent"
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+        open={isDrawerOpen}
+      >
+        <div >
+          <IconButton >
+            <ChevronLeftIcon onClick={doDrawerClose}/>
+            
+          </IconButton>
+        
+          <Link color="inherit" href="/">
+          <div className={classes.menuTitle}>
+          <Typography variant="h6">  
+            <AccountBalanceWalletOutlinedIcon />
+            acceptBTC
+          </Typography>
+          </div>
+          </Link>
+
+        </div>
+        <div className={classes.drawerInner}>
+          {list}
+        </div>
+      </Drawer>
     </div>
   );
 }

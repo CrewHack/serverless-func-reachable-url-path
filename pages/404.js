@@ -14,8 +14,8 @@ import { withStyles } from '@material-ui/core/styles';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import MuiLink from '@material-ui/core/Link';
 import Router from "next/router";
+import Link from '../src/Link';
 
 const styles = {
 
@@ -62,12 +62,12 @@ function Custom404(props) {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <MuiLink color="inherit" href="/">
+        <Link color="inherit" href="/">
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: false})} fontSize="inherit" /> 
           {'acceptBTC'}
         </Typography>
-        </MuiLink>
+        </Link>
 
         <Typography>
           <p>Launching acceptBTC.co...</p>

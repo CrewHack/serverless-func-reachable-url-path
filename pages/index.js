@@ -14,7 +14,7 @@ import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceW
 import clsx from 'clsx';
 import MainForm from '../src/MainForm';
 import Image from 'next/image'
-import MuiLink from '@material-ui/core/Link';
+import Link from '../src/Link';
 
 const styles = {
 
@@ -163,12 +163,12 @@ function Index(props) {
 
       <Box my={4}>
 
-        <MuiLink color="inherit" href="/">
+        <Link color="inherit" href="/">
         <Typography style={{opacity: 1}} align="left" variant="h1" component="h1" gutterBottom > 
           <AccountBalanceWalletOutlinedIcon className={clsx(classes.animatedItem, {[classes.animatedItemExiting]: open})} fontSize="inherit" />
           {!open ? 'acceptBTC' : 'acceptBTC'}
         </Typography>
-        </MuiLink>
+        </Link>
 
         <Typography variant="h2" component="h2" gutterBottom>
           Start accepting Bitcoin & other crypto payments today.

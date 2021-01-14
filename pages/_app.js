@@ -9,6 +9,8 @@ import MUICookieConsent from 'material-ui-cookie-consent';
 import Cookies from 'js-cookie';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import Router from "next/router";
+import { Provider } from 'next-auth/client';
+import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
 
 const useStyles = makeStyles(theme => ({
   offset: theme.mixins.toolbar,
@@ -84,7 +86,7 @@ export default function MyApp(props) {
         }
     }
   
-    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined" && Router.pathname !== '/privacy-policy')
+    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined" && Router.pathname !== '/privacy-policy' && Router.pathname !== '/members' && Router.pathname !== '/about')
     {
       if (!paid)
       {
@@ -212,9 +214,11 @@ export default function MyApp(props) {
             message={<span aria-label="chilli" role="img">Welcome to <AccountBalanceWalletOutlinedIcon fontSize="inherit"/>acceptBTC.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue. GDPR, done. ✅</div></span>}
         /> 
         <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}>
-            {/*<PrimarySearchAppBar />*/}
-            {/*<div className={classes.offset} />*/}
+          <Provider session={pageProps.session}>
+            <PrimarySearchAppBar />
+            <div className={classes.offset} />
             <Component {...pageProps} />
+          </Provider>
         </div>
       </ThemeProvider>
     </React.Fragment>

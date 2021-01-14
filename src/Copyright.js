@@ -1,20 +1,20 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import MuiLink from '@material-ui/core/Link';
+import Link from '../src/Link';
 
 export default function Copyright() {
 
   return (
     
     <Typography variant="body2" color="textSecondary" align="center">
-      <MuiLink color="inherit" href="/privacy-policy">
+      <Link color="inherit" href="/privacy-policy">
         Privacy Policy
-      </MuiLink>
+      </Link>
       <div>&nbsp;</div>
       {'Copyright © '}
-      <MuiLink color="inherit" href="https:/acceptbtc.co/">
+      <Link color="inherit" href="https:/acceptbtc.co/">
         acceptBTC
-      </MuiLink>{' '}
+      </Link>{' '}
       {new Date().getFullYear()}.
       <div><i>{'Bitcoin Payment Technology Education & Integration Company'}</i></div>
       <div>&nbsp;</div>
