@@ -50,19 +50,26 @@ function ThankYou(props) {
 
   React.useEffect(() => {
 
+    const params = new URLSearchParams(window.location.search);
+    const refresh = params.get('refresh');
+    if (refresh)
+    {
+      window.history.replaceState({}, document.title, "/" + "thank-you");
+      location.reload();
+    }
+
     window.addEventListener('load', (e) => {
-      <script dangerouslySetInnerHTML={
+    {/*<script dangerouslySetInnerHTML={
         {
             __html: `src='https://secure.tap2pay.me/checkout.v1.js'</script>`,
         }
     }
-    />
+    />*/}
     });
     
   });
 
   const handleBuyClick = (event) => {
-    var t2pHandler = new T2P.Checkout({merchant_id: "2NAszJMW"});
     t2pHandler.openProduct('zsHUksKn');
   };
 

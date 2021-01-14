@@ -88,7 +88,10 @@ export default function MyApp(props) {
     {
       if (!paid)
       {
-        Router.push('/thank-you');
+        if (Router.pathname !== '/thank-you')
+        {
+          Router.push('/thank-you?refresh=1');
+        }
       }
       else //paid
       {
