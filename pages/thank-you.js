@@ -48,7 +48,21 @@ const styles = {
 
 function ThankYou(props) {  
 
+  React.useEffect(() => {
+
+    window.addEventListener('load', (e) => {
+      <script dangerouslySetInnerHTML={
+        {
+            __html: `src='https://secure.tap2pay.me/checkout.v1.js'</script>`,
+        }
+    }
+    />
+    });
+    
+  });
+
   const handleBuyClick = (event) => {
+    var t2pHandler = new T2P.Checkout({merchant_id: "2NAszJMW"});
     t2pHandler.openProduct('zsHUksKn');
   };
 
