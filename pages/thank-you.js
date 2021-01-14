@@ -96,7 +96,7 @@ function ThankYou(props) {
         </Typography>*/}
    
         <Typography align="left" variant="h6" component="h1" gutterBottom>
-         1. First, buy our <b>"BTC Accepted Here" Launch Guide 2021 Edition + Private Consultation</b> <i>including lifetime member portal access</i> on sale now for a one-time payment of <s style={{color: "#ef5a5a"}}>$49.99</s>&nbsp;<b style={{color: "green"}}>$20.21</b>:  
+         1. First, buy our <b>"BTC Accepted Here" Launch Guide 2021 Edition + Private Consultation</b> <i>including lifetime member portal access</i> on sale now for a one-time payment of <s style={{color: "#ef5a5a"}}>$49.99</s>&nbsp;<b style={{color: "#0aa90a"}}>$20.21</b>:  
          <Button style={{color: "white", backgroundColor: "#FF9900"}} className="tap2pay-pay-btn" type="button" onClick={handleBuyClick}>
           Buy with Bitcoin&nbsp;<i style={{fontSize: "12px"}}>-or-</i><div className="tap2pay-safe-icons"></div>
          </Button>
@@ -105,7 +105,7 @@ function ThankYou(props) {
         <div>&nbsp;</div>
 
         <Typography align="left" variant="h6" component="h1" gutterBottom>
-        2. Next, after payment confirmation please check your email. We'll deliver your member portal access including the Launch Guide. We'll follow-up to schedule your private consultation.
+        2. Next, after payment confirmation please check your email. We'll deliver your lifetime member portal access including the Launch Guide, along with scheduling your private consultation.
         </Typography>
 
         <div>&nbsp;</div>
@@ -119,7 +119,7 @@ function ThankYou(props) {
        <div>&nbsp;</div>*/}
 
         <Typography>
-        We'll send the 1st installment <i>immediately</i> after your purchase so you can get started right away. On Day 3 we'll connect you with a private consultant via Messenger. Together we'll target success. Each of the 3 days leading up to your private consultation requires less than an hour of work on your part. By Day 3 -- in <i>less than</i> 3 hours of work total & no additional hidden expenses -- we'll have you up & running accepting Bitcoin payments! It's that simple. Quick to implement. No paying overpriced consultants, developers or technical "gurus" - Do It Yourself #DIY ! <b>You can started accepting Bitcoin payments today!</b> <p>Need some inspiration? Check out a real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. That's where the magic really happens. Give it a try! Yes, our solution works with <i>any</i> business model, not just eCommerce.</p>
+        Together we'll target success. Leading up to your private consultation you'll work through our Launch Guide. This requires around 3 hours (<i>give or take</i>) of work on your part. Ultimately in 3 hours of work total -- & no additional hidden expenses -- we'll have you up & running accepting Bitcoin payments! Along with 150+ other forms of payment. It's that simple. Quick to implement. No paying overpriced consultants, developers or technical "gurus" - Do It Yourself #DIY all the way! <br></br><br></br><b>You can started accepting Bitcoin payments today!</b> <p>Need some inspiration? Look no further. Our buy button above is one example. We accept Bitcoin -- along with traditional credit card payments and PayPal. <br></br><br></br>Or you can check out another real-world example of acceptBTC in action in an eCommerce shop - <i>look for the orange 'Buy with Bitcoin' button </i> on the product page. Their sales are skyrocketing as a result. That's where the magic really happens. Give it a try. Yes, our solution works with <i>any</i> business model, not just eCommerce. Both online and physical shops!</p>
         </Typography>
 
         <Button variant="contained" component={Link} naked href="https://www.style-element.co/product/mens-silver-grey-classic-aviator-sunglasses?ref=acceptBTC" target="_blank">
