@@ -16,7 +16,7 @@ export default function Copyright() {
         acceptBTC
       </MuiLink>{' '}
       {new Date().getFullYear()}.
-      <div><i>{'a Bitcoin Payment Technology Education & Integration Company'}</i></div>
+      <div><i>{'Bitcoin Payment Technology Education & Integration Company'}</i></div>
       <div>&nbsp;</div>
     </Typography>
   );
