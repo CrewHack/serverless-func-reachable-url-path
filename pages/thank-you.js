@@ -11,7 +11,6 @@ import { withStyles } from '@material-ui/core/styles';
 import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import Link from '../src/Link';
 
 const styles = {
 
