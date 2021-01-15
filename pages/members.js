@@ -68,7 +68,7 @@ function About(props) {
 
         {!session && <>
          <Typography>
-          Please Sign Up (or Sign In) with your email address: <br/>
+          Please Sign Up (<i>or Sign In</i>) with your email address. We'll send you a magic link to access the Member's Area: <br/>
           <br/><Button style={{color: "white", backgroundColor: "#FF9900"}} onClick={signIn}>Access Members Area</Button>
           </Typography>
         </>}
