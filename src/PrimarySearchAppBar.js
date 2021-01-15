@@ -170,41 +170,65 @@ export default function PrimarySearchAppBar() {
 
     console.log(index);
 
-    if (index === 0)
+    if (index === 0) // Home
     {
       handleDrawerOpen(false);
       Router.push('/');
     }
 
-    if (index === 1) // Install
+    /*if (index === 1) // 
     {
       handleDrawerOpen(false);
-      Router.push('/');
-    }
+      //Router.push('/');
+      //let deferredPrompt = localStorage.getItem("deferredPrompt");
+      //deferredPrompt.prompt();
+    }*/
 
-    if (index === 2)
+    if (index === 1) // Members
     {
       handleDrawerOpen(false);
       Router.push('/members');
     }
 
-    if (index === 3)
+    if (index === 2) // About
     {
       handleDrawerOpen(false);
       Router.push('/about');
-    }
-
-    if (index === 4) // Buy
-    {
-      handleDrawerOpen(false);
-      Router.push('/');
     }
   };
 
   const handleDividerListClick = (index) => {
 
     console.log(index);
+
+    if (index === 0) // Call
+    {
+      handleDrawerOpen(false);
+      document.location.href="tel:"+"8086312029";
+    }
+
+    if (index === 1) // Email
+    {
+      handleDrawerOpen(false);
+      document.location.href="mailto:"+"support@acceptbtc.co";
+    }
+
+    if (index === 2) // Chat
+    {
+      handleDrawerOpen(false);
+      window.open("https://m.me/acceptbtc");
+    }
     
+  };
+
+  const handleMailClick = (event) => {
+
+    console.log("Mail click");
+  };
+
+  const handleNotificationClick = (event) => {
+
+    console.log("Handle notification click");
   };
 
   const menuId = 'primary-search-account-menu';
@@ -218,8 +242,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleProfile} className="PicoEditProfile">Profile</MenuItem> 
-      <MenuItem onClick={handleAccount} className="PicoManageAccount">My account</MenuItem>
+      <MenuItem onClick={handleProfile} className="PicoEditProfile">Manage Profile</MenuItem> 
+      <MenuItem onClick={handleAccount} className="PicoManageAccount">Manage Account</MenuItem>
     </Menu>
   );
 
@@ -234,18 +258,18 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton aria-label="show 2 new mails" color="inherit">
-          <Badge badgeContent={2} color="error">
-            <MailIcon />
+      <MenuItem onClick={handleMailClick}>
+        <IconButton aria-label="show 2 new mails" color="inherit" >
+          <Badge badgeContent={2} color="default" style={{color: "#FF9900"}}>
+            <MailIcon style={{color: "black"}}/>
           </Badge>
         </IconButton>
         <p>Messages</p>
       </MenuItem>
-      <MenuItem>
+      <MenuItem onClick={handleNotificationClick}>
         <IconButton aria-label="show 3 new notifications" color="inherit">
-          <Badge badgeContent={3} color="error">
-            <NotificationsIcon />
+          <Badge badgeContent={3} color="default" style={{color: "#FF9900"}}>
+            <NotificationsIcon style={{color: "black"}}/>
           </Badge>
         </IconButton>
         <p>Notifications</p>
@@ -264,6 +288,8 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
+  const listArray = ['Home', 'Members Area', 'About'];
+
   const list = 
     <div
       className={classes.list}
@@ -272,7 +298,7 @@ export default function PrimarySearchAppBar() {
       //onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Home', 'Install', 'Members Area', 'About', 'Buy'].map((text, index) => (
+        {listArray.map((text, index) => (
           <ListItem button key={text} onClick={() => handleListClick(index)}>
           <ListItemIcon>
               {
@@ -345,15 +371,15 @@ export default function PrimarySearchAppBar() {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-            </div>*/}
+            </div> style={{backgroundColor: "#ffeb3b"}}*/}
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 2 new mails" color="inherit">
+            <IconButton aria-label="show 2 new mails" color="inherit" onClick={handleMailClick}>
               <Badge badgeContent={2} style={{color: "#ffeb3b"}}>
                 <MailIcon style={{color: "#FFFFFF"}}/> 
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 3 new notifications" color="inherit">
+            <IconButton aria-label="show 3 new notifications" color="inherit" onClick={handleNotificationClick}>
               <Badge badgeContent={3} style={{color: "#ffeb3b"}}>
                 <NotificationsIcon style={{color: "#FFFFFF"}}/>
               </Badge>
@@ -392,8 +418,8 @@ export default function PrimarySearchAppBar() {
         open={isDrawerOpen}
       >
         <div >
-          <IconButton >
-            <ChevronLeftIcon onClick={doDrawerClose}/>
+          <IconButton onClick={doDrawerClose}>
+            <ChevronLeftIcon />
             
           </IconButton>
         

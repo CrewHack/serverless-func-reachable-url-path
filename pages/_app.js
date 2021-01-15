@@ -30,6 +30,8 @@ export default function MyApp(props) {
 
   React.useEffect(() => {
 
+    localStorage.setItem("deferredPrompt", deferredPrompt);
+
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
 
@@ -50,6 +52,7 @@ export default function MyApp(props) {
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
+      localStorage.setItem("deferredPrompt", deferredPrompt);
     });
 
     //the in-app Instagram browser (& other non-standarddoes not allow making use of serviceWorkers :(
