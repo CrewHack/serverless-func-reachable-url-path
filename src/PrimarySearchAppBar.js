@@ -359,7 +359,7 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon style={{color: "#FFFFFF"}}/>
           </IconButton>
-          <Link color="textSecondary" href="/">
+          <Link style={{color: "#FFFFFF"}} href="/">
           <Typography style={{color: "#FFFFFF"}} className={classes.title} variant="h6">
             <AccountBalanceWalletOutlinedIcon style={{color: "#FFFFFF"}}/>
             acceptBTC

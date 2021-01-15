@@ -11,7 +11,7 @@ const theme = createMuiTheme({
       main: '#FF9900', 
     },
     text: {
-      secondary: '#fff'
+      //secondary: '#fff'
     },
     error: {
       main: '#FF9900',
