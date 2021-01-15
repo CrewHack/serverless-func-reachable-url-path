@@ -144,7 +144,7 @@ function Index(props) {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("spinner").style.display = "none";
 
-    localStorage.setItem("submitted", "yes")
+    localStorage.setItem("submitted", "yes");
 
     //if (process.browser) {
       window.location = "/thank-you";

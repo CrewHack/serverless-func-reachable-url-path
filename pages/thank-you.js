@@ -57,6 +57,13 @@ function ThankYou(props) {
       location.reload();
     }
 
+    const submitted = params.get('submitted');
+    if (submitted)
+    {
+      window.history.replaceState({}, document.title, "/" + "thank-you");
+      localStorage.setItem("submitted", "yes");
+    }
+
     window.addEventListener('load', (e) => {
 
     {/*<script dangerouslySetInnerHTML={

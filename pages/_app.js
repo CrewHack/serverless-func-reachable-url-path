@@ -34,12 +34,18 @@ export default function MyApp(props) {
 
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
+    const newSubmitted = params.get('submitted');
 
     if (code && Router.pathname === '/thank-you-payment')
     {
       console.log("paid");
      
       localStorage.setItem("paid", "yes")
+    }
+
+    if (newSubmitted && Router.pathname === '/thank-you')
+    {
+      localStorage.setItem("submitted", "yes");
     }
 
     /*var str = navigator.userAgent;
@@ -89,7 +95,8 @@ export default function MyApp(props) {
         }
     }
   
-    if (submitted && typeof Cookies.get('mySiteCookieConsent') !== "undefined" && Router.pathname !== '/privacy-policy' && Router.pathname !== '/members' && Router.pathname !== '/about')
+    // typeof Cookies.get('mySiteCookieConsent') !== "undefined" &&
+    if (submitted && Router.pathname !== '/privacy-policy' && Router.pathname !== '/members' && Router.pathname !== '/about')
     {
       if (!paid)
       {
