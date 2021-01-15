@@ -155,6 +155,7 @@ export default function PrimarySearchAppBar() {
     //var picoWidget = document.getElementById("pico-widget-container");
     //picoWidget.style.visibility = "visible";
     //picoWidget.style.display = "block";
+    Router.push('/members');
   };
 
   const handleAccount = (event) => {
@@ -164,6 +165,7 @@ export default function PrimarySearchAppBar() {
     //var picoWidget = document.getElementById("pico-widget-container");
     //picoWidget.style.visibility = "visible";
     //picoWidget.style.display = "block";
+    Router.push('/members');
   };
 
   const handleListClick = (index) => {
@@ -224,11 +226,15 @@ export default function PrimarySearchAppBar() {
   const handleMailClick = (event) => {
 
     console.log("Mail click");
+    handleMobileMenuClose();
+    Router.push('/members');
   };
 
   const handleNotificationClick = (event) => {
 
     console.log("Handle notification click");
+    handleMobileMenuClose();
+    Router.push('/members');
   };
 
   const menuId = 'primary-search-account-menu';
