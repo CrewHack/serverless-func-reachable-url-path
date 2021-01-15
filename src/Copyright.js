@@ -6,7 +6,7 @@ export default function Copyright() {
 
   return (
     
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="body2" align="center">
       <Link color="inherit" href="/privacy-policy">
         Privacy Policy
       </Link>
