@@ -43,7 +43,7 @@ const styles = {
     "100%": {
       opacity: 1,
     }
-  },
+  }, //
 }
 
 function About(props) {  
