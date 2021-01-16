@@ -43,6 +43,8 @@ const options = {
         if (myFetchedData.response.count > 0) {
           isAllowedToSignIn = true;
         }
+      } else {
+        isAllowedToSignIn = true;
       }
 
       if (isAllowedToSignIn) {
