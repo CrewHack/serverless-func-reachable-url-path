@@ -10,8 +10,6 @@ import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceW
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import Link from "../src/Link";
-import { signIn, signOut, useSession } from "next-auth/client";
-import Button from "@material-ui/core/Button";
 
 const styles = {
   animatedItem: {
@@ -42,12 +40,10 @@ const styles = {
     "100%": {
       opacity: 1,
     },
-  }, //
+  },
 };
 
-function About(props) {
-  const [session, loading] = useSession();
-
+function VerifyRequest(props) {
   const { classes } = props;
 
   return (
@@ -71,50 +67,11 @@ function About(props) {
           </Typography>
         </Link>
 
-        <div>&nbsp;</div>
+        <Typography>
+          <p>Check your email.</p>
 
-        {!session && (
-          <>
-            <Typography>
-              Please Sign Up (<i>or Sign In</i>) with your email address. We'll
-              send you a magic link to access the Member's Area: <br />
-              <br />
-              <Button
-                style={{ color: "white", backgroundColor: "#FF9900" }}
-                onClick={signIn}
-              >
-                Access Members Area
-              </Button>
-            </Typography>
-          </>
-        )}
-
-        {session && (
-          <>
-            <Typography>
-              <p>Welcome to the Member's Area</p>
-
-              <p>Last updated December 30th, 2020</p>
-
-              <p>Exclusive Content</p>
-
-              <p>We are awesome.</p>
-
-              <p>And so are you.</p>
-
-              <p>
-                But together, we're both <i>more</i> awesome!
-              </p>
-
-              <p>OTHER STUFF...</p>
-
-              <p>Blah blah blah...</p>
-            </Typography>
-          </>
-        )}
-
-        <div>&nbsp;</div>
-        <div>&nbsp;</div>
+          <p>A sign in link has been sent to your email address.</p>
+        </Typography>
 
         <div
           style={{
@@ -162,8 +119,8 @@ function About(props) {
   );
 }
 
-About.propTypes = {
+VerifyRequest.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(VerifyRequest);

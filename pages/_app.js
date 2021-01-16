@@ -1,26 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../src/theme';
-import { makeStyles } from '@material-ui/core/styles';
-import MUICookieConsent from 'material-ui-cookie-consent';
-import Cookies from 'js-cookie';
-import AccountBalanceWalletOutlinedIcon from '@material-ui/icons/AccountBalanceWalletOutlined';
+import React from "react";
+import PropTypes from "prop-types";
+import Head from "next/head";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import theme from "../src/theme";
+import { makeStyles } from "@material-ui/core/styles";
+import MUICookieConsent from "material-ui-cookie-consent";
+import Cookies from "js-cookie";
+import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
 import Router from "next/router";
-import { Provider } from 'next-auth/client';
-import PrimarySearchAppBar from '../src/PrimarySearchAppBar';
+import { Provider } from "next-auth/client";
+import PrimarySearchAppBar from "../src/PrimarySearchAppBar";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.toolbar,
   emojiTwoTone: {
-    filter: "grayscale(100%)"
-  }
-}))
+    filter: "grayscale(100%)",
+  },
+}));
 
 export default function MyApp(props) {
-  
   const { Component, pageProps } = props;
   const classes = useStyles();
 
@@ -29,22 +28,19 @@ export default function MyApp(props) {
   let deferredPrompt;
 
   React.useEffect(() => {
-
     localStorage.setItem("deferredPrompt", deferredPrompt);
 
     const params = new URLSearchParams(window.location.search);
-    const code = params.get('code');
-    const newSubmitted = params.get('submitted');
+    const code = params.get("code");
+    const newSubmitted = params.get("submitted");
 
-    if (code && Router.pathname === '/thank-you-payment')
-    {
+    if (code && Router.pathname === "/thank-you-payment") {
       console.log("paid");
-     
-      localStorage.setItem("paid", "yes")
+
+      localStorage.setItem("paid", "yes");
     }
 
-    if (newSubmitted && Router.pathname === '/thank-you')
-    {
+    if (newSubmitted && Router.pathname === "/thank-you") {
       localStorage.setItem("submitted", "yes");
     }
 
@@ -55,7 +51,7 @@ export default function MyApp(props) {
       window.stop();
     }*/
 
-    window.addEventListener('beforeinstallprompt', (e) => {
+    window.addEventListener("beforeinstallprompt", (e) => {
       e.preventDefault();
       deferredPrompt = e;
       localStorage.setItem("deferredPrompt", deferredPrompt);
@@ -63,7 +59,7 @@ export default function MyApp(props) {
 
     //the in-app Instagram browser (& other non-standarddoes not allow making use of serviceWorkers :(
     if (process.browser && navigator && navigator.serviceWorker) {
-      navigator.serviceWorker.register('/OneSignalSDKWorker.js');
+      navigator.serviceWorker.register("/OneSignalSDKWorker.js");
     }
 
     var acceptedCookies = localStorage.getItem("cookied") === "yes";
@@ -72,42 +68,37 @@ export default function MyApp(props) {
     var submitted = localStorage.getItem("submitted") === "yes";
     var paid = localStorage.getItem("paid") === "yes";
 
-    if (Router.pathname === '/thank-you')
-    {
-        if (!submitted)
-        {
-          Router.push('/');
-        }
+    if (Router.pathname === "/thank-you") {
+      if (!submitted) {
+        Router.push("/");
+      }
     }
 
-    if (Router.pathname === '/thank-you-payment')
-    {
-        if (submitted && !paid)
-        {
-          Router.push('/thank-you');
-        }
-        else
-        {
-          if (!paid)
-          {
-            Router.push('/');
-          }
-        }
-    }
-  
-    // typeof Cookies.get('mySiteCookieConsent') !== "undefined" &&
-    if (submitted && Router.pathname !== '/privacy-policy' && Router.pathname !== '/members' && Router.pathname !== '/about')
-    {
-      if (!paid)
-      {
-        if (Router.pathname !== '/thank-you')
-        {
-          Router.push('/thank-you?refresh=1');
+    if (Router.pathname === "/thank-you-payment") {
+      if (submitted && !paid) {
+        Router.push("/thank-you");
+      } else {
+        if (!paid) {
+          Router.push("/");
         }
       }
-      else //paid
-      {
-        Router.push('/thank-you-payment');
+    }
+
+    // typeof Cookies.get('mySiteCookieConsent') !== "undefined" &&
+    if (
+      submitted &&
+      Router.pathname !== "/privacy-policy" &&
+      Router.pathname !== "/members" &&
+      Router.pathname !== "/about" &&
+      Router.pathname !== "/email-signin"
+    ) {
+      if (!paid) {
+        if (Router.pathname !== "/thank-you") {
+          Router.push("/thank-you?refresh=1");
+        }
+      } //paid
+      else {
+        Router.push("/thank-you-payment");
       }
     }
 
@@ -153,11 +144,10 @@ export default function MyApp(props) {
     });*/
 
     // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
+    const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
-
   }, []);
 
   /*const timeout = setInterval(() => {
@@ -186,21 +176,18 @@ export default function MyApp(props) {
     }
   }, 500);*/
 
-  function cookieHandle()
-  {
-
-    localStorage.setItem("cookied", "yes")
+  function cookieHandle() {
+    localStorage.setItem("cookied", "yes");
     setCookied(true);
 
-    if (deferredPrompt)
-    {
+    if (deferredPrompt) {
       deferredPrompt.prompt();
 
       deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
+        if (choiceResult.outcome === "accepted") {
+          console.log("User accepted the install prompt");
         } else {
-          console.log('User dismissed the install prompt');
+          console.log("User dismissed the install prompt");
         }
       });
     }
@@ -209,21 +196,38 @@ export default function MyApp(props) {
   const [cookied, setCookied] = React.useState(false);
 
   return (
-    
     <React.Fragment>
       <Head>
         <title>acceptBTC</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <MUICookieConsent 
-            onAccept={cookieHandle}
-            cookieName="mySiteCookieConsent"
-            //componentType="Dialog" // default value is Snackbar
-            message={<span aria-label="chilli" role="img">Welcome to <AccountBalanceWalletOutlinedIcon fontSize="inherit"/>acceptBTC.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div><div className={classes.emojiTwoTone}>This site uses a few cookies 🍪. Click 'Accept' to continue. GDPR, done. ✅</div></span>}
-        /> 
-        <div style={cookied ? {pointerEvents: "all", opacity: 1, transition: "all .7s ease"} : {pointerEvents: "all", opacity: 1, transition: "all .7s ease"}}>
+        <MUICookieConsent
+          onAccept={cookieHandle}
+          cookieName="mySiteCookieConsent"
+          //componentType="Dialog" // default value is Snackbar
+          message={
+            <span aria-label="chilli" role="img">
+              Welcome to <AccountBalanceWalletOutlinedIcon fontSize="inherit" />
+              acceptBTC.<div className={classes.emojiTwoTone}>&nbsp;&nbsp;</div>
+              <div className={classes.emojiTwoTone}>
+                This site uses a few cookies 🍪. Click 'Accept' to continue.
+                GDPR, done. ✅
+              </div>
+            </span>
+          }
+        />
+        <div
+          style={
+            cookied
+              ? { pointerEvents: "all", opacity: 1, transition: "all .7s ease" }
+              : { pointerEvents: "all", opacity: 1, transition: "all .7s ease" }
+          }
+        >
           <Provider session={pageProps.session}>
             <PrimarySearchAppBar />
             <div className={classes.offset} />
@@ -236,7 +240,6 @@ export default function MyApp(props) {
 }
 
 MyApp.propTypes = {
-  
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 };
