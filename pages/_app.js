@@ -58,6 +58,10 @@ export default function MyApp(props) {
     if (Router.pathname === "/thank-you") {
       if (!submitted) {
         Router.push("/");
+      } else {
+        if (paid) {
+          Router.push("/thank-you-payment");
+        }
       }
     }
 
