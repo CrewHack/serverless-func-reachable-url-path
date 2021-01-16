@@ -40,7 +40,8 @@ export default function MyApp(props) {
       localStorage.setItem("paid", "yes");
     }
 
-    if (newSubmitted && Router.pathname === "/thank-you") {
+    if (newSubmitted) {
+      //&& Router.pathname === "/thank-you"
       localStorage.setItem("submitted", "yes");
     }
 
