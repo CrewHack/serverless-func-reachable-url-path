@@ -127,6 +127,9 @@ function SignIn(props) {
                 //error={true}
                 helperText={props.helperText}
                 autoComplete="off"
+                inputProps={{
+                  autoCapitalize: "none",
+                }}
               />
               {/*<input type="text" id="email" name="email" />*/}
               <Button
