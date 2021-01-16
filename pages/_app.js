@@ -6,7 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
 import { makeStyles } from "@material-ui/core/styles";
 import MUICookieConsent from "material-ui-cookie-consent";
-import Cookies from "js-cookie";
+//import Cookies from "js-cookie";
 import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
 import Router from "next/router";
 import { Provider } from "next-auth/client";
@@ -28,52 +28,22 @@ export default function MyApp(props) {
   let deferredPrompt;
 
   React.useEffect(() => {
-    localStorage.setItem("deferredPrompt", deferredPrompt);
+    //localStorage.setItem("deferredPrompt", deferredPrompt);
 
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
     const newSubmitted = params.get("submitted");
 
-    if (code && Router.pathname === "/thank-you-payment") {
-      console.log("paid");
-
-      localStorage.setItem("paid", "yes");
-    }
-
     if (newSubmitted) {
-      //&& Router.pathname === "/thank-you"
       localStorage.setItem("submitted", "yes");
     }
 
-    /*var str = navigator.userAgent;
-    var i = str.indexOf("Instagram");
-    if (i != -1) {
-      document.write("<a target=\"_blank\" href=\"https://acceptbtc.co/\">Proceed</a>");
-      window.stop();
-    }*/
-
-    window.addEventListener("beforeinstallprompt", (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      localStorage.setItem("deferredPrompt", deferredPrompt);
-    });
-
-    //the in-app Instagram browser (& other non-standarddoes not allow making use of serviceWorkers :(
-    if (process.browser && navigator && navigator.serviceWorker) {
-      navigator.serviceWorker.register("/OneSignalSDKWorker.js");
+    if (code && Router.pathname === "/thank-you-payment") {
+      localStorage.setItem("paid", "yes");
     }
-
-    var acceptedCookies = localStorage.getItem("cookied") === "yes";
-    setCookied(acceptedCookies);
 
     var submitted = localStorage.getItem("submitted") === "yes";
     var paid = localStorage.getItem("paid") === "yes";
-
-    if (Router.pathname === "/thank-you") {
-      if (!submitted) {
-        Router.push("/");
-      }
-    }
 
     if (Router.pathname === "/thank-you-payment") {
       if (submitted && !paid) {
@@ -85,8 +55,35 @@ export default function MyApp(props) {
       }
     }
 
+    if (Router.pathname === "/thank-you") {
+      if (!submitted) {
+        Router.push("/");
+      }
+    }
+
+    /*var str = navigator.userAgent;
+    var i = str.indexOf("Instagram");
+    if (i != -1) {
+      document.write("<a target=\"_blank\" href=\"https://acceptbtc.co/\">Proceed</a>");
+      window.stop();
+    }*/
+
+    //the in-app Instagram browser (& other non-standarddoes not allow making use of serviceWorkers :(
+    if (process.browser && navigator && navigator.serviceWorker) {
+      navigator.serviceWorker.register("/OneSignalSDKWorker.js");
+    }
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      //localStorage.setItem("deferredPrompt", deferredPrompt);
+    });
+
+    var acceptedCookies = localStorage.getItem("cookied") === "yes";
+    setCookied(acceptedCookies);
+
     // typeof Cookies.get('mySiteCookieConsent') !== "undefined" &&
-    if (
+    /*if (
       submitted &&
       Router.pathname !== "/privacy-policy" &&
       Router.pathname !== "/members" &&
@@ -101,7 +98,7 @@ export default function MyApp(props) {
       else {
         Router.push("/thank-you-payment");
       }
-    }
+    }*/
 
     /*var observer = new MutationObserver(function (mutations) {
 
@@ -186,9 +183,9 @@ export default function MyApp(props) {
 
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === "accepted") {
-          console.log("User accepted the install prompt");
+          //console.log("User accepted the install prompt");
         } else {
-          console.log("User dismissed the install prompt");
+          //console.log("User dismissed the install prompt");
         }
       });
     }

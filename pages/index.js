@@ -123,10 +123,15 @@ const styles = {
 
 function Index(props) {
   React.useEffect(() => {
-    console.log("ok");
+    var paid = localStorage.getItem("paid") === "yes";
+    if (paid) {
+      Router.push("/thank-you-payment");
+    }
+
     var submitted = localStorage.getItem("submitted") === "yes";
     if (submitted) {
-      Router.push("/thank-you");
+      //Router.push("/thank-you");
+      Router.push("/thank-you?refresh=1");
     }
   });
 
