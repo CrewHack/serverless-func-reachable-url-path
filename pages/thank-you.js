@@ -80,7 +80,7 @@ function ThankYou(props) {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <Link shallow={false} color="inherit" href="/">
+        <Link color="inherit" href="/">
           <Typography
             style={{ opacity: 1 }}
             align="left"
