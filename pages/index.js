@@ -297,25 +297,7 @@ function Index(props) {
           </div>
         )}
 
-        {session &&
-          {
-            /*<div>
-            <>
-              <Typography>
-                <p>Thank you for being a member!</p>
-
-                <p>Please access the member's area: </p>
-
-                <Button
-                  //href="/members"
-                  style={{ color: "white", backgroundColor: "#FF9900" }}
-                >
-                  Access Members Area
-                </Button>
-              </Typography>
-            </>
-          </div>*/
-          }}
+        {session && <div></div>}
       </Box>
 
       <Typography style={{ fontSize: "11px", textAlign: "left" }}>
