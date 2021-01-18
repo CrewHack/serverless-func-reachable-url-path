@@ -123,7 +123,7 @@ const styles = {
 };
 
 function Index(props) {
-  const [session, loading] = useSession();
+  //const [session, loading] = useSession();
 
   React.useEffect(() => {
     /*var paid = localStorage.getItem("paid") === "yes";
