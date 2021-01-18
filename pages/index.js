@@ -16,7 +16,7 @@ import MainForm from "../src/MainForm";
 import Image from "next/image";
 import Link from "../src/Link";
 import Router from "next/router";
-//import { signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/client";
 
 const styles = {
   image: {
@@ -123,7 +123,7 @@ const styles = {
 };
 
 function Index(props) {
-  //const [session, loading] = useSession();
+  const [session, loading] = useSession();
 
   React.useEffect(() => {
     /*var paid = localStorage.getItem("paid") === "yes";
