@@ -297,7 +297,15 @@ function Index(props) {
           </div>
         )}
 
-        {session && <div></div>}
+        {session && (
+          <>
+            <Typography>
+              Please sign in with your email address. We'll send you a{" "}
+              <i>magic link</i> to access the Member's Area: <br />
+              <br />
+            </Typography>
+          </>
+        )}
       </Box>
 
       <Typography style={{ fontSize: "11px", textAlign: "left" }}>
