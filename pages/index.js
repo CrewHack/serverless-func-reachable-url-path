@@ -297,8 +297,9 @@ function Index(props) {
           </div>
         )}
 
-        {session && (
-          <div>
+        {session &&
+          {
+            /*<div>
             <>
               <Typography>
                 <p>Thank you for being a member!</p>
@@ -313,8 +314,8 @@ function Index(props) {
                 </Button>
               </Typography>
             </>
-          </div>
-        )}
+          </div>*/
+          }}
       </Box>
 
       <Typography style={{ fontSize: "11px", textAlign: "left" }}>
