@@ -198,97 +198,104 @@ function Index(props) {
           </Typography>
         </Link>
 
-        {/*{!session && (
+        {!session && (
           <div>
-        <>*/}
-        <Typography variant="h2" component="h2" gutterBottom>
-          Start accepting Bitcoin & other crypto payments today.
-        </Typography>
-
-        <Typography gutterBottom>
-          <span
-            style={{
-              display: "flex",
-              justifyContent: "left",
-              marginBottom: "-8px",
-            }}
-          >
-            <span
-              style={{
-                marginTop: "12px",
-              }}
-            >
-              Get your&nbsp;
-            </span>
-
-            <Image
-              className={classes.image}
-              src="/external/Bitcoin_accepted_here_printable.png"
-              alt="Add a 'Bitcoin Accepted Here' badge to your website"
-              width={135}
-              height={50}
-            />
-
-            <span
-              style={{
-                marginTop: "12px",
-              }}
-            >
-              &nbsp;badge today!
-            </span>
-          </span>
-        </Typography>
-
-        <div>&nbsp;</div>
-
-        <Card
-          className={clsx(!open && classes.card, open && classes.activatecard)}
-          style={{
-            textAlign: "center",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "-1px",
-          }}
-        >
-          <CardContent style={{ paddingBottom: "2px" }}>
-            <MainForm
-              submit={submit.bind(this)}
-              drawerToggle={drawerToggle.bind(this)}
-            />
-          </CardContent>
-        </Card>
-
-        <div>&nbsp;</div>
-
-        <Card
-          style={{ marginBottom: "0px", marginTop: "-8px" }}
-          className={clsx(
-            !open && classes.card2,
-            open && classes.activatecard2
-          )}
-        >
-          <CardContent style={{ paddingBottom: "0px", marginTop: "-8px" }}>
-            <video
-              width="100%"
-              src={require("../public/external/btc-accepted-here.mp4")}
-              id="promo-video"
-              autoPlay
-              muted
-              playsInline
-            ></video>
-          </CardContent>
-          <CardActions style={{ paddingTop: "0px", paddingBottom: "0px" }}>
-            {!open && <ProTip />}
-            {open && (
-              <Typography className={classes.root} color="error">
-                Let's do this!
+            <>
+              <Typography variant="h2" component="h2" gutterBottom>
+                Start accepting Bitcoin & other crypto payments today.
               </Typography>
-            )}
-          </CardActions>
-        </Card>
-        {/*} </>
+
+              <Typography gutterBottom>
+                <span
+                  style={{
+                    display: "flex",
+                    justifyContent: "left",
+                    marginBottom: "-8px",
+                  }}
+                >
+                  <span
+                    style={{
+                      marginTop: "12px",
+                    }}
+                  >
+                    Get your&nbsp;
+                  </span>
+
+                  <Image
+                    className={classes.image}
+                    src="/external/Bitcoin_accepted_here_printable.png"
+                    alt="Add a 'Bitcoin Accepted Here' badge to your website"
+                    width={135}
+                    height={50}
+                  />
+
+                  <span
+                    style={{
+                      marginTop: "12px",
+                    }}
+                  >
+                    &nbsp;badge today!
+                  </span>
+                </span>
+              </Typography>
+
+              <div>&nbsp;</div>
+
+              <Card
+                className={clsx(
+                  !open && classes.card,
+                  open && classes.activatecard
+                )}
+                style={{
+                  textAlign: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "-1px",
+                }}
+              >
+                <CardContent style={{ paddingBottom: "2px" }}>
+                  <MainForm
+                    submit={submit.bind(this)}
+                    drawerToggle={drawerToggle.bind(this)}
+                  />
+                </CardContent>
+              </Card>
+
+              <div>&nbsp;</div>
+
+              <Card
+                style={{ marginBottom: "0px", marginTop: "-8px" }}
+                className={clsx(
+                  !open && classes.card2,
+                  open && classes.activatecard2
+                )}
+              >
+                <CardContent
+                  style={{ paddingBottom: "0px", marginTop: "-8px" }}
+                >
+                  <video
+                    width="100%"
+                    src={require("../public/external/btc-accepted-here.mp4")}
+                    id="promo-video"
+                    autoPlay
+                    muted
+                    playsInline
+                  ></video>
+                </CardContent>
+                <CardActions
+                  style={{ paddingTop: "0px", paddingBottom: "0px" }}
+                >
+                  {!open && <ProTip />}
+                  {open && (
+                    <Typography className={classes.root} color="error">
+                      Let's do this!
+                    </Typography>
+                  )}
+                </CardActions>
+              </Card>
+            </>
           </div>
-        )}(/})
+        )}
 
         {/*{session && (
           <>
