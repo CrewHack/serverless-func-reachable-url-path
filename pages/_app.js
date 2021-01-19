@@ -27,8 +27,12 @@ export default function MyApp(props) {
 
   let deferredPrompt;
 
+  console.log(pageProps.session);
+
   React.useEffect(() => {
     //localStorage.setItem("deferredPrompt", deferredPrompt);
+
+    console.log(pageProps.session);
 
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
