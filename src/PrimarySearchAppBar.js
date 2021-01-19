@@ -384,60 +384,61 @@ export default function PrimarySearchAppBar() {
             />
             </div> style={{backgroundColor: "#ffeb3b"}}*/}
           <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            <IconButton
-              aria-label="show 2 new mails"
-              color="inherit"
-              onClick={handleMailClick}
-            >
-              <Badge badgeContent={2} style={{ color: "#ffeb3b" }}>
-                <MailIcon style={{ color: "#FFFFFF" }} />
-              </Badge>
-            </IconButton>
-            <IconButton
-              aria-label="show 3 new notifications"
-              color="inherit"
-              onClick={handleNotificationClick}
-            >
-              <Badge badgeContent={3} style={{ color: "#ffeb3b" }}>
-                <NotificationsIcon style={{ color: "#FFFFFF" }} />
-              </Badge>
-            </IconButton>
-            <IconButton
-              style={{ color: "#FFFFFF" }}
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              style={{ color: "#FFFFFF" }}
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
+
+          {!session && (
+            <div>
+              <>
+                <div className={classes.sectionDesktop}>
+                  <IconButton
+                    aria-label="show 2 new mails"
+                    color="inherit"
+                    onClick={handleMailClick}
+                  >
+                    <Badge badgeContent={2} style={{ color: "#ffeb3b" }}>
+                      <MailIcon style={{ color: "#FFFFFF" }} />
+                    </Badge>
+                  </IconButton>
+                  <IconButton
+                    aria-label="show 3 new notifications"
+                    color="inherit"
+                    onClick={handleNotificationClick}
+                  >
+                    <Badge badgeContent={3} style={{ color: "#ffeb3b" }}>
+                      <NotificationsIcon style={{ color: "#FFFFFF" }} />
+                    </Badge>
+                  </IconButton>
+                  <IconButton
+                    style={{ color: "#FFFFFF" }}
+                    edge="end"
+                    aria-label="account of current user"
+                    aria-controls={menuId}
+                    aria-haspopup="true"
+                    onClick={handleProfileMenuOpen}
+                    color="inherit"
+                  >
+                    <AccountCircle />
+                  </IconButton>
+                </div>
+                <div className={classes.sectionMobile}>
+                  <IconButton
+                    style={{ color: "#FFFFFF" }}
+                    aria-label="show more"
+                    aria-controls={mobileMenuId}
+                    aria-haspopup="true"
+                    onClick={handleMobileMenuOpen}
+                    color="inherit"
+                  >
+                    <MoreIcon />
+                  </IconButton>
+                </div>
+              </>
+            </div>
+          )}
         </Toolbar>
       </AppBar>
 
-      {!session && (
-        <div>
-          <>
-            {renderMobileMenu}
-            {renderMenu}
-          </>
-        </div>
-      )}
+      {renderMobileMenu}
+      {renderMenu}
 
       <Drawer
         //variant="persistent"
