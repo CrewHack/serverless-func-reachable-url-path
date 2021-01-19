@@ -13,6 +13,10 @@ import Link from "../src/Link";
 import { signIn, signOut, useSession } from "next-auth/client";
 import Button from "@material-ui/core/Button";
 
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+
 const styles = {
   animatedItem: {
     animation: `$myEffect 750ms ease`,
@@ -111,6 +115,22 @@ function About(props) {
 
               <p>Blah blah blah...</p>
             </Typography>
+
+            <Card style={{ marginBottom: "0px", marginTop: "-8px" }}>
+              <CardContent style={{ paddingBottom: "0px", marginTop: "-8px" }}>
+                <video
+                  width="100%"
+                  src={require("../public/external/btc-accepted-here.mp4")}
+                  id="promo-video"
+                  autoPlay
+                  muted
+                  playsInline
+                ></video>
+              </CardContent>
+              <CardActions style={{ paddingTop: "0px", paddingBottom: "0px" }}>
+                {/*<ProTip />*/}
+              </CardActions>
+            </Card>
           </>
         )}
 
