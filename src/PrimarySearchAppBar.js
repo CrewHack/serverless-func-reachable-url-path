@@ -440,7 +440,7 @@ export default function PrimarySearchAppBar() {
             <ChevronLeftIcon />
           </IconButton>
 
-          <Link color="inherit" href="/">
+          <Link color="inherit" onClick={doDrawerClose} href="/">
             <div className={classes.menuTitle}>
               <Typography variant="h6">
                 <AccountBalanceWalletOutlinedIcon />
