@@ -125,6 +125,7 @@ function About(props) {
                   //autoPlay
                   //muted
                   //playsInline
+                  controls
                 ></video>
               </CardContent>
               <CardActions style={{ paddingTop: "0px", paddingBottom: "0px" }}>
