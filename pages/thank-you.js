@@ -13,7 +13,6 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 import Router from "next/router";
 import { signIn, signOut, useSession } from "next-auth/client";
-import Button from "@material-ui/core/Button";
 
 const styles = {
   animatedItem: {
