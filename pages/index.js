@@ -17,6 +17,7 @@ import Image from "next/image";
 import Link from "../src/Link";
 import Router from "next/router";
 import { signIn, signOut, useSession } from "next-auth/client";
+import Button from "@material-ui/core/Button";
 
 const styles = {
   image: {
@@ -121,6 +122,10 @@ const styles = {
     },
   },
 };
+
+function goToMembers() {
+  Router.push("/members");
+}
 
 function Index(props) {
   const [session, loading] = useSession();
@@ -300,9 +305,15 @@ function Index(props) {
         {session && (
           <>
             <Typography>
-              Please sign in with your email address. We'll send you a{" "}
-              <i>magic link</i> to access the Member's Area: <br />
+              Thank you for being a valued member. You have access to the
+              Member's Area: <br />
               <br />
+              <Button
+                style={{ color: "white", backgroundColor: "#FF9900" }}
+                onClick={goToMembers}
+              >
+                Go To Members Area
+              </Button>
             </Typography>
           </>
         )}
