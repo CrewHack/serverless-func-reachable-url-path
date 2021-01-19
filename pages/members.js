@@ -45,8 +45,6 @@ const styles = {
   }, //
 };
 
-export const config = { amp: true };
-
 function About(props) {
   const [session, loading] = useSession();
 
