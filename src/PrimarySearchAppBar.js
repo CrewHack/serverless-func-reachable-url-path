@@ -33,6 +33,13 @@ import Link from "../src/Link";
 
 import { signIn, signOut, useSession } from "next-auth/client";
 
+import HomeIcon from "@material-ui/icons/Home";
+import RecentActorsIcon from "@material-ui/icons/RecentActors";
+import InfoIcon from "@material-ui/icons/Info";
+import CallIcon from "@material-ui/icons/Call";
+import EmailIcon from "@material-ui/icons/Email";
+import ChatIcon from "@material-ui/icons/Chat";
+
 const useStyles = makeStyles((theme) => ({
   menuTitle: {
     top: "10px",
@@ -300,11 +307,11 @@ export default function PrimarySearchAppBar() {
           <ListItem button key={text} onClick={() => handleListClick(index)}>
             <ListItemIcon>
               {index === 0 ? (
-                <InboxIcon />
+                <HomeIcon />
               ) : index === 1 ? (
-                <InboxIcon />
+                <RecentActorsIcon />
               ) : index === 2 ? (
-                <InboxIcon />
+                <InfoIcon />
               ) : index === 3 ? (
                 <InboxIcon />
               ) : index === 4 ? (
@@ -327,11 +334,11 @@ export default function PrimarySearchAppBar() {
           >
             <ListItemIcon>
               {index === 0 ? (
-                <InboxIcon />
+                <CallIcon />
               ) : index === 1 ? (
-                <InboxIcon />
+                <EmailIcon />
               ) : index === 2 ? (
-                <InboxIcon />
+                <ChatIcon />
               ) : index === 3 ? (
                 <InboxIcon />
               ) : (
