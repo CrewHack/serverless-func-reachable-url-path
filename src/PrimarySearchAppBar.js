@@ -31,6 +31,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Router from "next/router";
 import Link from "../src/Link";
 
+import { signIn, signOut, useSession } from "next-auth/client";
+
 const useStyles = makeStyles((theme) => ({
   menuTitle: {
     top: "10px",
@@ -106,6 +108,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PrimarySearchAppBar() {
+  const [session, loading] = useSession();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -426,8 +429,16 @@ export default function PrimarySearchAppBar() {
           </div>
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+
+      {!session && (
+        <div>
+          <>
+            {renderMobileMenu}
+            {renderMenu}
+          </>
+        </div>
+      )}
+
       <Drawer
         //variant="persistent"
         classes={{
