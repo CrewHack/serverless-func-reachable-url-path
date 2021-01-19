@@ -131,16 +131,19 @@ function Index(props) {
   const [session, loading] = useSession();
 
   React.useEffect(() => {
-    /*var paid = localStorage.getItem("paid") === "yes";
+    var paid = localStorage.getItem("paid") === "yes";
     if (paid) {
       Router.push("/thank-you-payment");
     } else {
       var submitted = localStorage.getItem("submitted") === "yes";
       if (submitted) {
-        //Router.push("/thank-you");
-        Router.push("/thank-you?refresh=1");
+        if (session) {
+          Router.push("/thank-you");
+        } else {
+          Router.push("/thank-you?refresh=1");
+        }
       }
-    }*/
+    }
   });
 
   const { classes } = props;
