@@ -78,7 +78,7 @@ function About(props) {
 
         <div>&nbsp;</div>
 
-        {!session && (
+        {session && (
           <>
             <Typography>
               Please sign in with your email address. We'll send you a{" "}
@@ -94,7 +94,7 @@ function About(props) {
           </>
         )}
 
-        {session && (
+        {!session && (
           <>
             <Typography>
               <p>Welcome to the Member's Area</p>
@@ -102,18 +102,6 @@ function About(props) {
               <p>Last updated December 30th, 2020</p>
 
               <p>Exclusive Content</p>
-
-              <p>We are awesome.</p>
-
-              <p>And so are you.</p>
-
-              <p>
-                But together, we're both <i>more</i> awesome!
-              </p>
-
-              <p>OTHER STUFF...</p>
-
-              <p>Blah blah blah...</p>
             </Typography>
 
             <Card style={{ marginBottom: "0px", marginTop: "-8px" }}>
@@ -122,6 +110,7 @@ function About(props) {
                   width="100%"
                   src={require("../public/external/btc-accepted-here.mp4")}
                   id="promo-video"
+                  //poster=""
                   //autoPlay
                   //muted
                   //playsInline
